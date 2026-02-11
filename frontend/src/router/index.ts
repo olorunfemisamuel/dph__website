@@ -25,6 +25,7 @@ import MergerAcquisition from '@/views/MergerAcquisition.vue'
 import CorporateFinance from '../views/CorporateFinance.vue'
 import StructuredFinance from '../views/StructuredFinance.vue'
 import ProjectFinance from '@/views/ProjectFinance.vue'
+import FinancialAdvisory from '@/views/FinancialAdvisory.vue'
 
 
 const router = createRouter({
