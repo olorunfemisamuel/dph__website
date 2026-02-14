@@ -15,7 +15,7 @@ import aboutusImage from '@/assets/aboutusImage.png'
         />
         <div class="absolute inset-0 bg-black/50"></div>
         <h3 class="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 md:bottom-10 md:left-10 text-white font-bold text-2xl sm:text-3xl md:text-5xl z-10">
-     Financial Advisory
+          Alternative Investtments
         </h3>
       </div>
     </section>
@@ -26,17 +26,15 @@ import aboutusImage from '@/assets/aboutusImage.png'
        
       </h2>
       <p class="text-sm md:text-base leading-relaxed max-w-4xl">
-        We provide strategic financial advisory services designed to help organizations,
-        institutions, and individuals make informed decisions, manage risk, and unlock
-        sustainable value. Our expertise spans corporate finance, investment advisory,
-        project structuring, and capital optimization.
+  DPH provides a comprehensive range of advisory services focused on alternative investments, helping clients access non-traditional asset classes to achieve portfolio diversification, long-term growth, 
+  and attractive risk-adjusted returns. Our approach combines rigorous analysis, strategic structuring, and practical execution to deliver solutions that meet both financial and developmental objectives.
       </p>
     </section>
 
  <!-- WHAT WE DO TITLE -->
 <section class="bg-white py-10 px-6 md:px-16">
   <h2 class="text-green-700 text-xl font-semibold">
-    What We Do
+  Our Alternative Investment Servives
   </h2>
 </section>
 
@@ -55,45 +53,42 @@ import aboutusImage from '@/assets/aboutusImage.png'
 
         <div class="bg-white p-20">
           <h3 class="font-semibold text-base mb-2">
-            Financial Strategy & Structuring
+         Private Equity and Venture Capital
           </h3>
           <p class="text-sm text-gray-600 leading-relaxed">
-            We support clients in designing robust financial strategies including capital
-            structuring, funding options analysis, and long-term financial planning aligned
-            with organizational objectives.
+          We advise clients on investments in private companies across growth, expansion, 
+          and restructuring stages. Our services include opportunity assessment, valuation support, 
+          transaction structuring, and exit planning to maximize returns.
           </p>
         </div>
 
         <div class="bg-white p-20">
           <h3 class="font-semibold text-base mb-2">
-            Transaction & Investment Advisory
+         Private Credit And Structured Finance
           </h3>
           <p class="text-sm text-gray-600 leading-relaxed">
-            DPH advises clients on full transaction lifecycle—covering project appraisal,
-            business and asset valuation, investment analysis, due diligence support and
-            transaction structuring for both public and private sector engagements.
+           DPH provides advisory services on alternative credit solutions, including private debt, mezzanine financing, and hybrid instruments. These structures are designed to provide flexible 
+           capital solutions where traditional financing may be limited.
           </p>
         </div>
 
         <div class="bg-white p-20">
           <h3 class="font-semibold text-base mb-2">
-            Project & Infrastructure Finance
+        Infrastructure and Real  Asset Investment
           </h3>
           <p class="text-sm text-gray-600 leading-relaxed">
-            We assist in developing bankable projects by delivering end-to-end financial
-            advisory services including project financing, PPP structuring, funding
-            arrangements, and financial optimization to attract local and international capital.
+            Our team supports investments in infrastructure, real estate, energy, and other real assets, focusing on long-term value creation, stable cash flows, and effective risk management.
           </p>
         </div>
 
         <div class="bg-white p-20">
           <h3 class="font-semibold text-base mb-2">
-            Development & Public Finance Advisory
+            Impact and Development Investments
           </h3>
           <p class="text-sm text-gray-600 leading-relaxed">
-            Our team works with governments, MDAs, and development partners to strengthen
-            financial governance, improve project funding mechanisms, and align financial
-            decisions with development priorities and institutional objectives.
+          We assist clients in structuring investments that generate measurable social, economic, 
+          or environmental outcomes alongside financial returns, supporting projects in sectors such as energy, 
+          housing, and community development.
           </p>
         </div>
 
@@ -106,7 +101,7 @@ import aboutusImage from '@/assets/aboutusImage.png'
 <!-- OUR APPROACH -->
 <section class="py-14 px-6 md:px-16 bg-white">
   <h2 class="text-green-700 text-xl font-semibold mb-8">
-    Our Approach
+  Why Choose Dph for Altenative Investment
   </h2>
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl">
@@ -114,35 +109,33 @@ import aboutusImage from '@/assets/aboutusImage.png'
     <!-- Card 1 -->
     <div class="flex flex-col">
       <div class="bg-green-700 text-white py-3 text-center font-semibold text-sm">
-        Insight-Driven
+      Proven Track Record
       </div>
       <div class="bg-gray-200 p-20 text-sm text-gray-700 flex-1">
-        We offer precise financial modeling and stress-testing to evaluate investment
-        opportunities and mitigate risks before capital is deployed.
+     DPH has successfully advised investors and sponsors on a variety of alternative investment opportunities, 
+     ensuring well-structured and investable solutions.
       </div>
     </div>
 
     <!-- Card 2 -->
     <div class="flex flex-col">
       <div class="bg-green-700 text-white py-3 text-center font-semibold text-sm">
-        Independent & Objective
+      Comprehensive Solutions
       </div>
       <div class="bg-gray-200 p-20 text-sm text-gray-700 flex-1">
-        Our deep understanding of global financial trends and lender requirements enables
-        us to structure favorable terms and navigate complex regulatory environments
-        effectively.
+      Our services are tailored to the specific requirements of each client, combining financial insight, market knowledge, and practical execution to deliver sustainable results.
       </div>
     </div>
 
     <!-- Card 3 -->
     <div class="flex flex-col">
       <div class="bg-green-700 text-white py-3 text-center font-semibold text-sm">
-        Execution-Focused
+      Expert Advisory Team
       </div>
       <div class="bg-gray-200 p-20 text-sm text-gray-700 flex-1">
-        Achieving financial excellence requires meticulous planning and flawless
-        implementation. We partner closely with our clients, providing high-quality
-        advice and execution while maintaining the utmost discretion and integrity.
+        Our advisors bring extensive experience in private markets, real assets, and structured finance, 
+        enabling us to provide actionable 
+        insights and effective investment solutions.
       </div>
     </div>
 

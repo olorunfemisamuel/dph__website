@@ -15,7 +15,7 @@ import aboutusImage from '@/assets/aboutusImage.png'
         />
         <div class="absolute inset-0 bg-black/50"></div>
         <h3 class="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 md:bottom-10 md:left-10 text-white font-bold text-2xl sm:text-3xl md:text-5xl z-10">
-     Financial Advisory
+            Equity and Debt Capital Market
         </h3>
       </div>
     </section>
@@ -26,17 +26,16 @@ import aboutusImage from '@/assets/aboutusImage.png'
        
       </h2>
       <p class="text-sm md:text-base leading-relaxed max-w-4xl">
-        We provide strategic financial advisory services designed to help organizations,
-        institutions, and individuals make informed decisions, manage risk, and unlock
-        sustainable value. Our expertise spans corporate finance, investment advisory,
-        project structuring, and capital optimization.
+    DPH advises clients on accessing capital markets through well-structured equity and debt solutions that support growth, balance sheet optimization, and long-term financial sustainability. We work with corporates, financial institutions, project sponsors, and public sector entities to design and execute capital raising strategies aligned with market conditions, regulatory requirements, and investor expectations.
+
+Our capital markets advisory combines market insight, financial structuring expertise, and transaction execution support to help clients raise capital efficiently and responsibly.
       </p>
     </section>
 
  <!-- WHAT WE DO TITLE -->
 <section class="bg-white py-10 px-6 md:px-16">
   <h2 class="text-green-700 text-xl font-semibold">
-    What We Do
+    Our Capital Markets Advisory Offerings
   </h2>
 </section>
 
@@ -55,45 +54,43 @@ import aboutusImage from '@/assets/aboutusImage.png'
 
         <div class="bg-white p-20">
           <h3 class="font-semibold text-base mb-2">
-            Financial Strategy & Structuring
+          Equity Capital Markets
           </h3>
           <p class="text-sm text-gray-600 leading-relaxed">
-            We support clients in designing robust financial strategies including capital
-            structuring, funding options analysis, and long-term financial planning aligned
-            with organizational objectives.
+           We support clients seeking equity financing through private placements, rights issues, and other equity-linked transactions. 
+           Our advisory services cover capital structuring, valuation support, transaction readiness, investor positioning, 
+           and regulatory coordination to ensure successful equity raises.
           </p>
         </div>
 
         <div class="bg-white p-20">
           <h3 class="font-semibold text-base mb-2">
-            Transaction & Investment Advisory
+          Debt  Capital Markets
           </h3>
           <p class="text-sm text-gray-600 leading-relaxed">
-            DPH advises clients on full transaction lifecycle—covering project appraisal,
-            business and asset valuation, investment analysis, due diligence support and
-            transaction structuring for both public and private sector engagements.
+           DPH provides advisory on debt financing solutions including bonds, commercial papers, notes, 
+           and other structured debt instruments. We assist clients in selecting appropriate instruments, pricing strategies, 
+           tenor optimization, 
+           and credit enhancement structures to achieve optimal funding outcomes.
           </p>
         </div>
 
         <div class="bg-white p-20">
           <h3 class="font-semibold text-base mb-2">
-            Project & Infrastructure Finance
+        Issuer & Sponsor Advisory
           </h3>
           <p class="text-sm text-gray-600 leading-relaxed">
-            We assist in developing bankable projects by delivering end-to-end financial
-            advisory services including project financing, PPP structuring, funding
-            arrangements, and financial optimization to attract local and international capital.
+            We advise issuers and project sponsors on capital markets strategy, transaction sequencing, and market entry timing, ensuring alignment with corporate objectives and prevailing market dynamics.
           </p>
         </div>
 
         <div class="bg-white p-20">
           <h3 class="font-semibold text-base mb-2">
-            Development & Public Finance Advisory
+            Public Sector & Developmnet Capital
           </h3>
           <p class="text-sm text-gray-600 leading-relaxed">
-            Our team works with governments, MDAs, and development partners to strengthen
-            financial governance, improve project funding mechanisms, and align financial
-            decisions with development priorities and institutional objectives.
+           Our team supports government entities and development-focused organizations in accessing capital markets for infrastructure and development projects, 
+           with a focus on sustainable funding structures and compliance with regulatory and governance frameworks.
           </p>
         </div>
 
@@ -106,7 +103,7 @@ import aboutusImage from '@/assets/aboutusImage.png'
 <!-- OUR APPROACH -->
 <section class="py-14 px-6 md:px-16 bg-white">
   <h2 class="text-green-700 text-xl font-semibold mb-8">
-    Our Approach
+   How We Add Value
   </h2>
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl">
@@ -114,35 +111,31 @@ import aboutusImage from '@/assets/aboutusImage.png'
     <!-- Card 1 -->
     <div class="flex flex-col">
       <div class="bg-green-700 text-white py-3 text-center font-semibold text-sm">
-        Insight-Driven
+        Market Responsive Structuring
       </div>
       <div class="bg-gray-200 p-20 text-sm text-gray-700 flex-1">
-        We offer precise financial modeling and stress-testing to evaluate investment
-        opportunities and mitigate risks before capital is deployed.
+       We design capital market solutions that reflect current investor appetite, liquidity conditions, and regulatory realities
       </div>
     </div>
 
     <!-- Card 2 -->
     <div class="flex flex-col">
       <div class="bg-green-700 text-white py-3 text-center font-semibold text-sm">
-        Independent & Objective
+       Strong Transaction Discipline
       </div>
       <div class="bg-gray-200 p-20 text-sm text-gray-700 flex-1">
-        Our deep understanding of global financial trends and lender requirements enables
-        us to structure favorable terms and navigate complex regulatory environments
-        effectively.
+       Our advisory emphasizes rigorous preparation, clear documentation, and coordinated execution to reduce transaction risk.
       </div>
     </div>
 
     <!-- Card 3 -->
     <div class="flex flex-col">
       <div class="bg-green-700 text-white py-3 text-center font-semibold text-sm">
-        Execution-Focused
+       End to End Support
       </div>
       <div class="bg-gray-200 p-20 text-sm text-gray-700 flex-1">
-        Achieving financial excellence requires meticulous planning and flawless
-        implementation. We partner closely with our clients, providing high-quality
-        advice and execution while maintaining the utmost discretion and integrity.
+       From early-stage structuring through issuance and post-transaction support, 
+       we provide continuous advisory across the transaction lifecycle.
       </div>
     </div>
 

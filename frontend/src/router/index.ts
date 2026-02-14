@@ -26,6 +26,17 @@ import CorporateFinance from '../views/CorporateFinance.vue'
 import StructuredFinance from '../views/StructuredFinance.vue'
 import ProjectFinance from '@/views/ProjectFinance.vue'
 import FinancialAdvisory from '@/views/FinancialAdvisory.vue'
+import EquityDebtCapitalMarket from '@/views/EquityDebtCapitalMarket.vue'
+import Alternativeinvest from '@/views/Alternativeinvest.vue'
+import StockBroking from '@/views/StockBroking.vue'
+import SecurityDealing from '@/views/SecurityDealing.vue'
+import FixedIncomeSecurity from '@/views/FixedIncomeSecurity.vue'
+import Equities from '@/views/Equities.vue'
+import DerivativesInstruments from '@/views/DerivativesInstruments.vue'
+import CommodityTrading from '@/views/CommodityTrading.vue'
+import ForeignExchange from '@/views/ForeignExchange.vue'
+import SecuredandUnsecuredInsurance from '@/views/SecuredandUnsecuredInsurance.vue'
+import CooporateTrust from '@/views/CooporateTrust.vue'
 
 
 const router = createRouter({
@@ -176,7 +187,75 @@ const router = createRouter({
   name: '/financial-advisory',
   path: '/financial-advisory',
   component: FinancialAdvisory
+},
+
+{
+  name: '/equity-debt-capital-market',
+  path: '/equity-debt-capital-market',
+  component:EquityDebtCapitalMarket
+},
+
+{
+  name: '/alternative-invest',
+  path: '/alternative-invest',
+  component: Alternativeinvest
+},
+
+{
+  name:'/stockbroking',
+  path: '/stockbroking',
+  component: StockBroking
+},
+
+{
+  name:'/security-dealing',
+  path: '/security-dealing',
+  component: SecurityDealing
+},
+
+{
+  name: '/fixed-income-security',
+  path: '/fixed-income-security',
+  component: FixedIncomeSecurity
+},
+
+{
+  name: '/equities',
+  path: '/equities',
+  component: Equities
+},
+
+{
+  name: '/derivatives-instruments',
+  path: '/derivatives-instruments',
+  component: DerivativesInstruments
+},
+
+{
+  name: '/commodity-trading',
+  path: '/commodity-trading',
+  component: CommodityTrading
+},
+
+{
+  name: '/foreign-exchange',
+  path: '/foreign-exchange',
+  component: ForeignExchange
+},
+
+{
+  name:'/secured-unsecured',
+  path: '/secured-unsecured',
+  component: SecuredandUnsecuredInsurance
+},
+
+{
+  name:'/cooporate-trust',
+  path: '/cooporate-trust',
+  component: CooporateTrust
 }
+
+
 
   ],
 
