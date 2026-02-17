@@ -13,6 +13,8 @@ import fourthsliderImage from '@/assets/fourthsliderImage.png'
 import fifthsliderImage from '@/assets/fifthsliderImage.png'
 import sixthsliderImage from '@/assets/sixthsliderImage.png'
 import venturecapitalimage from '@/assets/venturecapitalimg.png'
+
+
 import { computed } from 'vue'
 
 import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
