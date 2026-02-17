@@ -47,9 +47,9 @@ import subsidiariesIMAGE from '@/assets/subsidiariesIMAGE/subsidiariesIMAGE.png'
              We provide a wide range of financial advisory and capital raising services to our clients. Working closely with our clients to understand their exact needs bringing tailor made solutions. Delivering strategic advice and solutions including capital raising, risk management, and trade finance. We are adept at building long term relationships with our clients.
             </p>
           </div>
-          <button class="bg-white text-black px-6 py-2.5 rounded-md text-sm font-medium hover:bg-gray-100 transition w-fit">
+          <Router-Link to = "/Investment-Banking" class="bg-white text-black px-6 py-2.5 rounded-md text-sm font-medium hover:bg-gray-100 transition w-fit">
             View Services
-          </button>
+          </Router-Link>
         </div>
 
         <!-- Image overlapping -->
@@ -97,9 +97,9 @@ import subsidiariesIMAGE from '@/assets/subsidiariesIMAGE/subsidiariesIMAGE.png'
               institutional and private clients.
             </p>
           </div>
-          <button class="bg-white text-black px-6 py-2.5 rounded-md text-sm font-medium hover:bg-gray-100 transition w-fit">
+          <Router-Link to = "/Securities-Trading" class="bg-white text-black px-6 py-2.5 rounded-md text-sm font-medium hover:bg-gray-100 transition w-fit">
             View Services
-          </button>
+          </Router-Link>
         </div>
 
         <!-- Image overlapping -->
