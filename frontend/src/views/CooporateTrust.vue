@@ -7,7 +7,7 @@
       <section class="w-full overflow-hidden shadow-lg">
         <div class="relative w-full h-64 md:h-96 overflow-hidden">
           <img 
-            src="@/assets/assetmangbanner.jpg" 
+            src="@/assets/corporateTrust/corporatetrustIMG.png" 
             alt="About Banner" 
             class="w-full h-full object-cover"
           />
@@ -25,7 +25,7 @@
           <!-- Image -->
           <div class="w-full md:w-1/2">
             <img 
-              src="@/assets/assetmangbanner.jpg" 
+              src="@/assets/corporateTrust/corporatetrustIMG2.png" 
               alt="Growth Chart" 
               class="w-full h-64 object-cover rounded-md"
             />

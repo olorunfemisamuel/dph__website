@@ -379,28 +379,28 @@ const closeAllMenus = () => {
         </p>
 
         <ul class="space-y-2">
-          <RouterLink to="/"
+          <RouterLink to="/Investment-Banking"
             class="block px-4 py-3 rounded-lg hover:bg-green-100 font-medium"
               @mouseenter="activeServicesSub = 'investment'"
               @click="closeAllMenus">
            Investment Banking
           </RouterLink>
 
-          <RouterLink to="/"
+          <RouterLink to="/Asset-Management"
             class="block px-4 py-3 rounded-lg hover:bg-green-100"
             @mouseenter = "activeServicesSub = 'asset'"
             @click="closeAllMenus">
         Asset Management
           </RouterLink>
 
-          <RouterLink to="/"
+          <RouterLink to="/Private-Equity"
             class="block px-4 py-3 rounded-lg hover:bg-green-100"
             @mouseenter = "activeServicesSub = 'private'"
             @click="closeAllMenus">
             Private Equity
           </RouterLink>
 
-          <RouterLink to="/"
+          <RouterLink to="/Securities-Trading"
             class="block px-4 py-3 rounded-lg hover:bg-green-100" 
             @mouseenter = "activeServicesSub = 'securities'"
             @click="closeAllMenus">
