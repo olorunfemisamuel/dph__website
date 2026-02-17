@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+
 const showMutualFunds = ref(false)
 const showWealthManagement = ref(false)
 const showPortfolioManagement = ref(false)
@@ -8,6 +9,13 @@ const showHedgeFund = ref(false)
 const showVentureCapital = ref(false)
 const showInvestmentAdvisory= ref(false)
 const showInstitutionalAssetManagement= ref(false)
+
+  const managementData = [
+  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive Officer', img: new URL('@/assets/leadershipIMGS/mdIMG.jpg', import.meta.url).href },
+  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/mrijomaIMG.jpg', import.meta.url).href },
+  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/misscatherineIMG.jpg', import.meta.url).href },
+
+]
 </script>
 
 
@@ -26,6 +34,8 @@ const showInstitutionalAssetManagement= ref(false)
       </h3>
     </div>
   </section>
+
+
 
   <!-- IMAGE + TEXT SECTION (New from design)  -->
   <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-16">
@@ -48,6 +58,33 @@ const showInstitutionalAssetManagement= ref(false)
         <p class="text-sm md:text-sm leading-relaxed">
           We deliver top of the line Investment Management services to our clients and engage funds by Institutions and Corporate Entities.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+   <!-- LEADERSHIP PREVIEW SECTION -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+    <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Our Leadership</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <div
+        v-for="(leader, index) in managementData.slice(0, 3)"
+        :key="index"
+        class="flex bg-[#f8fafc] rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
+      >
+        <img
+          :src="leader.img"
+          alt="Leader"
+          class="w-24 sm:w-28 h-full object-cover"
+        />
+        <div class="p-3 sm:p-5 flex flex-col justify-center">
+          <h4 class="font-bold text-gray-800 text-sm sm:text-base">
+            {{ leader.name }}
+          </h4>
+          <p class="text-[9px] sm:text-[10px] uppercase tracking-wider text-gray-400 mt-1 font-medium">
+            {{ leader.role }}
+          </p>
+        </div>
       </div>
     </div>
   </section>

@@ -1,5 +1,10 @@
 <script setup lang="ts">
-// No logic required for this static layout
+  const managementData = [
+  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive Officer', img: new URL('@/assets/leadershipIMGS/mdIMG.jpg', import.meta.url).href },
+  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/mrijomaIMG.jpg', import.meta.url).href },
+  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/misscatherineIMG.jpg', import.meta.url).href },
+
+]
 </script>
 
 <template>
@@ -58,19 +63,32 @@
 
 
     <!-- Why Choose Us -->
-    <!-- <section class="bg-white w-full py-12 sm:py-16 px-4 sm:px-6 mt-10">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-6 sm:gap-8">
-        <div class="md:w-1/3">
-          <h2 class="text-2xl sm:text-3xl md:text-3xl font-bold text-[#2e8b3b]">Why CHOOSE US ?</h2>
-        </div>
-        
-        <div class="md:w-2/3 bg-white p-6 sm:p-8 md:p-10 rounded-xl shadow-sm border border-gray-100">
-          <p class="text-gray-700 leading-relaxed text-sm sm:text-[13px]">
-            We have excellent IT processes and have leveraged technology to provide instant trading capabilities to our clients from our devices. Our team is committed to helping clients make informed decisions that lead to maximized investment returns. Our Securities trading business provides access to primary market opportunities for listed equities (IPOs, Right issues, Offer for Sale and Offer for Subscription) and fixed income securities (Bonds and Treasury bills). In addition, we offer secondary market trading services for clients who want to buy and sell their listed Shares and Bonds on the floor of the Nigerian Stock Exchange.
+    <!-- LEADERSHIP PREVIEW SECTION -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+    <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Our Leadership</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <div
+        v-for="(leader, index) in managementData.slice(0, 3)"
+        :key="index"
+        class="flex bg-[#f8fafc] rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
+      >
+        <img
+          :src="leader.img"
+          alt="Leader"
+          class="w-24 sm:w-28 h-full object-cover"
+        />
+        <div class="p-3 sm:p-5 flex flex-col justify-center">
+          <h4 class="font-bold text-gray-800 text-sm sm:text-base">
+            {{ leader.name }}
+          </h4>
+          <p class="text-[9px] sm:text-[10px] uppercase tracking-wider text-gray-400 mt-1 font-medium">
+            {{ leader.role }}
           </p>
-        </div>     
+        </div>
       </div>
-    </section> -->
+    </div>
+  </section>
+
 
     <!-- Securities Sections -->
     <!-- <section class="max-w-7xl mx-auto py-12 px-4 sm:px-6 space-y-8">
