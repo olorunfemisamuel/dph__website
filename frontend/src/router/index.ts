@@ -159,6 +159,8 @@ const router = createRouter({
   component: SubsidiariesPage
 },
 
+
+// Insights and Services routes
 {
   name: '/merger-acquisition',
   path: '/merger-acquisition',

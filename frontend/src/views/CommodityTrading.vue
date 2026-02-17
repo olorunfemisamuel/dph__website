@@ -19,9 +19,10 @@
       </section>
 
       <!-- INTRO TEXT SECTION -->
+    <!-- INTRO TEXT SECTION -->
       <section class="w-full bg-white py-12 md:py-16">
-        <div class="max-w-7xl mx-auto px-6 md:px-10">
-          <p class="text-gray-700 text-sm md:text-base leading-relaxed">
+        <div class="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row gap-10 items-center">
+          <p class="text-gray-700 text-sm md:text-base leading-relaxed md:w-1/2">
             Delivering a holistic, feature-rich Commodities Office, with a powerful combination of real-time market data, 
             advanced analytics, and seamless integration across trading, risk management, and compliance functions. Designed 
             to empower commodity traders and portfolio managers with the tools they need to navigate volatile markets, optimize 
@@ -30,53 +31,53 @@
             With cutting-edge technology and deep industry expertise, we enable smarter decisions, faster execution, and sustained 
             competitive advantage in the global commodities market.
           </p>
+          <div class="md:w-1/2">
+            <img
+              src="@/assets/assetmangbanner.jpg"
+              alt="Commodity Trading"
+              class="w-full h-64 object-cover rounded-lg shadow-md"
+            />
+          </div>
         </div>
       </section>
 
       <!-- COMPREHENSIVE COMMODITY PORTFOLIO SECTION -->
-      <section class="w-full bg-gray-50 py-12 md:py-16">
+
+      <section class="w-full bg-white py-12 md:py-16">
         <div class="max-w-7xl mx-auto px-6 md:px-10">
-          <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Comprehensive Commodity Portfolio</h2>
-          <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-8">
+          <h2 class="text-2xl md:text-3xl font-bold text-green-700 mb-4 text-center">Comprehensive Commodity Portfolio</h2>
+          <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-10 text-center max-w-2xl mx-auto">
             Our platform provides seamless access to a diverse range of commodities, empowering traders and investors to capitalize 
             on opportunities across global markets.
           </p>
 
-          <div class="space-y-6">
-            <!-- Item 1 -->
-            <div class="border-l-4 border-green-700 pl-6">
-              <h3 class="font-bold text-gray-800 text-base md:text-lg mb-2">Energy Commodities</h3>
-              <p class="text-gray-700 text-sm leading-relaxed">
-                Trade in crude oil, natural gas, and renewable energy certificates with real-time pricing and market depth. Our tools 
-                support hedging, speculative trading, and portfolio optimization.
-              </p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <!-- Card 1 -->
+            <div class="relative rounded-xl overflow-hidden shadow-md h-48 md:h-56">
+              <img src="@/assets/assetimgProd.png" alt="Precious Metals" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-black/40"></div>
+              <p class="absolute bottom-4 left-4 text-white font-semibold text-sm md:text-base">Precious Metals</p>
             </div>
 
-            <!-- Item 2 -->
-            <div class="border-l-4 border-green-700 pl-6">
-              <h3 class="font-bold text-gray-800 text-base md:text-lg mb-2">Agricultural Goods</h3>
-              <p class="text-gray-700 text-sm leading-relaxed">
-                Access markets for grains, livestock, and soft commodities like coffee and cocoa. Benefit from advanced analytics to 
-                predict supply-demand dynamics and price volatility.
-              </p>
+            <!-- Card 2 -->
+            <div class="relative rounded-xl overflow-hidden shadow-md h-48 md:h-56">
+              <img src="@/assets/assetimgProd1.png" alt="Agricultural Goods" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-black/40"></div>
+              <p class="absolute bottom-4 left-4 text-white font-semibold text-sm md:text-base">Agricultural Goods</p>
             </div>
 
-            <!-- Item 3 -->
-            <div class="border-l-4 border-green-700 pl-6">
-              <h3 class="font-bold text-gray-800 text-base md:text-lg mb-2">Metals and Minerals</h3>
-              <p class="text-gray-700 text-sm leading-relaxed">
-                Engage in precious metals (gold, silver, platinum) and industrial metals (copper, aluminum, zinc) trading. Our platform 
-                integrates spot and futures markets for comprehensive exposure.
-              </p>
+            <!-- Card 3 -->
+            <div class="relative rounded-xl overflow-hidden shadow-md h-48 md:h-56">
+              <img src="@/assets/assetimgProd1.png" alt="Chemical Exports" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-black/40"></div>
+              <p class="absolute bottom-4 left-4 text-white font-semibold text-sm md:text-base">Chemical Exports</p>
             </div>
 
-            <!-- Item 4 -->
-            <div class="border-l-4 border-green-700 pl-6">
-              <h3 class="font-bold text-gray-800 text-base md:text-lg mb-2">Energy and Emission Credits</h3>
-              <p class="text-gray-700 text-sm leading-relaxed">
-                Navigate the growing market for carbon credits and emission allowances. Stay ahead of regulatory changes with tools 
-                designed for compliance and strategic positioning in ESG-focused investments.
-              </p>
+            <!-- Card 4 -->
+            <div class="relative rounded-xl overflow-hidden shadow-md h-48 md:h-56">
+              <img src="@/assets/assetimgProd1.png" alt="Industrial Materials" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-black/40"></div>
+              <p class="absolute bottom-4 left-4 text-white font-semibold text-sm md:text-base">Industrial Materials</p>
             </div>
           </div>
         </div>

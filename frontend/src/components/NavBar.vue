@@ -299,7 +299,26 @@ const closeAllMenus = () => {
 
       <!-- RIGHT -->
       <div class="bg-gray-50 rounded-xl p-4 flex flex-col justify-between">
+          <img
+          v-if="activeAboutSub === 'who'"
+          src="/navigation1.png"
+          alt="Who We Are"
+          class="rounded-lg mb-4"
+        />
         <img
+          v-else-if="activeAboutSub === 'lead'"
+          src="/navigation2.png"
+          alt="Leadership"
+          class="rounded-lg mb-4"
+        />
+        <img
+          v-else-if="activeAboutSub === 'sub'"
+          src="@/assets/MDimg.png"
+          alt="Subsidiaries"
+          class="rounded-lg mb-4"
+        />
+        <img
+          v-else
           src="/navigation1.png"
           alt="Our Businesses"
           class="rounded-lg mb-4"
