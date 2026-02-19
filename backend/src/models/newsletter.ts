@@ -1,0 +1,22 @@
+import mongoose, { Document, Schema } from 'mongoose';
+
+export interface INewsletter extends Document {
+  email: string;
+  name?: string;
+  isActive: boolean;
+  subscribedAt: Date;
+  unsubscribedAt?: Date;
+}
+
+const NewsletterSchema = new Schema<INewsletter>(
+  {
+    email: { type: String, required: true, unique: true, lowercase: true, trim: true },
+    name: { type: String, trim: true },
+    isActive: { type: Boolean, default: true },
+    subscribedAt: { type: Date, default: Date.now },
+    unsubscribedAt: { type: Date }
+  },
+  { timestamps: true }
+);
+
+export default mongoose.model<INewsletter>('Newsletter', NewsletterSchema);
