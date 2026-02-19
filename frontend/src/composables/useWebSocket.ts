@@ -1,54 +1,83 @@
-import { ref, onMounted, onUnmounted } from "vue"
+import { ref, onMounted, onUnmounted } from 'vue'
+import { io, Socket } from 'socket.io-client'
+import { API_BASE_URL } from '../api/config'
 
-export function useWebSocket(url: string) {
-  const socket = ref<WebSocket | null>(null)
+interface StockData {
+  price: number
+  change: number
+  changePercent: number
+  timestamp: string
+}
+
+export function useWebSocket() {
+  const socket = ref<Socket | null>(null)
   const isConnected = ref(false)
-  const lastMessage = ref<string | null>(null)
-  const error = ref<Event | null>(null)
+  const stockData = ref<Record<string, StockData>>({})
+  const error = ref<string | null>(null)
 
-  const apiKey = import.meta.env.VITE_TWELVE_DATA_API_KEY 
+  const connect = (symbols: string[] = ['AAPL', 'GOOGL', 'MSFT', 'TSLA']) => {
+    try {
+      socket.value = io(API_BASE_URL, {
+        path: '/ws/stocks',
+        transports: ['websocket', 'polling'],
+        withCredentials: true
+      })
 
+      socket.value.on('connect', () => {
+        isConnected.value = true
+        error.value = null
+        console.log('✅ Connected to DPH WebSocket')
 
-  const connect = () => {
-    socket.value = new WebSocket(`wss://ws.twelvedata.com/v1/quotes/price?apikey=${apiKey}`)
+        // Subscribe to symbols
+        socket.value?.emit('subscribe', { symbols })
+      })
 
-    socket.value.onopen = () => {
-      isConnected.value = true
-      console.log("WebSocket connected")
-    }
+      socket.value.on('stock_update', (data: any) => {
+        if (data.symbol) {
+          stockData.value[data.symbol] = {
+            price: data.price,
+            change: data.change,
+            changePercent: data.changePercent,
+            timestamp: data.timestamp || new Date().toISOString()
+          }
+        }
+      })
 
-    socket.value.onmessage = (event) => {
-      lastMessage.value = event.data
-    }
+      socket.value.on('subscribed', (data: any) => {
+        console.log('Subscribed to:', data.symbols)
+      })
 
-    socket.value.onerror = (e) => {
-      error.value = e
-    }
+      socket.value.on('disconnect', () => {
+        isConnected.value = false
+        console.log('🔌 Disconnected from WebSocket')
+      })
 
-    socket.value.onclose = () => {
-      isConnected.value = false
-      console.log("WebSocket closed")
+      socket.value.on('connect_error', (err) => {
+        error.value = 'WebSocket connection error'
+        isConnected.value = false
+        console.error('WebSocket error:', err)
+      })
+
+    } catch (err) {
+      error.value = 'Failed to create WebSocket connection'
+      console.error('WebSocket creation error:', err)
     }
   }
 
-  const send = (message: string) => {
-    if (socket.value && isConnected.value) {
-      socket.value.send(message)
-    }
+  const disconnect = () => {
+    socket.value?.disconnect()
   }
 
-  const close = () => {
-    socket.value?.close()
+  const subscribe = (symbols: string[]) => {
+    socket.value?.emit('subscribe', { symbols })
   }
 
-  onMounted(connect)
-  onUnmounted(close)
-
-  return {
-    isConnected,
-    lastMessage,
-    send,
-    close,
-    error,
+  const unsubscribe = (symbols: string[]) => {
+    socket.value?.emit('unsubscribe', { symbols })
   }
+
+  onMounted(() => connect())
+  onUnmounted(() => disconnect())
+
+  return { isConnected, stockData, error, connect, disconnect, subscribe, unsubscribe }
 }

@@ -1,149 +1,238 @@
-<script setup lang="ts">
-
-</script>
-
+<!-- frontend/src/views/ContactPage.vue -->
 
 <template>
-  <div class="bg-white">
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold text-center mb-8">Contact Us</h1>
 
-    <!-- ================= HERO ================= -->
-    <section class="w-full overflow-hidden shadow-lg">
-      <div class="relative min-h-45 sm:min-h-55 md:min-h-70 rounded-2xl overflow-hidden">
-        <img
-          src="@/assets/contactimg.png"
-          alt="Get in touch"
-          class="w-full h-full object-cover"
-        />
-        <div class="absolute inset-0 bg-black/60"></div>
+    <div class="grid md:grid-cols-2 gap-12">
+      <!-- Contact Form -->
+      <div>
+        <h2 class="text-xl font-semibold mb-4">Send us a message</h2>
 
-        <div class="absolute inset-0 flex flex-col justify-center px-4 sm:px-8 md:px-10">
-          <h2 class=" capitalize text-white text-2xl sm:text-2xl md:text-3xl font-bold mb-2">
-          Gain Insights And Data Driven Research
-          </h2>
-          <!-- <p class="text-white/80 text-sm sm:text-base max-w-md">
-            We are here to support your investment and financial growth.
-          </p> -->
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= LOCATIONS ================= -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 mt-8 sm:mt-10">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
-
-        <!-- Card -->
-        <!-- <div class="bg-white rounded-xl shadow-sm p-4 sm:p-5 flex gap-4 items-center">
-          <img src="@/assets/contactimg.png" class="w-14 h-14 sm:w-16 sm:h-16 rounded-lg object-cover" />
+        <form @submit.prevent="handleSubmit" class="space-y-4">
+          <!-- Name -->
           <div>
-            <h4 class="font-semibold text-sm">Lagos</h4>
-            <p class="text-xs text-gray-500">
-              7th Floor, UBA House, Marina
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Name *
+            </label>
+            <input
+              v-model="form.name"
+              type="text"
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              :class="{ 'border-red-500': errors.name }"
+            />
+            <p v-if="errors.name" class="mt-1 text-sm text-red-600">
+              {{ errors.name }}
             </p>
           </div>
-        </div> -->
 
-        <div class="bg-white rounded-xl shadow-sm p-4 sm:p-5 flex gap-4 items-center">
-          <img src="@/assets/contactimg.png" class="w-14 h-14 sm:w-16 sm:h-16 rounded-lg object-cover" />
+          <!-- Email -->
           <div>
-            <h4 class="font-semibold text-sm">Abuja</h4>
-            <p class="text-xs text-gray-500">
-             Plot 3 Peter Obang Close, Off O.P. Fingesi Street, Utako District, Abuja
-            </p>
-          </div>
-        </div>
-
-       
-
-      </div>
-    </section>
-
-    <!-- ================= CONTACT + FORM ================= -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 mt-12 sm:mt-14">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
-
-        <!-- Contact Info -->
-        <div class="bg-[#f4f7f9] rounded-xl p-6 sm:p-8">
-          <h3 class="text-green-700 font-semibold mb-3 sm:mb-4">
-            Contact us
-          </h3>
-
-          <p class="text-sm text-gray-600 mb-5 sm:mb-6">
-            Have questions or need assistance? Get in touch with us today.
-          </p>
-
-          <ul class="space-y-4 text-sm">
-            <li class="flex items-center gap-3">
-              <span class="text-green-700">📧</span>
-              info@company.com
-            </li>
-            <li class="flex items-center gap-3">
-              <span class="text-green-700">📞</span>
-              +234 800 000 0000
-            </li>
-            <li class="flex items-center gap-3">
-              <span class="text-green-700">📍</span>
-             Plot 3 Peter Obang Close, Off O.P. Fingesi Street, Utako District, Abuja
-            </li>
-          </ul>
-        </div>
-
-        <!-- Form -->
-        <div>
-          <h3 class="text-green-700 font-semibold mb-4">
-            Get in Touch
-          </h3>
-
-          <form class="space-y-4">
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Email *
+            </label>
             <input
-              type="text"
-              placeholder="First Name"
-              class="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:ring-2 focus:ring-green-600 outline-none"
-            />
-
-            <input
-              type="text"
-              placeholder="Last Name"
-              class="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:ring-2 focus:ring-green-600 outline-none"
-            />
-
-            <input
-              type="text"
-              placeholder="Phone Number"
-              class="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:ring-2 focus:ring-green-600 outline-none"
-            />
-
-            <input
+              v-model="form.email"
               type="email"
-              placeholder="Email Address"
-              class="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:ring-2 focus:ring-green-600 outline-none"
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              :class="{ 'border-red-500': errors.email }"
             />
+            <p v-if="errors.email" class="mt-1 text-sm text-red-600">
+              {{ errors.email }}
+            </p>
+          </div>
 
+          <!-- Subject -->
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Subject *
+            </label>
+            <input
+              v-model="form.subject"
+              type="text"
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              :class="{ 'border-red-500': errors.subject }"
+            />
+            <p v-if="errors.subject" class="mt-1 text-sm text-red-600">
+              {{ errors.subject }}
+            </p>
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">
+              Message *
+            </label>
             <textarea
-              rows="4"
-              placeholder="How can we help you?"
-              class="w-full border border-gray-300 rounded-md px-4 py-3 text-sm focus:ring-2 focus:ring-green-600 outline-none"
+              v-model="form.message"
+              rows="5"
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              :class="{ 'border-red-500': errors.message }"
             ></textarea>
+            <p v-if="errors.message" class="mt-1 text-sm text-red-600">
+              {{ errors.message }}
+            </p>
+          </div>
 
-            <button
-              class="w-full sm:w-auto bg-green-700 text-white text-sm px-8 py-3 rounded-md hover:bg-green-800 transition"
-            >
-              Submit
-            </button>
-          </form>
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            :disabled="loading"
+            class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-200 disabled:opacity-50 disabled:cursor-not-allowed font-medium"
+          >
+            <span v-if="loading">Sending...</span>
+            <span v-else>Send Message</span>
+          </button>
+        </form>
+
+        <!-- Success Message -->
+        <div
+          v-if="success"
+          class="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg"
+        >
+          <p class="text-green-700">
+            ✅ Thank you for contacting us! We'll get back to you soon.
+          </p>
         </div>
 
+        <!-- Error Message -->
+        <div
+          v-if="error"
+          class="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg"
+        >
+          <p class="text-red-700">❌ {{ error }}</p>
+        </div>
       </div>
-    </section>
 
-    <!-- ================= MAP ================= -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 my-12 sm:my-16">
-    <iframe
-  class="w-full h-55 sm:h-65 md:h-65 rounded-xl border-0"
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade"
-  src="https://www.google.com/maps?q=Plot%203%20Peter%20Obang%20Close,%20Off%20O.P.%20Fingesi%20Street,%20Utako%20District,%20Abuja&output=embed"
-></iframe>
-    </section>
+      <!-- Contact Information -->
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <h2 class="text-xl font-semibold mb-4">Contact Information</h2>
 
+        <div class="space-y-4">
+          <div>
+            <p class="text-sm font-medium text-gray-900">Phone</p>
+            <p class="text-sm text-gray-600">+1 (555) 123-4567</p>
+          </div>
+
+          <div>
+            <p class="text-sm font-medium text-gray-900">Email</p>
+            <p class="text-sm text-gray-600">info@dphadvisory.com</p>
+          </div>
+
+          <div>
+            <p class="text-sm font-medium text-gray-900">Office</p>
+            <p class="text-sm text-gray-600">
+              123 Financial District<br />
+              New York, NY 10004<br />
+              United States
+            </p>
+          </div>
+        </div>
+
+        <!-- Business Hours -->
+        <div class="mt-8">
+          <h3 class="text-lg font-medium text-gray-900 mb-2">
+            Business Hours
+          </h3>
+          <div class="space-y-2 text-sm text-gray-600">
+            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+            <p>Saturday: 10:00 AM - 2:00 PM</p>
+            <p>Sunday: Closed</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { ref, reactive } from 'vue'
+import { submitContact } from '../services/contactservice'
+
+const form = reactive({
+  name: '',
+  email: '',
+  subject: '',
+  message: ''
+})
+
+const errors = reactive({
+  name: '',
+  email: '',
+  subject: '',
+  message: ''
+})
+
+const loading = ref(false)
+const success = ref(false)
+const error = ref('')
+
+const validateForm = () => {
+  let isValid = true
+
+  errors.name = ''
+  errors.email = ''
+  errors.subject = ''
+  errors.message = ''
+
+  if (!form.name.trim()) {
+    errors.name = 'Name is required'
+    isValid = false
+  }
+
+  if (!form.email.trim()) {
+    errors.email = 'Email is required'
+    isValid = false
+  } else if (!/^\S+@\S+\.\S+$/.test(form.email)) {
+    errors.email = 'Please enter a valid email'
+    isValid = false
+  }
+
+  if (!form.subject.trim()) {
+    errors.subject = 'Subject is required'
+    isValid = false
+  }
+
+  if (!form.message.trim()) {
+    errors.message = 'Message is required'
+    isValid = false
+  }
+
+  return isValid
+}
+
+const handleSubmit = async () => {
+  if (!validateForm()) return
+
+  loading.value = true
+  success.value = false
+  error.value = ''
+
+  try {
+    await submitContact(form)
+
+    success.value = true
+
+    // Reset form
+    form.name = ''
+    form.email = ''
+    form.subject = ''
+    form.message = ''
+
+    // Auto-hide success message
+    setTimeout(() => {
+      success.value = false
+    }, 5000)
+  } catch (err: any) {
+    error.value =
+      err?.response?.data?.error ||
+      'Failed to send message. Please try again.'
+  } finally {
+    loading.value = false
+  }
+}
+</script>
