@@ -6,7 +6,7 @@
       <div class="alternative-investment">
     
     <section class="w-full overflow-hidden shadow-lg">
-      <div class="relative h-[180px] sm:h-[220px] md:h-[500px] overflow-hidden">
+       <div class="relative w-full h-40 sm:h-44 md:h-70 overflow-hidden">
         <img
           src="@/assets/ExchangeTradedimg.png"
           alt="Get in touch"

@@ -222,7 +222,7 @@ const currentSlide = computed<SlideType>(() => {
               <div class="flex justify-center lg:justify-end order-1 lg:order-2">
                 <img
                   :src="currentSlide.src"
-                  class="w-full max-w-[280px] sm:max-w-[380px] md:max-w-[480px] lg:max-w-[520px] xl:max-w-[640px] 2xl:max-w-[720px] h-auto object-contain"
+                  class="w-full max-w-[280px] sm:max-w-[380px] md:max-w-[480px] lg:max-w-[520px] h-auto object-contain"
                   alt="Hero Image"
                 />
               </div>
@@ -235,7 +235,7 @@ const currentSlide = computed<SlideType>(() => {
         <img
           v-else
           :src="currentSlide.src"
-          class="w-full h-full object-cover"
+          class="w-full h-auto object-cover"
           alt="Slide background"
         />
 
@@ -252,9 +252,9 @@ const currentSlide = computed<SlideType>(() => {
       <div
         v-if="activeSlide !== 0"
         :key="activeSlide"
-        class="absolute left-4 right-4 sm:left-6 sm:right-auto md:left-12 lg:left-16 xl:left-20 top-1/2 -translate-y-1/2 md:top-auto md:translate-y-0 md:bottom-auto md:top-[45%] lg:top-[40%] text-left max-w-xl lg:max-w-2xl"
+       class="absolute left-4 right-4 sm:left-6 sm:right-auto md:left-12 lg:left-16 xl:left-20 top-1/2 -translate-y-1/2 text-left max-w-xl lg:max-w-2xl"
       >
-        <h2 class="font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-tight mb-4 md:mb-6 lg:mb-8 text-white">
+        <h2 class="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl leading-tight mb-3 md:mb-4 lg:mb-5 text-white">
           <span class="block">
             {{ currentSlide.title }}
           </span>
