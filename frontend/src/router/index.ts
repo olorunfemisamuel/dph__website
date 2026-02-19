@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+
+// existing imports...
 import InvestNow from '@/views/InvestNow.vue'
 import HomePage from '@/views/HomePage.vue'
 import AboutUs from '@/views/AboutUs.vue'
@@ -16,7 +18,6 @@ import ExchangeTradedFunds from '@/views/ExchangeTradedFunds.vue'
 import MutualFunds from '@/views/MutualFunds.vue'
 import AlternativeInvestment from '@/views/AlternativeInvestment.vue'
 import SubsidiariesPage from '@/views/SubsidiariesPage.vue'
-
 import Insightpage from '@/views/Insightpage.vue'
 import InsightsExtendPage from '@/views/InsightsExtendPage.vue'
 import MDMessagePage from '@/views/MDMessagePage.vue'
@@ -26,6 +27,7 @@ import CorporateFinance from '../views/CorporateFinance.vue'
 import StructuredFinance from '../views/StructuredFinance.vue'
 import ProjectFinance from '@/views/ProjectFinance.vue'
 import FinancialAdvisory from '@/views/FinancialAdvisory.vue'
+
 import EquityDebtCapitalMarket from '@/views/EquityDebtCapitalMarket.vue'
 import Alternativeinvest from '@/views/Alternativeinvest.vue'
 import StockBroking from '@/views/StockBroking.vue'
@@ -39,9 +41,15 @@ import SecuredandUnsecuredInsurance from '@/views/SecuredandUnsecuredInsurance.v
 import CooporateTrust from '@/views/CooporateTrust.vue'
 
 
+
+
+// new imports
+
+
 const router = createRouter({
   history: createWebHistory(),
   routes: [
+
     {
       path: '/',
       name: 'Home',
@@ -259,11 +267,16 @@ const router = createRouter({
 
 
 
+
+
   ],
 
   scrollBehavior() {
     return { top: 0 }
   }
 })
+
+// Route guard for protected pages
+
 
 export default router

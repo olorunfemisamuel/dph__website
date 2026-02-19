@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-// import { RouterLink, RouterView } from 'vue-router'
-
+import { computed, ref } from 'vue'
+import { useRoute } from 'vue-router'
 import NavBar from '@/components/NavBar.vue'
+import FooterSection from '@/components/FooterSection.vue'
+import CookiesConsent from '@/components/CookiesConsent.vue'
 import ChatBotWidget from '@/components/ChatBotWidget.vue'
 import PrivacyModal from '@/components/PrivacyModal.vue'
 
-import CookiesConsent from '@/components/CookiesConsent.vue'
-
-import FooterSection from '@/components/FooterSection.vue'
+const route = useRoute()
+const showChatbot = computed(() => route.path !== '/chatbot')
 
 const menuOpen = ref(false)
 const toggleMenu = () => {
@@ -17,30 +17,14 @@ const toggleMenu = () => {
 </script>
 
 <template>
- 
- <NavBar :toggleMenu="toggleMenu" />
+  <div id="app">
+    <NavBar />
+    
+      <Router-View />
 
- 
-   
-  <router-view />
-
-  <ChatBotWidget />
-
-  <PrivacyModal />
-
-  <!-- <CookiesConsent /> -->
-   <CookiesConsent />
-
-   <!---Footer Section-->
-  <FooterSection />
-
-
-
-   
-   
-
- 
-
+    <ChatBotWidget v-if="showChatbot" />
+    <PrivacyModal />
+    <CookiesConsent />
+    <FooterSection />
+  </div>
 </template>
-
-
