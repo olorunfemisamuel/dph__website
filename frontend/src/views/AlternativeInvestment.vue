@@ -26,7 +26,7 @@
 <section class="w-full bg-white py-16 px-4 sm:px-10 space-y-24">
 
   <!-- SECTION ONE -->
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+  <div id="private-wealth-management" class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
     <!-- Text Column -->
     <div class="space-y-5">
@@ -74,7 +74,7 @@
   </div>
 
   <!-- SECTION TWO -->
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+  <div id="asset-manange" class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
     <!-- Image Column -->
     <div class="w-full">

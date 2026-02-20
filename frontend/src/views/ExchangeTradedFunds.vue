@@ -29,7 +29,7 @@
 
     <!-- Deutsche Agro-ETF -->
    <!-- Deutsche Agro-ETF -->
-    <section class="max-w-6xl mx-auto px-6 mt-10">
+    <section id="agro-etf" class="max-w-6xl mx-auto px-6 mt-10">
       <h2 class="text-green-600 font-semibold mb-3 text-2xl">
         Deutsche Agro-ETF
       </h2>
@@ -42,7 +42,7 @@
         </div>
 
         <!-- MIDDLE: text -->
-        <div class="bg-black text-white p-8 text-sm leading-relaxed">
+        <div  class="bg-black text-white p-8 text-sm leading-relaxed">
           <p class="mb-3">
             Deutsche Agro ETFs are funds that invest in target agricultural commodities like grains, dairy and livestock. These funds can invest in diverse commodity types and they can also focus on one specific commodity. The objective of these funds is to enable investors gain diversified exposure to the agricultural sector by daily tracking best-performing agricultural commodities. The asset class traded under these funds is agro-commodities, which offer investors limitless investment opportunities.
           </p>
@@ -76,7 +76,7 @@
 
     <!-- Deutsche Gold-ETF -->
     <!-- Deutsche Gold-ETF -->
-    <section class="max-w-6xl mx-auto px-6 mt-12 mb-20">
+    <section id = "gold-etf" class="max-w-6xl mx-auto px-6 mt-12 mb-20">
       <h2 class="text-green-600 font-semibold mb-3 text-2xl">
         Deutsche Gold-ETF
       </h2>
