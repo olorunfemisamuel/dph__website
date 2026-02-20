@@ -390,9 +390,16 @@ const closeAllMenus = () => {
   @click="navigateToSection('wealth-management')"
 >Portfolio Management</RouterLink>
 
+
+<RouterLink 
+  to="/Asset-Management" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('hedge-fund')"
+>Hedge Fund</RouterLink>
+
            
 
-            <RouterLink to="/Asset-Management" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Hedge Fund</RouterLink>
+           
            <RouterLink 
   to="/Asset-Management" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
