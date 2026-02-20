@@ -131,7 +131,7 @@
   class="flex flex-col md:flex-row bg-[#C4E5F2] rounded-2xl overflow-hidden min-h-62.5 shadow-lg
          relative z-10 sticky top-24">
 
-  <div class="flex-1 p-10 flex flex-col justify-center">
+  <div id= "corporate-finance" class="flex-1 p-10 flex flex-col justify-center">
     
     <h4 class="text-[#2554B9] font-bold text-3xl mb-4">
     Corporate Finance
@@ -175,7 +175,7 @@
   class="flex flex-col md:flex-row bg-[#F0F5F7] rounded-2xl overflow-hidden min-h-62.5 shadow-lg
          relative z-10 sticky top-24">
 
-  <div class="flex-1 p-10 flex flex-col justify-center">
+  <div id="mergersacquisitions" class="flex-1 p-10 flex flex-col justify-center">
     
     <h4 class="text-[#2554B9] font-bold text-3xl mb-4">
       Mergers and Acquisitions
@@ -236,7 +236,7 @@
   class="flex flex-col md:flex-row bg-[#C4E5F2] rounded-2xl overflow-hidden min-h-62.5 shadow-lg
          relative z-10 sticky top-24">
 
-  <div class="flex-1 p-10 flex flex-col justify-center">
+  <div id = "project-finance" class="flex-1 p-10 flex flex-col justify-center">
     
     <h4 class="text-[#2554B9] font-bold text-3xl mb-4">
   Project Finance
@@ -310,7 +310,7 @@
   class="flex flex-col md:flex-row bg-[#F0F5F7] rounded-2xl overflow-hidden min-h-62.5 shadow-lg
          relative z-10 sticky top-24">
 
-  <div class="flex-1 p-10 flex flex-col justify-center">
+  <div id = "financial-advisory" class="flex-1 p-10 flex flex-col justify-center">
     
     <h4 class="text-[#2554B9] font-bold text-3xl mb-4">
     Financial Advisory
