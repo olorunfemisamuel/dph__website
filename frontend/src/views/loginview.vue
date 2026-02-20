@@ -87,8 +87,8 @@
 
 <script setup lang="ts">
 // import { ref, reactive } from 'vue'
-import { useRouter, useRoute } from 'vue-router'
-import { login } from '../services/authservice'
+// import { useRouter, useRoute } from 'vue-router'
+// import { login } from '../services/authservice'
 
 // const router = useRouter()
 // const route = useRoute()
