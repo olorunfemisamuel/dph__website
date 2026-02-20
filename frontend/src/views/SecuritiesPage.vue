@@ -219,7 +219,7 @@
       <!-- Reusable Card Template -->
       <div class="flex flex-col md:flex-row bg-[#F0F5F7] rounded-2xl overflow-hidden shadow-lg">
         <!-- LEFT CONTENT -->
-        <div class="md:w-2/3 w-full p-6 sm:p-8 flex flex-col justify-center">
+        <div id="stock-broking" class="md:w-2/3 w-full p-6 sm:p-8 flex flex-col justify-center">
           <h4 class="text-[#168223] font-semibold text-lg mb-3">
            Stock Broking
           </h4>
@@ -239,7 +239,7 @@
       </div>
 
       <!-- Equities Section -->
-      <div class="flex flex-col md:flex-row-reverse bg-[#F0F5F7] rounded-2xl overflow-hidden shadow-lg">
+      <div id= "equities" class="flex flex-col md:flex-row-reverse bg-[#F0F5F7] rounded-2xl overflow-hidden shadow-lg">
         <div class="md:w-2/3 w-full p-6 sm:p-8 flex flex-col justify-center">
           <h4 class="text-[#168223] font-semibold text-lg mb-3">
             Equities
@@ -266,7 +266,7 @@
 
       <!-- Derivatives Section -->
       <div class="flex flex-col md:flex-row bg-[#F0F5F7] rounded-2xl overflow-hidden shadow-lg">
-        <div class="md:w-2/3 w-full p-6 sm:p-8 flex flex-col justify-center">
+        <div id="derivatives-instrument" class="md:w-2/3 w-full p-6 sm:p-8 flex flex-col justify-center">
           <h4 class="text-[#168223] font-semibold text-lg mb-3">
             Derivatives Instrument
           </h4>
@@ -292,7 +292,7 @@
 
       <!-- Commodities Trading -->
       <div class="flex flex-col md:flex-row-reverse bg-[#F0F5F7] rounded-2xl overflow-hidden shadow-lg">
-        <div class="md:w-2/3 w-full p-6 sm:p-8 flex flex-col justify-center">
+        <div id="commodities-trading" class="md:w-2/3 w-full p-6 sm:p-8 flex flex-col justify-center">
           <h4 class="text-[#168223] font-semibold text-lg mb-3">
             Commodities Trading
           </h4>

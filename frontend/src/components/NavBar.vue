@@ -375,11 +375,41 @@ const closeAllMenus = () => {
   to="/Asset-Management" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
   @click="navigateToSection('wealth-management')"
->Private Wealth Management</RouterLink>
-            <RouterLink to="/Asset-Management" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Fund Management and Advisory</RouterLink>
-            <RouterLink to="/Asset-Management" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Collective Investment Scheme</RouterLink>
-            <RouterLink to="/Asset-Management" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Special Investment Scheme</RouterLink>
-            <RouterLink to="/Asset-Management" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Portfolio Management</RouterLink>
+>Mutual Funds </RouterLink>
+
+<RouterLink 
+  to="/Asset-Management" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('wealth-management')"
+>Wealth Management </RouterLink>
+
+
+<RouterLink 
+  to="/Asset-Management" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('wealth-management')"
+>Portfolio Management</RouterLink>
+
+           
+
+            <RouterLink to="/Asset-Management" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Hedge Fund</RouterLink>
+           <RouterLink 
+  to="/Asset-Management" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('venture-capital')"
+>Venture Capital</RouterLink>
+
+
+
+
+
+<RouterLink 
+  to="/Asset-Management" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('investment-advisory')"
+>Investment Advisory</RouterLink>
+           
+           
           </div>
 
           <div v-if="activeServicesSub === 'investment'" class="space-y-4">
@@ -425,20 +455,75 @@ const closeAllMenus = () => {
           </div>
 
           <div v-if="activeServicesSub === 'securities'" class="space-y-4">
-            <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Equity Trading</RouterLink>
-            <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Fixed Income Trading</RouterLink>
-            <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Proprietary Trading</RouterLink>
-            <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Security Analysis</RouterLink>
-            <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Economic Profiling</RouterLink>
+
+            <RouterLink 
+  to="/Securities-Trading" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('stock-broking')"
+> Stock Broking</RouterLink>
+
+
+ <RouterLink 
+  to="/Securities-Trading" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('equities')"
+> Equities</RouterLink>
+
+
+ <RouterLink 
+  to="/Securities-Trading" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('derivatives-instrument')"
+> Derivatives Instrument</RouterLink>
+
+ <RouterLink 
+  to="/Securities-Trading" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('commodities-trading')"
+> Commodites Trading</RouterLink>
+            
+
+            
+            
+            <!-- <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Economic Profiling</RouterLink> -->
           </div>
 
           <div v-if="activeServicesSub === 'trustees'" class="space-y-4">
-            <RouterLink to="/Trustees" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Secured and unsecured note issuances</RouterLink>
-            <RouterLink to="/Trustees" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Securitization and structured financings</RouterLink>
-            <RouterLink to="/Trustees" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">EMTN Programmes</RouterLink>
-            <RouterLink to="/Trustees" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Retail bonds</RouterLink>
-            <RouterLink to="/Trustees" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">High Yield and emerging markets bonds</RouterLink>
-            <RouterLink to="/Trustees" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Convertible and Equity linked bonds</RouterLink>
+             <RouterLink 
+  to="/Trustees" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('secured-unsecured')"
+> Secured and unsecured note issuances</RouterLink>
+
+
+         <RouterLink 
+  to="/Trustees" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('bond-trusteeship')"
+> Bond Trusteeship</RouterLink>
+
+         <RouterLink 
+  to="/Trustees" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('private-trust')"
+> Private Trust</RouterLink>
+            
+
+     <RouterLink 
+  to="/Trustees" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('corporate-trust')"
+> Corporate Trust</RouterLink>
+
+<RouterLink 
+  to="/Trustees" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('estate-planning')"
+> Estate Planning </RouterLink>
+            
+           
+            
+            
           </div>
         </div>
 
@@ -489,20 +574,72 @@ const closeAllMenus = () => {
           <p class="text-xs tracking-widest text-gray-400 mb-4">WHAT WE DO</p>
 
           <div v-if="activeProductsSub === 'mutual'" class="space-y-4">
-            <RouterLink to="/mutual-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Deutsche Money Market Fund</RouterLink>
-            <RouterLink to="/mutual-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Deutsche Equity Fund</RouterLink>
-            <RouterLink to="/mutual-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Deutsche Private Fixed Income Fund</RouterLink>
-            <RouterLink to="/mutual-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Deutsche Ethical Funds</RouterLink>
+            <RouterLink 
+  to="/mutual-funds" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('money-market')"
+>Deutsche Money Market Fund</RouterLink>
+
+
+        <RouterLink 
+  to="/mutual-funds" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('equity-fund')"
+>Deutsche Equity Fund</RouterLink>
+            
+
+    <RouterLink 
+  to="/mutual-funds" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('fixed-income')"
+>Deutsche Private Fixed Income Fund</RouterLink>
+
+
+    <RouterLink 
+  to="/mutual-funds" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('ethical-funds')"
+>Deutsche Ethical Funds</RouterLink>
+
+
+           
+       
+           
           </div>
 
           <div v-if="activeProductsSub === 'exchange-traded'" class="space-y-4">
-            <RouterLink to="/exchange-traded-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Deutsche Agro-ETF</RouterLink>
-            <RouterLink to="/exchange-traded-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Deutsche Gold-ETF</RouterLink>
+                <RouterLink 
+  to="/exchange-traded-funds" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('ethical-funds')"
+>Deutsche Agro-ETF</RouterLink>
+
+<RouterLink 
+  to="/exchange-traded-funds" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('gold-etf')"
+>Deutsche Gold-ETF</RouterLink>
+            
+           
           </div>
 
           <div v-if="activeProductsSub === 'alternative'" class="space-y-4">
-            <RouterLink to="/alternative-investment" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Deutsche Private Wealth Management</RouterLink>
-            <RouterLink to="/alternative-investment" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Deutsche Institutional Asset Management</RouterLink>
+
+            <RouterLink 
+  to="/alternative-investment" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('private-wealth-management')"
+>Deutsche Private Wealth Management</RouterLink>
+
+
+          <RouterLink 
+  to="/alternative-investment" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('asset-manange')"
+>Deutsche Institutional Asset Management</RouterLink>
+
+           
+            
           </div>
         </div>
 

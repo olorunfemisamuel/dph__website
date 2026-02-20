@@ -204,8 +204,8 @@
 
     <div class="sticky top-24 flex flex-col md:flex-row bg-[#F0F5F7] rounded-3xl overflow-hidden min-h-[350px] shadow-2xl border border-white/20 transition-all duration-500"
          style="margin-bottom: 100px;">
-      <div class="md:w-2/3 w-full p-8 sm:p-12 flex flex-col justify-center bg-white/10 backdrop-blur-sm">
-        <h4 class="text-[#168223] font-bold text-2xl mb-4">Fixed Income Securities</h4>
+      <div id="secured-unsecured" class="md:w-2/3 w-full p-8 sm:p-12 flex flex-col justify-center bg-white/10 backdrop-blur-sm">
+        <h4 class="text-[#168223] font-bold text-2xl mb-4">Secured and Unsecured Note Issuances</h4>
         <p class="text-gray-800 text-base leading-relaxed">
           The Mergers and Acquisitions (M&A) Group at Deutsche partners holding is one of the leading M&A advisors in Africa. Providing the full spectrum of strategic Financial Advisory Services.
         </p>
@@ -217,8 +217,8 @@
 
     <div class="sticky top-32 flex flex-col md:flex-row bg-[#CBDDCC] rounded-3xl overflow-hidden min-h-[350px] shadow-2xl border border-white/20 -mt-40 transition-all duration-500"
          style="margin-bottom: 100px;">
-      <div class="md:w-2/3 w-full p-8 sm:p-12 flex flex-col justify-center bg-white/10 backdrop-blur-sm">
-        <h4 class="text-[#168223] font-bold text-2xl mb-4">Equities</h4>
+      <div id="bond-trusteeship" class="md:w-2/3 w-full p-8 sm:p-12 flex flex-col justify-center bg-white/10 backdrop-blur-sm">
+        <h4 class="text-[#168223] font-bold text-2xl mb-4">Bond Trusteeship</h4>
         <p class="text-gray-800 text-base leading-relaxed">
           We offer secondary market trading services for clients who want to buy and sell their listed Shares and Bonds on the floor of the Nigerian Stock Exchange.
         </p>
@@ -230,8 +230,8 @@
 
     <div class="sticky top-40 flex flex-col md:flex-row bg-[#F0F5F7] rounded-3xl overflow-hidden min-h-[350px] shadow-2xl border border-white/20 -mt-40 transition-all duration-500"
          style="margin-bottom: 100px;">
-      <div class="md:w-2/3 w-full p-8 sm:p-12 flex flex-col justify-center bg-white/10 backdrop-blur-sm">
-        <h4 class="text-[#168223] font-bold text-2xl mb-4">Derivatives Instrument</h4>
+      <div id="private-trust" class="md:w-2/3 w-full p-8 sm:p-12 flex flex-col justify-center bg-white/10 backdrop-blur-sm">
+        <h4 class="text-[#168223] font-bold text-2xl mb-4">Private Trust </h4>
         <p class="text-gray-800 text-base leading-relaxed">
           Our team delivers expert guidance and execution for mergers, acquisitions, divestitures, and cross-border transactions, offering innovative, fully integrated solutions.
         </p>
@@ -242,8 +242,21 @@
     </div>
 
     <div class="sticky top-48 flex flex-col md:flex-row bg-[#CBDDCC] rounded-3xl overflow-hidden min-h-[350px] shadow-2xl border border-white/20 -mt-40 transition-all duration-500">
-      <div class="md:w-2/3 w-full p-8 sm:p-12 flex flex-col justify-center bg-white/10 backdrop-blur-sm">
-        <h4 class="text-[#168223] font-bold text-2xl mb-4">Commodities Trading</h4>
+      <div id="corporate-trust" class="md:w-2/3 w-full p-8 sm:p-12 flex flex-col justify-center bg-white/10 backdrop-blur-sm">
+        <h4 class="text-[#168223] font-bold text-2xl mb-4">Corporate Trust</h4>
+        <p class="text-gray-800 text-base leading-relaxed">
+          Through our boutiques of experts, we strive to achieve a culture of excellence and innovation that remains the hallmark of our service delivery.
+        </p>
+      </div>
+      <div class="md:w-1/3 w-full">
+        <img src="@/assets/securitiesimage.png" class="w-full h-full object-cover" alt="Commodities" />
+      </div>
+    </div>
+
+
+    <div class="sticky top-48 flex flex-col md:flex-row bg-[#CBDDCC] rounded-3xl overflow-hidden min-h-[350px] shadow-2xl border border-white/20 -mt-40 transition-all duration-500">
+      <div id="estate-planning" class="md:w-2/3 w-full p-8 sm:p-12 flex flex-col justify-center bg-white/10 backdrop-blur-sm">
+        <h4 class="text-[#168223] font-bold text-2xl mb-4">Estate Planning</h4>
         <p class="text-gray-800 text-base leading-relaxed">
           Through our boutiques of experts, we strive to achieve a culture of excellence and innovation that remains the hallmark of our service delivery.
         </p>

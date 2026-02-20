@@ -97,7 +97,7 @@ const showInstitutionalAssetManagement= ref(false)
     <!-- SECTION 1 -->
     <div class="grid md:grid-cols-2 gap-12 items-start">
       <div class="space-y-8">
-       <div
+       <div id="mutual-funds"
   class="border-l-4 border-[#2e8b3b] pl-5 cursor-pointer"
   @click="showMutualFunds = true"
 >
@@ -134,16 +134,16 @@ const showInstitutionalAssetManagement= ref(false)
       </div>
 
       <div class="order-1 md:order-2 space-y-8">
-        <div class="border-l-4 border-[#2e8b3b] pl-5 cursor-pointer"  @click="showPortfolioManagement = true">
+        <div id="portfolio-managemnt" class="border-l-4 border-[#2e8b3b] pl-5 cursor-pointer"  @click="showPortfolioManagement = true">
           <h4 class="font-bold text-[#2e8b3b] text-base mb-3 transition-colors duration-300 hover:text-[#06410e]">
-            Portfolio Management
+        Portfolio Management
           </h4>
           <p class="text-gray-600 text-sm leading-relaxed">
             We manage investment portfolios on behalf of clients...
           </p>
         </div>
 
-        <div class="border-l-4 border-gray-400 pl-5 cursor-pointer" @click="showHedgeFund = true">
+        <div id="hedge-fund" class="border-l-4 border-gray-400 pl-5 cursor-pointer" @click="showHedgeFund = true">
           <h4 class="font-bold text-gray-800 text-base mb-3 transition-colors duration-300 hover:text-[#2e8b3b]">Hedge Fund</h4>
           <p class="text-gray-600 text-sm leading-relaxed">
             Our hedge fund strategies focus on alternative investments...
@@ -155,27 +155,27 @@ const showInstitutionalAssetManagement= ref(false)
     <!-- SECTION 3 -->
     <div class="grid md:grid-cols-2 gap-12 items-start">
       <div class="space-y-8">
-        <div class="border-l-4 border-[#2e8b3b] pl-5 cursor-pointer" @click = "showVentureCapital = true">
-          <h4 class="font-bold text-gray-800 text-base mb-2 transition-colors duration-300 hover:text-[#2e8b3b]">Venture Capital</h4>
+        <div id= "venture-capital" class="border-l-4 border-[#2e8b3b] pl-5 cursor-pointer" @click = "showVentureCapital = true">
+          <h4 class="font-bold text-gray-800 text-base mb-2 transition-colors duration-300 hover:text-[#2e8b3b]">Venture Captital</h4>
           <p class="text-gray-600 text-sm leading-relaxed">
             We invest in high-growth businesses with strong fundamentals...
           </p>
         </div>
 
-        <div class="border-l-4 border-gray-400 pl-5 cursor-pointer" @click="showInvestmentAdvisory= true">
+        <div id="hedge-fund" class="border-l-4 border-gray-400 pl-5 cursor-pointer" @click="showInvestmentAdvisory= true">
           <h4 class="font-bold text-gray-800 text-base mb-2 transition-colors duration-300 hover:text-[#2e8b3b]">
-            Investment Advisory
+          Hedge Fund
           </h4>
           <p class="text-gray-600 text-sm leading-relaxed">
             Our advisory services offer expert guidance...
           </p>
         </div>
 
-        <div class="border-l-4 border-gray-800 pl-5 cursor-pointer" @click="showInstitutionalAssetManagement= true">
+        <div id="investment-advisory" class="border-l-4 border-gray-800 pl-5 cursor-pointer" @click="showInstitutionalAssetManagement= true">
          <h4
   class="font-bold text-gray-800 text-base mb-2 transition-colors duration-300 hover:text-[#2e8b3b]"
 >
-  Institutional Asset Management
+Investment Advisory
 </h4>
           <p class="text-gray-600 text-sm leading-relaxed">
             We design and manage tailored investment solutions for institutions...

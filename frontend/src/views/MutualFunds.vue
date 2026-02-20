@@ -22,7 +22,7 @@
  <div class="max-w-5xl mx-auto space-y-6">
         <div class="flex flex-col md:flex-row gap-8 items-start">
           <!-- LEFT: text -->
-          <div class="md:w-1/2 space-y-4">
+          <div id="money-market" class="md:w-1/2 space-y-4">
             <h3 class="text-green-700 font-semibold">
               Deutsche Money Market Fund
             </h3>
@@ -55,7 +55,7 @@
       <div class="max-w-5xl mx-auto space-y-6">
         <div class="flex flex-col md:flex-row gap-8 items-start">
           <!-- LEFT: text -->
-          <div class="md:w-1/2 space-y-4">
+          <div id="equity-fund" class="md:w-1/2 space-y-4">
             <h3 class="text-green-700 font-semibold">
               Deutsche Equity Fund
             </h3>
@@ -89,7 +89,7 @@
       <div class="max-w-5xl mx-auto space-y-6">
         <div class="flex flex-col md:flex-row gap-8 items-start">
           <!-- LEFT: text -->
-          <div class="md:w-1/2 space-y-4">
+          <div id="fixed-income" class="md:w-1/2 space-y-4">
             <h3 class="text-green-700 font-semibold">
               Deutsche Private Fixed Income Fund
             </h3>
@@ -124,7 +124,7 @@
       <div class="max-w-5xl mx-auto space-y-6">
         <div class="flex flex-col md:flex-row gap-8 items-start">
           <!-- LEFT: text -->
-          <div class="md:w-1/2 space-y-4">
+          <div id="ethical-funds" class="md:w-1/2 space-y-4">
             <h3 class="text-green-700 font-semibold">
               Deutsche Ethical Funds
             </h3>
