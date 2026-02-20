@@ -118,7 +118,7 @@ needs.
   :style="{ backgroundImage: `url(${Ourmissionimg})` }"
 >
 
-      <div class="absolute inset-0 bg-black/90 z-0"></div>
+      <div id="mission" class="absolute inset-0 bg-black/90 z-0"></div>
 
       <div class="relative z-10 text-white">
         <h3 class="text-xl font-bold mb-4 uppercase tracking-widest">Our Mission</h3>
@@ -147,7 +147,7 @@ needs.
 </section>
 
 
-<section class="max-w-7xl mx-auto mt-20 px-4 sm:px-6">
+<section id="core-values" class="max-w-7xl mx-auto mt-20 px-4 sm:px-6">
   <div class="text-center mb-10">
     <h2 class="text-xl font-bold text-gray-800 uppercase tracking-widest">Our Core Values</h2>
     <p class="text-gray-500 text-sm mt-2 max-w-2xl mx-auto">

@@ -2,6 +2,17 @@
 
 import { ref } from 'vue'
 
+
+//Navigastion to a section
+const navigateToSection = (sectionId: string) => {
+  closeAllMenus()
+  setTimeout(() => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+  }, 200)
+}
+
+
+
 type AboutSub = 'who'| 'lead' | 'sub' | null
 const activeAboutSub = ref<AboutSub>('who')
 
@@ -91,7 +102,7 @@ const closeAllMenus = () => {
                    after:h-0.5 after:w-0
                    after:bg-green-700
                    after:transition-all after:duration-300
-                   hover:after:w-full"
+                   hover:after:w-full font-semibold"
           >
             Home
           </RouterLink>
@@ -99,7 +110,7 @@ const closeAllMenus = () => {
 
         <!-- ABOUT US -->
         <li class="relative" @mouseenter="openMega('about')" @mouseleave="closeMega">
-          <span class="cursor-pointer">About Us</span>
+          <span class="cursor-pointer font-semibold">About Us</span>
         </li>
 
         <!-- OUR SERVICES -->
@@ -110,7 +121,7 @@ const closeAllMenus = () => {
                  after:h-0.5 after:w-0
                  after:bg-green-700
                  after:transition-all after:duration-300
-                 hover:after:w-full"
+                 hover:after:w-full font-semibold"
           @mouseenter="openMega('services')"
           @mouseleave="closeMega"
         >
@@ -125,7 +136,7 @@ const closeAllMenus = () => {
                  after:h-0.5 after:w-0
                  after:bg-green-700
                  after:transition-all after:duration-300
-                 hover:after:w-full"
+                 hover:after:w-full font-semibold"
           @mouseenter="openMega('products')"
           @mouseleave="closeMega"
         >
@@ -140,7 +151,7 @@ const closeAllMenus = () => {
                  after:h-0.5 after:w-0
                  after:bg-green-700
                  after:transition-all after:duration-300
-                 hover:after:w-full"
+                 hover:after:w-full font-semibold"
           @mouseenter="openMega('resources')"
           @mouseleave="closeMega"
         >
@@ -155,7 +166,7 @@ const closeAllMenus = () => {
                  after:h-0.5 after:w-0
                  after:bg-green-700
                  after:transition-all after:duration-300
-                 hover:after:w-full"
+                 hover:after:w-full font-semibold"
         >
           <RouterLink to="/contact" class="cursor-pointer">Contact</RouterLink>
         </li>
@@ -195,16 +206,17 @@ const closeAllMenus = () => {
 
         <!-- LEFT -->
         <div class="border-r pr-4">
-          <p class="text-xs tracking-widest text-gray-400 mb-4">About Us</p>
+          <p class="text-sm tracking-widest text-gray-400 mb-4">About Us</p>
           <ul class="space-y-2">
-            <RouterLink
-              to="/about"
-              class="block px-4 py-3 rounded-lg hover:bg-green-100 font-medium"
-              @mouseenter="activeAboutSub = 'who'"
-              @click="closeAllMenus"
-            >
-              Who We Are
-            </RouterLink>
+          
+
+          <RouterLink to="/about" 
+  class="block px-4 py-3 rounded-lg font-medium transition-colors"
+  :class="activeAboutSub === 'who' ? 'bg-green-700 text-white' : 'hover:bg-green-100'"
+  @mouseenter="activeAboutSub = 'who'" 
+  @click="closeAllMenus">Who We Are</RouterLink>
+
+
             <RouterLink
               to="/MDmessage"
               class="block px-4 py-3 rounded-lg hover:bg-green-100"
@@ -212,22 +224,20 @@ const closeAllMenus = () => {
             >
               MD's Message
             </RouterLink>
-            <RouterLink
-              to="/Leadership"
-              class="block px-4 py-3 rounded-lg hover:bg-green-100 font-medium"
-              @mouseenter="activeAboutSub = 'lead'"
-              @click="closeAllMenus"
-            >
-              Leadership
-            </RouterLink>
-            <RouterLink
-              to="/subsidiaries"
-              class="block px-4 py-3 rounded-lg hover:bg-green-100 font-medium"
-              @mouseenter="activeAboutSub = 'sub'"
-              @click="closeAllMenus"
-            >
-              Subsidiaries
-            </RouterLink>
+           
+            <RouterLink to="/Leadership" 
+  class="block px-4 py-3 rounded-lg font-medium transition-colors"
+  :class="activeAboutSub === 'lead' ? 'bg-green-700 text-white' : 'hover:bg-green-100'"
+  @mouseenter="activeAboutSub = 'lead'" 
+  @click="closeAllMenus">Leadership</RouterLink>
+  
+       
+
+                      <RouterLink to="/subsidiaries" 
+  class="block px-4 py-3 rounded-lg font-medium transition-colors"
+  :class="activeAboutSub === 'sub' ? 'bg-green-700 text-white' : 'hover:bg-green-100'"
+  @mouseenter="activeAboutSub = 'sub'" 
+  @click="closeAllMenus">Subsidiaries</RouterLink>
           </ul>
         </div>
 
@@ -238,19 +248,25 @@ const closeAllMenus = () => {
           <!-- Who We Are -->
           <div v-if="activeAboutSub === 'who'" class="space-y-4">
             <div @mouseenter="activeWhoSub = 'mission'" @mouseleave="activeWhoSub = null">
-              <RouterLink to="/about#mission" class="block font-medium hover:text-green-700" @click="closeAllMenus">Mission</RouterLink>
+                      <RouterLink 
+  to="/about" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('mission')"
+> Mission & Vision</RouterLink>
+
+              
               <div v-show="activeWhoSub === 'mission'" class="mt-2">
                 <img src="/mission.jpg" alt="Mission" class="rounded-lg w-full h-2/5 object-cover" />
               </div>
             </div>
-            <div @mouseenter="activeWhoSub = 'vision'" @mouseleave="activeWhoSub = null">
-              <RouterLink to="/about#vision" class="block font-medium hover:text-green-700" @click="closeAllMenus">Vision</RouterLink>
-              <div v-show="activeWhoSub === 'vision'" class="mt-2">
-                <img src="/vision.jpg" alt="Vision" class="rounded-lg w-full h-2/5 object-cover" />
-              </div>
-            </div>
+        
             <div @mouseenter="activeWhoSub = 'corevalues'" @mouseleave="activeWhoSub = null">
-              <RouterLink to="/about#core-values" class="block font-medium hover:text-green-700" @click="closeAllMenus">Core Values</RouterLink>
+                                    <RouterLink 
+  to="/about" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('core-values')"
+> Core Values</RouterLink>
+
               <div v-show="activeWhoSub === 'corevalues'" class="mt-2">
                 <img src="/corevalues.png" alt="Core Values" class="rounded-lg w-full h-2/5 object-cover" />
               </div>
@@ -259,17 +275,41 @@ const closeAllMenus = () => {
 
           <!-- Leadership -->
           <div v-if="activeAboutSub === 'lead'" class="space-y-8">
+
+        
             <RouterLink to="/Leadership" class="block font-medium hover:text-green-700" @click="closeAllMenus">Board Of Directors</RouterLink>
             <RouterLink to="/Leadership" class="block font-medium hover:text-green-700" @click="closeAllMenus">Team Members</RouterLink>
           </div>
 
           <!-- Subsidiaries -->
           <div v-if="activeAboutSub === 'sub'" class="space-y-8">
-            <RouterLink to="/subsidiaries" class="block font-medium hover:text-green-700" @click="closeAllMenus">Deutsche Asset Management Limited</RouterLink>
-            <RouterLink to="/subsidiaries" class="block font-medium hover:text-green-700" @click="closeAllMenus">Deutsche Capital Limited</RouterLink>
-            <RouterLink to="/subsidiaries" class="block font-medium hover:text-green-700" @click="closeAllMenus">Deutsche Private Equity Limited</RouterLink>
-            <RouterLink to="/subsidiaries" class="block font-medium hover:text-green-700" @click="closeAllMenus">Deutsche Security Limited</RouterLink>
-            <RouterLink to="/subsidiaries" class="block font-medium hover:text-green-700" @click="closeAllMenus">Deutsche Trustees Limited</RouterLink>
+            <RouterLink 
+  to="/subsidiaries" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('asset-managment-limited')"
+> Deutsche Asset Management Limited</RouterLink>
+
+      <RouterLink 
+  to="/subsidiaries" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('capital-limited')"
+> Deutsche Capital Limited</RouterLink>
+           
+          
+              <RouterLink 
+  to="/subsidiaries" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('private-limited')"
+> Deutsche Private Equity Limited</RouterLink>
+
+       <RouterLink 
+  to="/subsidiaries" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('securities-limited')"
+> Deutsche Security Limited</RouterLink>
+           
+
+           
           </div>
         </div>
 
@@ -331,7 +371,11 @@ const closeAllMenus = () => {
           <p class="text-xs tracking-widest text-gray-400 mb-4">WHAT WE DO</p>
 
           <div v-if="activeServicesSub === 'asset'" class="space-y-4">
-            <RouterLink to="/Asset-Management" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Private Wealth Management</RouterLink>
+<RouterLink 
+  to="/Asset-Management" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('wealth-management')"
+>Private Wealth Management</RouterLink>
             <RouterLink to="/Asset-Management" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Fund Management and Advisory</RouterLink>
             <RouterLink to="/Asset-Management" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Collective Investment Scheme</RouterLink>
             <RouterLink to="/Asset-Management" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Special Investment Scheme</RouterLink>
@@ -339,10 +383,37 @@ const closeAllMenus = () => {
           </div>
 
           <div v-if="activeServicesSub === 'investment'" class="space-y-4">
-            <RouterLink to="/Investment-Banking" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Corporate Finance</RouterLink>
-            <RouterLink to="/Investment-Banking" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Public Sector Advisory</RouterLink>
-            <RouterLink to="/Investment-Banking" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Structured Finance</RouterLink>
-            <RouterLink to="/Investment-Banking" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Research & Intelligence</RouterLink>
+            <RouterLink 
+  to="/Investment-Banking" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('corporate-finance')"
+>Corporate Finance</RouterLink>
+
+           <RouterLink 
+  to="/Investment-Banking" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('mergersacquisitions')"
+>Mergers and Acquisitions</RouterLink>
+
+
+<RouterLink 
+  to="/Investment-Banking" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('financial-advisory')"
+>Financial Advisory</RouterLink>
+
+
+
+<RouterLink 
+  to="/Investment-Banking" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('project-finance')"
+> Project Finance</RouterLink>
+            
+           
+           
+           
+
           </div>
 
           <div v-if="activeServicesSub === 'private'" class="space-y-4">
@@ -389,9 +460,27 @@ const closeAllMenus = () => {
         <div class="border-r pr-4">
           <p class="text-xs tracking-widest text-gray-400 mb-4">OUR PRODUCTS</p>
           <ul class="space-y-2">
-            <RouterLink to="/" class="block px-4 py-3 rounded-lg hover:bg-green-100 font-medium" @mouseenter="activeProductsSub = 'mutual'" @click="closeAllMenus">Mutual Funds</RouterLink>
-            <RouterLink to="/" class="block px-4 py-3 rounded-lg hover:bg-green-100" @mouseenter="activeProductsSub = 'exchange-traded'" @click="closeAllMenus">Exchange Traded Funds</RouterLink>
-            <RouterLink to="/" class="block px-4 py-3 rounded-lg hover:bg-green-100" @mouseenter="activeProductsSub = 'alternative'" @click="closeAllMenus">Alternative Investments Scheme</RouterLink>
+
+            <RouterLink to="/mutual-funds" 
+  class="block px-4 py-3 rounded-lg font-medium transition-colors"
+  :class="activeProductsSub === 'mutual' ? 'bg-green-700 text-white' : 'hover:bg-green-100'"
+  @mouseenter="activeProductsSub = 'mutual'" 
+  @click="closeAllMenus">Mutual Funds</RouterLink>
+
+          <RouterLink to="/Exchange-Traded-Funds" 
+  class="block px-4 py-3 rounded-lg font-medium transition-colors"
+  :class="activeProductsSub === 'exchange-traded' ? 'bg-green-700 text-white' : 'hover:bg-green-100'"
+  @mouseenter="activeProductsSub = 'exchange-traded'" 
+  @click="closeAllMenus">Exchange Traded Funds</RouterLink>
+
+
+        <RouterLink to="/alternative-investment" 
+  class="block px-4 py-3 rounded-lg font-medium transition-colors"
+  :class="activeProductsSub === 'alternative' ? 'bg-green-700 text-white' : 'hover:bg-green-100'"
+  @mouseenter="activeProductsSub = 'alternative'" 
+  @click="closeAllMenus">Alternative Investments Scheme</RouterLink>
+
+
           </ul>
         </div>
 

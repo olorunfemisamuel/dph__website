@@ -40,7 +40,7 @@ import subsidiariesIMAGE from '@/assets/subsidiariesIMAGE/subsidiariesIMAGE.png'
         <!----Card 0-Intial Card Position-->
           <div class="relative flex flex-col md:flex-row-reverse items-start gap-0">
         <!-- Tall Text Box -->
-        <div class="bg-neutral-900 text-white p-10 rounded-lg w-full md:w-[380px] h-[500px] flex flex-col justify-between">
+        <div id="capital-limited" class="bg-neutral-900 text-white p-10 rounded-lg w-full md:w-[380px] h-[500px] flex flex-col justify-between">
           <div>
             <h3 class="text-2xl font-semibold mb-4">Deutsche Capital Limited</h3>
             <p class="text-gray-300 text-sm leading-relaxed">
@@ -63,7 +63,7 @@ import subsidiariesIMAGE from '@/assets/subsidiariesIMAGE/subsidiariesIMAGE.png'
       <!-- CARD 1 - Image overlaps on tall text box (left side) -->
       <div class="relative flex flex-col md:flex-row items-start gap-0">
         <!-- Tall Text Box -->
-        <div class="bg-neutral-900 text-white p-10 rounded-lg w-full md:w-[380px] h-[500px] flex flex-col justify-between">
+        <div id= "asset-managment-limited" class="bg-neutral-900 text-white p-10 rounded-lg w-full md:w-[380px] h-[500px] flex flex-col justify-between">
           <div>
             <h3 class="text-2xl font-semibold mb-4">Deutsche Asset Management Limited</h3>
             <p class="text-gray-300 text-sm leading-relaxed">
@@ -86,7 +86,7 @@ import subsidiariesIMAGE from '@/assets/subsidiariesIMAGE/subsidiariesIMAGE.png'
       <!-- CARD 2 - Image overlaps on tall text box (right side) -->
       <div class="relative flex flex-col md:flex-row-reverse items-start gap-0">
         <!-- Tall Text Box -->
-        <div class="bg-neutral-900 text-white p-10 rounded-lg w-full md:w-[380px] h-[500px] flex flex-col justify-between">
+        <div id = "securities-limited" class="bg-neutral-900 text-white p-10 rounded-lg w-full md:w-[380px] h-[500px] flex flex-col justify-between">
           <div>
             <h3 class="text-2xl font-semibold mb-4">Deutsche Securities Limited</h3>
             <p class="text-gray-300 text-sm leading-relaxed">
@@ -113,9 +113,9 @@ import subsidiariesIMAGE from '@/assets/subsidiariesIMAGE/subsidiariesIMAGE.png'
       <!-- CARD 3 - Image overlaps on tall text box (left side) -->
       <div class="relative flex flex-col md:flex-row items-start gap-0">
         <!-- Tall Text Box -->
-        <div class="bg-neutral-900 text-white p-10 rounded-lg w-full md:w-[380px] h-[500px] flex flex-col justify-between">
+        <div id= "private-limited" class="bg-neutral-900 text-white p-10 rounded-lg w-full md:w-[380px] h-[500px] flex flex-col justify-between">
           <div>
-            <h3 class="text-2xl font-semibold mb-4"></h3>
+            <h3 class="text-2xl font-semibold mb-4"> Deutsche Private Equity Limited</h3>
             <p class="text-gray-300 text-sm leading-relaxed">
               Our securities division offers comprehensive brokerage and
               trading services across multiple asset classes. We provide

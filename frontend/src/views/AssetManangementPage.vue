@@ -108,8 +108,8 @@ const showInstitutionalAssetManagement= ref(false)
 </div>
 
 
-        <div class="border-l-4 border-gray-400 pl-5 cursor-pointer" @click="showWealthManagement = true">
-          <h4 class="font-bold text-gray-800 text-base mb-3 transition-colors duration-300 hover:text-[#2e8b3b]">Wealth Management</h4>
+        <div id = "wealth-management" class="border-l-4 border-gray-400 pl-5 cursor-pointer" @click="showWealthManagement = true">
+          <h4  class="font-bold text-gray-800 text-base mb-3 transition-colors duration-300 hover:text-[#2e8b3b]">Wealth Management</h4>
           <p class="text-gray-600 text-sm leading-relaxed">
             Our wealth management services provide personalized solutions...
           </p>
