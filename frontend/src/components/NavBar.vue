@@ -7,10 +7,18 @@ import { ref } from 'vue'
 const navigateToSection = (sectionId: string) => {
   closeAllMenus()
   setTimeout(() => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+    const section = document.getElementById(sectionId)
+    if (!section) return
+
+    // Auto-detect navbar height — works with any fixed/sticky nav
+    const navbar = document.querySelector('nav') as HTMLElement | null
+    const navbarHeight = navbar?.offsetHeight ?? 80 // fallback to 80px
+
+    const top = section.getBoundingClientRect().top + window.scrollY - navbarHeight
+
+    window.scrollTo({ top, behavior: 'smooth' })
   }, 200)
 }
-
 
 
 type AboutSub = 'who'| 'lead' | 'sub' | null
@@ -36,6 +44,8 @@ type ServicesSub =
   | 'private'
   | 'securities'
   | 'trustees'
+   | 'consultancy'
+    | 'venture'
   | null
 
 const activeServicesSub = ref<ServicesSub>('asset')
@@ -363,6 +373,20 @@ const closeAllMenus = () => {
   :class="activeServicesSub === 'trustees' ? 'bg-green-700 text-white' : 'hover:bg-green-100'"
   @mouseenter="activeServicesSub = 'trustees'" 
   @click="closeAllMenus">Trustees</RouterLink>
+
+
+  <RouterLink to="/venture-capital" 
+  class="block px-4 py-3 rounded-lg transition-colors"
+  :class="activeServicesSub === 'venture' ? 'bg-green-700 text-white' : 'hover:bg-green-100'"
+  @mouseenter="activeServicesSub = 'venture'" 
+  @click="closeAllMenus">Venture Capital</RouterLink>
+
+
+  <RouterLink to="/consultancy-service" 
+  class="block px-4 py-3 rounded-lg transition-colors"
+  :class="activeServicesSub === 'consultancy' ? 'bg-green-700 text-white' : 'hover:bg-green-100'"
+  @mouseenter="activeServicesSub = 'consultancy'" 
+  @click="closeAllMenus">Consultancy Service</RouterLink>
           </ul>
         </div>
 
@@ -374,14 +398,14 @@ const closeAllMenus = () => {
 <RouterLink 
   to="/Asset-Management" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
-  @click="navigateToSection('wealth-management')"
+  @click="navigateToSection('mutual-funds')"
 >Mutual Funds </RouterLink>
 
-<RouterLink 
+<!-- <RouterLink 
   to="/Asset-Management" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
   @click="navigateToSection('wealth-management')"
->Wealth Management </RouterLink>
+>Wealth Management </RouterLink> -->
 
 
 <RouterLink 
@@ -446,6 +470,18 @@ const closeAllMenus = () => {
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
   @click="navigateToSection('project-finance')"
 > Project Finance</RouterLink>
+
+<RouterLink 
+  to="/Investment-Banking" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('equity-debt-capital-market')"
+> Equity and Debt Capital Market </RouterLink>
+
+<RouterLink 
+  to="/Investment-Banking" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('alternative-investments')"
+> Alternative Investments</RouterLink>
             
            
            
@@ -488,6 +524,25 @@ const closeAllMenus = () => {
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
   @click="navigateToSection('commodities-trading')"
 > Commodites Trading</RouterLink>
+
+<RouterLink 
+  to="/Securities-Trading" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('security-dealing')"
+> Security Dealing</RouterLink>
+
+
+<RouterLink 
+  to="/Securities-Trading" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('fixed-income-securities')"
+> Fixed Income Securities</RouterLink>
+
+<RouterLink 
+  to="/Securities-Trading" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @click="navigateToSection('foreign-exchange')"
+> Foreign Exhchange </RouterLink>
             
 
             
@@ -668,8 +723,8 @@ const closeAllMenus = () => {
         <div class="space-y-2">
           <RouterLink to="/Insight" class="block px-4 py-3 hover:bg-green-50 rounded-lg" @click="closeAllMenus">Insights</RouterLink>
           <RouterLink to="/gallery" class="block px-4 py-3 hover:bg-green-50 rounded-lg" @click="closeAllMenus">Gallery</RouterLink>
-          <RouterLink to="/gallery" class="block px-4 py-3 hover:bg-green-50 rounded-lg" @click="closeAllMenus">Career</RouterLink>
-          <RouterLink to="/gallery" class="block px-4 py-3 hover:bg-green-50 rounded-lg" @click="closeAllMenus">Policy</RouterLink>
+          <RouterLink to="/career" class="block px-4 py-3 hover:bg-green-50 rounded-lg" @click="closeAllMenus">Career</RouterLink>
+          <RouterLink to="/cookies-policy" class="block px-4 py-3 hover:bg-green-50 rounded-lg" @click="closeAllMenus">Policy</RouterLink>
           <RouterLink to="/investmentdashboard" class="block px-4 py-3 hover:bg-green-50 rounded-lg" @click="closeAllMenus">Investment Dashboard</RouterLink>
         </div>
 

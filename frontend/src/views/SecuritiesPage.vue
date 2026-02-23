@@ -316,6 +316,82 @@
         </div>
       </div>
 
+
+      <div class="flex flex-col md:flex-row-reverse bg-[#F0F5F7] rounded-2xl overflow-hidden shadow-lg">
+        <div id="security-dealing" class="md:w-2/3 w-full p-6 sm:p-8 flex flex-col justify-center">
+          <h4 class="text-[#168223] font-semibold text-lg mb-3">
+            Security Dealing
+          </h4>
+          <p class="text-black/90 text-sm leading-relaxed">
+            The Mergers and Acquisitions (M&A) Group at Deutsche partners holding
+            is one of the leading M&A advisors in Africa. Providing the full spectrum
+            of strategic Financial Advisory Services. Our Team delivers expert
+            guidance and execution for mergers, acquisitions, divestitures, and
+            cross-border transactions, offering innovative, fully integrated
+            solutions to help clients navigate complex deals and achieve
+            strategic goals.
+          </p>
+        </div>
+
+        <div class="md:w-1/3 w-full relative">
+          <img
+            src="@/assets/securitiesimage.png"
+            alt="Stockbroking"
+            class="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row-reverse bg-[#F0F5F7] rounded-2xl overflow-hidden shadow-lg">
+        <div id="fixed-income-securities" class="md:w-2/3 w-full p-6 sm:p-8 flex flex-col justify-center">
+          <h4 class="text-[#168223] font-semibold text-lg mb-3">
+           Fixed Income Securities
+          </h4>
+          <p class="text-black/90 text-sm leading-relaxed">
+            The Mergers and Acquisitions (M&A) Group at Deutsche partners holding
+            is one of the leading M&A advisors in Africa. Providing the full spectrum
+            of strategic Financial Advisory Services. Our Team delivers expert
+            guidance and execution for mergers, acquisitions, divestitures, and
+            cross-border transactions, offering innovative, fully integrated
+            solutions to help clients navigate complex deals and achieve
+            strategic goals.
+          </p>
+        </div>
+
+        <div class="md:w-1/3 w-full relative">
+          <img
+            src="@/assets/securitiesimage.png"
+            alt="Stockbroking"
+            class="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row-reverse bg-[#F0F5F7] rounded-2xl overflow-hidden shadow-lg">
+        <div id="foreign-exchange" class="md:w-2/3 w-full p-6 sm:p-8 flex flex-col justify-center">
+          <h4 class="text-[#168223] font-semibold text-lg mb-3">
+           Foreign Exchange
+          </h4>
+          <p class="text-black/90 text-sm leading-relaxed">
+            The Mergers and Acquisitions (M&A) Group at Deutsche partners holding
+            is one of the leading M&A advisors in Africa. Providing the full spectrum
+            of strategic Financial Advisory Services. Our Team delivers expert
+            guidance and execution for mergers, acquisitions, divestitures, and
+            cross-border transactions, offering innovative, fully integrated
+            solutions to help clients navigate complex deals and achieve
+            strategic goals.
+          </p>
+        </div>
+
+        <div class="md:w-1/3 w-full relative">
+          <img
+            src="@/assets/securitiesimage.png"
+            alt="Stockbroking"
+            class="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+
     </section>
 
 

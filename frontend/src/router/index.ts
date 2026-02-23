@@ -39,6 +39,9 @@ import CommodityTrading from '@/views/CommodityTrading.vue'
 import ForeignExchange from '@/views/ForeignExchange.vue'
 import SecuredandUnsecuredInsurance from '@/views/SecuredandUnsecuredInsurance.vue'
 import CooporateTrust from '@/views/CooporateTrust.vue'
+import ConsultancyService from '@/views/ConsultancyService.vue'
+import VentureCapital from '@/views/VentureCapital.vue'
+import CookiesPolicy from '@/views/CookiesPolicy.vue'
 
 
 
@@ -263,6 +266,24 @@ const router = createRouter({
   name:'/cooporate-trust',
   path: '/cooporate-trust',
   component: CooporateTrust
+},
+
+{
+  name: '/consultancy-service',
+  path: '/consultancy-service',
+  component: ConsultancyService
+},
+
+{
+  name: '/venture-capital',
+  path: '/venture-capital',
+  component: VentureCapital
+},
+
+{
+  name: '/cookies-policy',
+  path: '/cookies-policy',
+  component: CookiesPolicy
 }
 
 
