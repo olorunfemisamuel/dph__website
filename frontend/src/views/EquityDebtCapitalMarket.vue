@@ -40,7 +40,7 @@ Our capital markets advisory combines market insight, financial structuring expe
 </section>
 
 <!-- WHAT WE DO GRID WITH DARK BACKGROUND -->
-<section
+<section 
   class="py-16 px-6 md:px-16 bg-cover bg-center relative"
   :style="{ backgroundImage: `url(${aboutusImage})` }"
 >
