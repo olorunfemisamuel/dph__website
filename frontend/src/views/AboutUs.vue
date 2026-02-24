@@ -39,7 +39,7 @@ onMounted(() => {
       class="absolute bottom-6 left-4 sm:left-6 md:bottom-10 md:left-10
              text-white font-bold text-2xl sm:text-3xl md:text-5xl z-10 reveal"
     >
-      About Us
+      Who We Are
     </h3>
   </div>
 </section>
