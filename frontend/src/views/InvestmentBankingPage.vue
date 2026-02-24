@@ -44,7 +44,7 @@
   <section class="max-w-7xl mx-auto py-16 px-6 space-y-8">
 
     <!-- Mergers and Acquisitions (first) -->
-    <div class="flex flex-col md:flex-row bg-[#F0F5F7] rounded-2xl overflow-hidden shadow-lg">
+    <!-- <div class="flex flex-col md:flex-row bg-[#F0F5F7] rounded-2xl overflow-hidden shadow-lg">
       <div class="flex-1 p-10 flex flex-col justify-center">
         <h4 class="text-[#2554B9] font-bold text-3xl mb-4">Mergers and Acquisitions</h4>
         <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
@@ -62,7 +62,7 @@
       <div class="w-full md:w-1/3 h-64 md:h-auto">
         <img src="@/assets/InvestmentBankingimg2.png" class="w-full h-full object-cover" />
       </div>
-    </div>
+    </div> -->
 
     <!-- Corporate Finance -->
     <div id="corporate-finance" class="flex flex-col md:flex-row bg-[#C4E5F2] rounded-2xl overflow-hidden shadow-lg">
