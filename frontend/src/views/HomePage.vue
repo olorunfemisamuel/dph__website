@@ -317,70 +317,70 @@ const currentSlide = computed<SlideType>(() => {
 
   <!-- Investment Banking -->
   <RouterLink to="/Investment-Banking"
-    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal">
-    <img :src="whatwedoIMG1invest" class="w-full h-full object-cover" />
-    <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-16 group-hover:bg-black/40"></div>
-    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md">
+    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal group cursor-pointer">
+    <img :src="whatwedoIMG1invest" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110" />
+    <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-14 group-hover:bg-black/40"></div>
+    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md transition-all duration-500 group-hover:bottom-3">
       Investment Banking
     </div>
   </RouterLink>
 
   <!-- Asset Management -->
   <RouterLink to="/Asset-Management"
-    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal">
-    <img :src="whatwedoIMG2asset" class="w-full h-full object-cover" />
-   <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-16 group-hover:bg-black/40"></div>
-    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md">
+    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal group cursor-pointer">
+    <img :src="whatwedoIMG2asset" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110" />
+    <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-14 group-hover:bg-black/40"></div>
+    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md transition-all duration-500 group-hover:bottom-3">
       Asset Management
     </div>
   </RouterLink>
 
   <!-- Private Equity -->
   <RouterLink to="/Private-Equity"
-    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal">
-    <img :src="whatwedoIMG3private" class="w-full h-full object-cover" />
-  <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-16 group-hover:bg-black/40"></div>
-    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md">
+    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal group cursor-pointer">
+    <img :src="whatwedoIMG3private" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110" />
+    <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-14 group-hover:bg-black/40"></div>
+    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md transition-all duration-500 group-hover:bottom-3">
       Private Equity
     </div>
   </RouterLink>
 
   <!-- Securities Trading -->
   <RouterLink to="/Securities-Trading"
-    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal">
-    <img :src="whatwedoIMG4security" class="w-full h-full object-cover" />
-    <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-16 group-hover:bg-black/40"></div>
-    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md">
+    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal group cursor-pointer">
+    <img :src="whatwedoIMG4security" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110" />
+    <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-14 group-hover:bg-black/40"></div>
+    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md transition-all duration-500 group-hover:bottom-3">
       Security Trading
     </div>
   </RouterLink>
 
   <!-- Trustees -->
   <RouterLink to="/Trustees"
-    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal">
-    <img :src="whatwedoIMG5trustees" class="w-full h-full object-cover" />
-  <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-16 group-hover:bg-black/40"></div>
-    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md">
+    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal group cursor-pointer">
+    <img :src="whatwedoIMG5trustees" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110" />
+    <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-14 group-hover:bg-black/40"></div>
+    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md transition-all duration-500 group-hover:bottom-3">
       Trustees
     </div>
   </RouterLink>
 
   <!-- Venture Capital -->
   <RouterLink to="/Venture-Capital"
-    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal">
-    <img :src="whatwedoIMG6venture" class="w-full h-full object-cover" />
-  <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-16 group-hover:bg-black/40"></div>
-    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md">
+    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal group cursor-pointer">
+    <img :src="whatwedoIMG6venture" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110" />
+    <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-14 group-hover:bg-black/40"></div>
+    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md transition-all duration-500 group-hover:bottom-3">
       Venture Capital
     </div>
   </RouterLink>
 
   <!-- Consultancy Service -->
   <RouterLink to="/Consultancy-Service"
-    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal">
-    <img :src="whatwedoIMG7consult" class="w-full h-full object-cover" />
-  <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-16 group-hover:bg-black/40"></div>
-    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md">
+    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal group cursor-pointer">
+    <img :src="whatwedoIMG7consult" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110" />
+    <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-14 group-hover:bg-black/40"></div>
+    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md transition-all duration-500 group-hover:bottom-3">
       Consultancy Service
     </div>
   </RouterLink>
