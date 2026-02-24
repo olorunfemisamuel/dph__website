@@ -10,12 +10,12 @@ const showVentureCapital = ref(false)
 const showInvestmentAdvisory= ref(false)
 const showInstitutionalAssetManagement= ref(false)
 
-  const managementData = [
-  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive Officer', img: new URL('@/assets/leadershipIMGS/mdIMG.jpg', import.meta.url).href },
-  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/mrijomaIMG.jpg', import.meta.url).href },
-  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/misscatherineIMG.jpg', import.meta.url).href },
+//   const managementData = [
+//   { name: 'Dr Onuoha Nnachi', role: 'Chief Executive Officer', img: new URL('@/assets/leadershipIMGS/mdIMG.jpg', import.meta.url).href },
+//   { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/mrijomaIMG.jpg', import.meta.url).href },
+//   { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/misscatherineIMG.jpg', import.meta.url).href },
 
-]
+// ]
 </script>
 
 
@@ -64,7 +64,7 @@ const showInstitutionalAssetManagement= ref(false)
 
   <!-- WHY CHOOSE US -->
    <!-- LEADERSHIP PREVIEW SECTION -->
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+  <!-- <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
     <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Our Leadership</h2>
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
       <div
@@ -87,7 +87,7 @@ const showInstitutionalAssetManagement= ref(false)
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- WHY CHOOSE US -->
 
@@ -101,7 +101,7 @@ const showInstitutionalAssetManagement= ref(false)
   class="border-l-4 border-[#2e8b3b] pl-5 cursor-pointer"
   @click="showMutualFunds = true"
 >
-  <h4 class="font-bold text-gray-800 text-base mb-3 transition-colors duration-300 hover:text-[#2e8b3b]">Mutual Funds</h4>
+  <RouterLink to="/mutual-funds" class="font-bold text-gray-800 text-base mb-3 transition-colors duration-300 hover:text-[#2e8b3b]">Mutual Funds</RouterLink>
   <p class="text-gray-600 text-sm leading-relaxed">
     We offer professionally managed mutual funds...
   </p>
@@ -156,7 +156,7 @@ const showInstitutionalAssetManagement= ref(false)
     <div class="grid md:grid-cols-2 gap-12 items-start">
       <div class="space-y-8">
         <div id= "venture-capital" class="border-l-4 border-[#2e8b3b] pl-5 cursor-pointer" @click = "showVentureCapital = true">
-          <h4 class="font-bold text-gray-800 text-base mb-2 transition-colors duration-300 hover:text-[#2e8b3b]">Venture Captital</h4>
+          <RouterLink to = "/venture-capital" class="font-bold text-gray-800 text-base mb-2 transition-colors duration-300 hover:text-[#2e8b3b]">Venture Capital</RouterLink>
           <p class="text-gray-600 text-sm leading-relaxed">
             We invest in high-growth businesses with strong fundamentals...
           </p>
