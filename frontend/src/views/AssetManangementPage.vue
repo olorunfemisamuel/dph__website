@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+
 const showMutualFunds = ref(false)
 const showWealthManagement = ref(false)
 const showPortfolioManagement = ref(false)
@@ -8,13 +9,20 @@ const showHedgeFund = ref(false)
 const showVentureCapital = ref(false)
 const showInvestmentAdvisory= ref(false)
 const showInstitutionalAssetManagement= ref(false)
+
+//   const managementData = [
+//   { name: 'Dr Onuoha Nnachi', role: 'Chief Executive Officer', img: new URL('@/assets/leadershipIMGS/mdIMG.jpg', import.meta.url).href },
+//   { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/mrijomaIMG.jpg', import.meta.url).href },
+//   { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/misscatherineIMG.jpg', import.meta.url).href },
+
+// ]
 </script>
 
 
 <template>
   <!-- HERO SECTION -->
   <section class="w-full overflow-hidden shadow-lg">
-    <div class="relative w-full h-100 sm:h-64 md:h-96 overflow-hidden">
+  <div class="relative w-full h-40 sm:h-44 md:h-70 overflow-hidden">
       <img 
         src="@/assets/assetmangbanner.jpg" 
         alt="About Banner" 
@@ -26,6 +34,8 @@ const showInstitutionalAssetManagement= ref(false)
       </h3>
     </div>
   </section>
+
+
 
   <!-- IMAGE + TEXT SECTION (New from design)  -->
   <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-16">
@@ -53,6 +63,33 @@ const showInstitutionalAssetManagement= ref(false)
   </section>
 
   <!-- WHY CHOOSE US -->
+   <!-- LEADERSHIP PREVIEW SECTION -->
+  <!-- <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+    <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Our Leadership</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <div
+        v-for="(leader, index) in managementData.slice(0, 3)"
+        :key="index"
+        class="flex bg-[#f8fafc] rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
+      >
+        <img
+          :src="leader.img"
+          alt="Leader"
+          class="w-24 sm:w-28 h-full object-cover"
+        />
+        <div class="p-3 sm:p-5 flex flex-col justify-center">
+          <h4 class="font-bold text-gray-800 text-sm sm:text-base">
+            {{ leader.name }}
+          </h4>
+          <p class="text-[9px] sm:text-[10px] uppercase tracking-wider text-gray-400 mt-1 font-medium">
+            {{ leader.role }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- WHY CHOOSE US -->
 
   <!-- CONTENT SECTIONS -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-20 space-y-20">
@@ -60,19 +97,19 @@ const showInstitutionalAssetManagement= ref(false)
     <!-- SECTION 1 -->
     <div class="grid md:grid-cols-2 gap-12 items-start">
       <div class="space-y-8">
-       <div
+       <div id="mutual-funds"
   class="border-l-4 border-[#2e8b3b] pl-5 cursor-pointer"
   @click="showMutualFunds = true"
 >
-  <h4 class="font-bold text-gray-800 text-base mb-3 transition-colors duration-300 hover:text-[#2e8b3b]">Mutual Funds</h4>
+  <RouterLink to="/mutual-funds" class="font-bold text-gray-800 text-base mb-3 transition-colors duration-300 hover:text-[#2e8b3b]">Mutual Funds</RouterLink>
   <p class="text-gray-600 text-sm leading-relaxed">
     We offer professionally managed mutual funds...
   </p>
 </div>
 
 
-        <div class="border-l-4 border-gray-400 pl-5 cursor-pointer" @click="showWealthManagement = true">
-          <h4 class="font-bold text-gray-800 text-base mb-3 transition-colors duration-300 hover:text-[#2e8b3b]">Wealth Management</h4>
+        <div id = "wealth-management" class="border-l-4 border-gray-400 pl-5 cursor-pointer" @click="showWealthManagement = true">
+          <h4  class="font-bold text-gray-800 text-base mb-3 transition-colors duration-300 hover:text-[#2e8b3b]">Wealth Management</h4>
           <p class="text-gray-600 text-sm leading-relaxed">
             Our wealth management services provide personalized solutions...
           </p>
@@ -97,16 +134,16 @@ const showInstitutionalAssetManagement= ref(false)
       </div>
 
       <div class="order-1 md:order-2 space-y-8">
-        <div class="border-l-4 border-[#2e8b3b] pl-5 cursor-pointer"  @click="showPortfolioManagement = true">
+        <div id="portfolio-managemnt" class="border-l-4 border-[#2e8b3b] pl-5 cursor-pointer"  @click="showPortfolioManagement = true">
           <h4 class="font-bold text-[#2e8b3b] text-base mb-3 transition-colors duration-300 hover:text-[#06410e]">
-            Portfolio Management
+        Portfolio Management
           </h4>
           <p class="text-gray-600 text-sm leading-relaxed">
             We manage investment portfolios on behalf of clients...
           </p>
         </div>
 
-        <div class="border-l-4 border-gray-400 pl-5 cursor-pointer" @click="showHedgeFund = true">
+        <div id="hedge-fund" class="border-l-4 border-gray-400 pl-5 cursor-pointer" @click="showHedgeFund = true">
           <h4 class="font-bold text-gray-800 text-base mb-3 transition-colors duration-300 hover:text-[#2e8b3b]">Hedge Fund</h4>
           <p class="text-gray-600 text-sm leading-relaxed">
             Our hedge fund strategies focus on alternative investments...
@@ -118,27 +155,27 @@ const showInstitutionalAssetManagement= ref(false)
     <!-- SECTION 3 -->
     <div class="grid md:grid-cols-2 gap-12 items-start">
       <div class="space-y-8">
-        <div class="border-l-4 border-[#2e8b3b] pl-5 cursor-pointer" @click = "showVentureCapital = true">
-          <h4 class="font-bold text-gray-800 text-base mb-2 transition-colors duration-300 hover:text-[#2e8b3b]">Venture Capital</h4>
+        <div id= "venture-capital" class="border-l-4 border-[#2e8b3b] pl-5 cursor-pointer" @click = "showVentureCapital = true">
+          <RouterLink to = "/venture-capital" class="font-bold text-gray-800 text-base mb-2 transition-colors duration-300 hover:text-[#2e8b3b]">Venture Capital</RouterLink>
           <p class="text-gray-600 text-sm leading-relaxed">
             We invest in high-growth businesses with strong fundamentals...
           </p>
         </div>
 
-        <div class="border-l-4 border-gray-400 pl-5 cursor-pointer" @click="showInvestmentAdvisory= true">
+        <div id="hedge-fund" class="border-l-4 border-gray-400 pl-5 cursor-pointer" @click="showInvestmentAdvisory= true">
           <h4 class="font-bold text-gray-800 text-base mb-2 transition-colors duration-300 hover:text-[#2e8b3b]">
-            Investment Advisory
+          Hedge Fund
           </h4>
           <p class="text-gray-600 text-sm leading-relaxed">
             Our advisory services offer expert guidance...
           </p>
         </div>
 
-        <div class="border-l-4 border-gray-800 pl-5 cursor-pointer" @click="showInstitutionalAssetManagement= true">
+        <div id="investment-advisory" class="border-l-4 border-gray-800 pl-5 cursor-pointer" @click="showInstitutionalAssetManagement= true">
          <h4
   class="font-bold text-gray-800 text-base mb-2 transition-colors duration-300 hover:text-[#2e8b3b]"
 >
-  Institutional Asset Management
+Investment Advisory
 </h4>
           <p class="text-gray-600 text-sm leading-relaxed">
             We design and manage tailored investment solutions for institutions...

@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 
 import InsightsPage from '@/components/InsightsPage.vue'
-import investHomepage from '@/assets/investHomepage.png'
-import assetmanagement from '@/assets/assetmanagement.png'
-import Privateequity from '@/assets/Privateequity.jpg'
-import securitieshomepage from '@/assets/securitieshomepage.png'
-import Trusteesimg from '@/assets/Trusteesimg.jpg'
+import whatwedoIMG1invest from '@/assets/whatwedoIMGS/whatwedoIMG1invest.jpg'
+import whatwedoIMG2asset from '@/assets/whatwedoIMGS/whatwedoIMG2asset.jpg'
+import whatwedoIMG3private from '@/assets/whatwedoIMGS/whatwedoIMG3private.jpg'
+import whatwedoIMG4security from '@/assets/whatwedoIMGS/whatwedoIMG4security.jpg'
+import whatwedoIMG5trustees from '@/assets/whatwedoIMGS/whatwedoIMG5trustees.jpg'
 import HeroImage from "@/assets/HeroImage.png"
 import secondsliderImage from '@/assets/secondsliderImage.png'
 import thirdsliderImage from '@/assets/thirdsliderImage.png'
@@ -13,6 +13,11 @@ import fourthsliderImage from '@/assets/fourthsliderImage.png'
 import fifthsliderImage from '@/assets/fifthsliderImage.png'
 import sixthsliderImage from '@/assets/sixthsliderImage.png'
 import venturecapitalimage from '@/assets/venturecapitalimg.png'
+
+import whatwedoIMG6venture from '@/assets/whatwedoIMGS/whatwedoIMG6venture.jpg'
+import whatwedoIMG7consult from '@/assets/whatwedoIMGS/whatwedoIMG7consult.jpg'
+
+
 import { computed } from 'vue'
 
 import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
@@ -58,9 +63,7 @@ onBeforeUnmount(() => {
 })
 
 const cardClass =
-  'flex items-stretch md:w-[27%] sm:w-[45%] w-full bg-white rounded-2xl shadow-md overflow-hidden h-28'
-
-
+  'flex items-stretch w-full md:w-[31%] bg-white rounded-2xl shadow-md overflow-hidden h-28 transition hover:shadow-lg'
 
   // HERO SLIDER LOGIC
 const slides: SlideType[] = [
@@ -168,7 +171,7 @@ const currentSlide = computed<SlideType>(() => {
 
 <template>
   <main class="overflow-x-hidden">
- <div class="relative w-full h-[70svh] md:h-screen overflow-hidden">
+ <div class="relative w-full min-h-[85vh] md:min-h-[90vh] flex items-center overflow-hidden py-10 md:py-16">
   <!-- SLIDES -->
   <div class="absolute inset-0">
     <transition name="fade-slide">
@@ -220,7 +223,7 @@ const currentSlide = computed<SlideType>(() => {
               <div class="flex justify-center lg:justify-end order-1 lg:order-2">
                 <img
                   :src="currentSlide.src"
-                  class="w-full max-w-[280px] sm:max-w-[380px] md:max-w-[480px] lg:max-w-[520px] xl:max-w-[640px] 2xl:max-w-[720px] h-auto object-contain"
+                  class="w-full max-w-[280px] sm:max-w-[380px] md:max-w-[480px] lg:max-w-[520px] h-auto object-contain"
                   alt="Hero Image"
                 />
               </div>
@@ -233,7 +236,7 @@ const currentSlide = computed<SlideType>(() => {
         <img
           v-else
           :src="currentSlide.src"
-          class="w-full h-full object-cover"
+          class="w-full h-auto object-cover"
           alt="Slide background"
         />
 
@@ -250,9 +253,9 @@ const currentSlide = computed<SlideType>(() => {
       <div
         v-if="activeSlide !== 0"
         :key="activeSlide"
-        class="absolute left-4 right-4 sm:left-6 sm:right-auto md:left-12 lg:left-16 xl:left-20 top-1/2 -translate-y-1/2 md:top-auto md:translate-y-0 md:bottom-auto md:top-[45%] lg:top-[40%] text-left max-w-xl lg:max-w-2xl"
+       class="absolute left-4 right-4 sm:left-6 sm:right-auto md:left-12 lg:left-16 xl:left-20 top-1/2 -translate-y-1/2 text-left max-w-xl lg:max-w-2xl"
       >
-        <h2 class="font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-tight mb-4 md:mb-6 lg:mb-8 text-white">
+        <h2 class="font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl leading-tight mb-3 md:mb-4 lg:mb-5 text-white">
           <span class="block">
             {{ currentSlide.title }}
           </span>
@@ -294,136 +297,96 @@ const currentSlide = computed<SlideType>(() => {
   </div>
 </div>
     <!---What we do section-->
-    <div class="bg-[#F0F5F7] py-1">
-      <h2 class="reveal text-4xl font-bold  text-gray-500 mt-20 mb-10 ml-20">What We Do</h2>
-      <p class="reveal  text-gray-600 mx-6 sm:mx-10 md:mx-20 mb-8 md:mb-10  text-justify">
-        Deutsche Partners Holding (DPH) is an independently owned financial services group with core
-        expertise in Asset Management, Investment Banking, Private Equity, Securities, and
-        Trusteeship. DPH is deeply committed to the success, development, and sustainable growth of
-        its clients and their assets.
-      </p>
-      <div
-        class="flex justify-center items-center flex-wrap gap-4 sm:gap-6 px-4 sm:px-6 md:px-10 mb-16 md:mb-20"
-      >
-        <RouterLink to="/Investment-Banking" :class="cardClass" class="reveal">
-          <!-- Image container -->
-          <div class="relative h-full w-24 sm:w-28 md:w-32 -mr-6 sm:-mr-8">
-            <img :src="investHomepage" class="h-full w-full object-cover rounded-l-2xl" />
-            <!-- Overlay only on image -->
-            <div class="absolute inset-0 bg-black/30 rounded-l-2xl"></div>
-          </div>
+    <!---What we do section-->
+<div class="bg-[#F0F5F7] py-1">
+  <h2 class="reveal text-4xl font-bold text-gray-500 mt-20 mb-10 ml-20">
+    What We Do
+  </h2>
 
-          <!-- Text on top of image -->
-          <span
-            class="relative z-10 flex items-center justify-center h-full text-gray-700 text-sm sm:text-base font-semibold px-10"
-          >
-            Investment Banking
-          </span>
-        </RouterLink>
+  <p class="reveal text-gray-600 mx-6 sm:mx-10 md:mx-20 mb-8 md:mb-10 text-justify">
+    Deutsche Partners Holding (DPH) is an independently owned financial services group with core
+    expertise in Asset Management, Investment Banking, Private Equity, Securities, and
+    Trusteeship. DPH is deeply committed to the success, development, and sustainable growth of
+    its clients and their assets.
+  </p>
 
-        <RouterLink
-          to="/Asset-Management"
-         :class="cardClass"
-       class="reveal" >
-          <div class="relative h-full w-24 sm:w-28 md:w-32 -mr-6 sm:-mr-8">
-            <img
-              :src="assetmanagement"
-              class="w-24 sm:w-28 md:w-32 h-full object-cover -mr-6 sm:-mr-8"
-            />
-            <!-- Overlay only on image -->
-            <div class="absolute inset-0 bg-black/30 rounded-l-2xl"></div>
-          </div>
+  <!-- CARDS WRAPPER -->
+ <!-- FLEX IMAGE CARDS -->
+<!-- FLEX IMAGE CARDS -->
+<div class="flex flex-wrap justify-center gap-8 px-10 md:px-20 mb-20">
 
-          <span
-            class="relative z-10 flex items-center justify-center h-full text-gray-700 text-sm sm:text-base font-semibold px-10"
-          >
-            Asset Management
-          </span>
-        </RouterLink>
-
-        <RouterLink
-          to="/Private-Equity"
-        :class="cardClass"
-        class="reveal">
-          <div class="relative h-full w-24 sm:w-28 md:w-32 -mr-6 sm:-mr-8">
-            <img
-              :src="Privateequity"
-              class="w-24 sm:w-28 md:w-32 h-full object-cover -mr-6 sm:-mr-8"
-            />
-            <!-- Overlay only on image -->
-            <div class="absolute inset-0 bg-black/30 rounded-l-2xl"></div>
-          </div>
-
-          <span
-            class="relative z-10 flex items-center justify-center h-full text-gray-700 text-sm sm:text-base font-semibold px-10"
-          >
-            Private Equity
-          </span>
-        </RouterLink>
-
-        <RouterLink
-          to="/Securities-Trading"
-        :class="cardClass"
-        class="reveal">
-          <div class="relative h-full w-24 sm:w-28 md:w-32 -mr-6 sm:-mr-8">
-            <img
-              :src="securitieshomepage"
-              class="w-24 sm:w-28 md:w-32 h-full object-cover -mr-6 sm:-mr-8"
-            />
-            <!-- Overlay only on image -->
-            <div class="absolute inset-0 bg-black/30 rounded-l-2xl"></div>
-          </div>
-
-          <span
-            class="relative z-10 flex items-center justify-center h-full text-gray-700 text-sm sm:text-base font-semibold px-10"
-          >
-            Securities Trading
-          </span>
-        </RouterLink>
-
-        <RouterLink
-          to="/Trustees"
-         :class="cardClass"
-       class="reveal"> 
-          <div class="relative h-full w-24 sm:w-28 md:w-32 -mr-6 sm:-mr-8">
-            <img
-              :src="Trusteesimg"
-              class="w-24 sm:w-28 md:w-32 h-full object-cover -mr-6 sm:-mr-8"
-            />
-            <!-- Overlay only on image -->
-            <div class="absolute inset-0 bg-black/30 rounded-l-2xl"></div>
-          </div>
-
-          <span
-            class="relative z-10 flex items-center justify-center h-full text-gray-700 text-sm sm:text-base font-semibold px-10"
-          >
-            Trustees
-          </span>
-        </RouterLink>
-
-<RouterLink
-          to="/Trustees"
-         :class="cardClass"
-       class="reveal"> 
-          <div class="relative h-full w-24 sm:w-28 md:w-32 -mr-6 sm:-mr-8">
-            <img
-              :src="Trusteesimg"
-              class="w-24 sm:w-28 md:w-32 h-full object-cover -mr-6 sm:-mr-8"
-            />
-            <!-- Overlay only on image -->
-            <div class="absolute inset-0 bg-black/30 rounded-l-2xl"></div>
-          </div>
-
-          <span
-            class="relative z-10 flex items-center justify-center h-full text-gray-700 text-sm sm:text-base font-semibold px-10"
-          >
-            Venture Capital
-          </span>
-        </RouterLink>
-
-      </div>
+  <!-- Investment Banking -->
+  <RouterLink to="/Investment-Banking"
+    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal group cursor-pointer">
+    <img :src="whatwedoIMG1invest" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110" />
+    <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-14 group-hover:bg-black/40"></div>
+    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md transition-all duration-500 group-hover:bottom-3">
+      Investment Banking
     </div>
+  </RouterLink>
 
+  <!-- Asset Management -->
+  <RouterLink to="/Asset-Management"
+    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal group cursor-pointer">
+    <img :src="whatwedoIMG2asset" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110" />
+    <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-14 group-hover:bg-black/40"></div>
+    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md transition-all duration-500 group-hover:bottom-3">
+      Asset Management
+    </div>
+  </RouterLink>
+
+  <!-- Private Equity -->
+  <RouterLink to="/Private-Equity"
+    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal group cursor-pointer">
+    <img :src="whatwedoIMG3private" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110" />
+    <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-14 group-hover:bg-black/40"></div>
+    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md transition-all duration-500 group-hover:bottom-3">
+      Private Equity
+    </div>
+  </RouterLink>
+
+  <!-- Securities Trading -->
+  <RouterLink to="/Securities-Trading"
+    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal group cursor-pointer">
+    <img :src="whatwedoIMG4security" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110" />
+    <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-14 group-hover:bg-black/40"></div>
+    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md transition-all duration-500 group-hover:bottom-3">
+      Security Trading
+    </div>
+  </RouterLink>
+
+  <!-- Trustees -->
+  <RouterLink to="/Trustees"
+    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal group cursor-pointer">
+    <img :src="whatwedoIMG5trustees" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110" />
+    <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-14 group-hover:bg-black/40"></div>
+    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md transition-all duration-500 group-hover:bottom-3">
+      Trustees
+    </div>
+  </RouterLink>
+
+  <!-- Venture Capital -->
+  <RouterLink to="/Venture-Capital"
+    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal group cursor-pointer">
+    <img :src="whatwedoIMG6venture" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110" />
+    <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-14 group-hover:bg-black/40"></div>
+    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md transition-all duration-500 group-hover:bottom-3">
+      Venture Capital
+    </div>
+  </RouterLink>
+
+  <!-- Consultancy Service -->
+  <RouterLink to="/Consultancy-Service"
+    class="relative w-full sm:w-[48%] lg:w-[31%] h-52 rounded-2xl overflow-hidden reveal group cursor-pointer">
+    <img :src="whatwedoIMG7consult" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110" />
+    <div class="absolute bottom-0 left-0 right-0 h-20 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-14 group-hover:bg-black/40"></div>
+    <div class="absolute bottom-4 left-0 right-0 text-center text-white font-semibold text-sm tracking-wide drop-shadow-md transition-all duration-500 group-hover:bottom-3">
+      Consultancy Service
+    </div>
+  </RouterLink>
+
+</div>
+</div>
  
     <InsightsPage />
 

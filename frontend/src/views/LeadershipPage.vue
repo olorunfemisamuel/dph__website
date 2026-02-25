@@ -5,14 +5,33 @@ import { ref } from 'vue';
 const activeTab = ref('management');
 
 // Sample data to differentiate the views
-const managementData = Array(9).fill({ name: 'Dr Onuoha Nnachi', role: 'Chief Executive' });
-const boardData = Array(6).fill({ name: 'Dr Onuoha Nnachi', role: 'Director of Board' });
+const managementData = [
+  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive Officer', img: new URL('@/assets/leadershipIMGS/mdIMG.jpg', import.meta.url).href },
+  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/mrijomaIMG.jpg', import.meta.url).href },
+  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/misscatherineIMG.jpg', import.meta.url).href },
+  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/missblessingIMG.jpg', import.meta.url).href },
+  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/mrdeideiIMG.jpg', import.meta.url).href },
+  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/bosuIMG.jpg', import.meta.url).href },
+  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/oluchiIMG.jpg', import.meta.url).href },
+  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/mrbrightIMG.jpg', import.meta.url).href },
+  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/mrsamIMG.jpg', import.meta.url).href },
+];
+
+const boardData = [
+  { name: 'Dr Onuoha Nnachi', role: 'Director of Board', img: new URL('@/assets/leadershipIMGS/mdIMG.jpg', import.meta.url).href },
+  { name: 'Dr Onuoha Nnachi', role: 'Director of Board', img: new URL('@/assets/leadershipIMGS/mrijomaIMG.jpg', import.meta.url).href },
+  { name: 'Dr Onuoha Nnachi', role: 'Director of Board', img: new URL('@/assets/leadershipIMGS/misscatherineIMG.jpg', import.meta.url).href },
+  { name: 'Dr Onuoha Nnachi', role: 'Director of Board', img: new URL('@/assets/leadershipIMGS/misscatherineIMG.jpg', import.meta.url).href },
+  { name: 'Dr Onuoha Nnachi', role: 'Director of Board', img: new URL('@/assets/leadershipIMGS/misscatherineIMG.jpg', import.meta.url).href },
+  { name: 'Dr Onuoha Nnachi', role: 'Director of Board', img: new URL('@/assets/leadershipIMGS/misscatherineIMG.jpg', import.meta.url).href },
+];
 
 
 const showModal = ref(false);
-const selectedLeader = ref<{ name: string; role: string } | null>(null);
 
-const openModal = (leader: { name: string; role: string }) => {
+const selectedLeader = ref<{ name: string; role: string; img: string } | null>(null);
+
+const openModal = (leader: { name: string; role: string; img: string }) => {
   selectedLeader.value = leader;
   showModal.value = true;
 };
@@ -28,7 +47,7 @@ const closeModal = () => {
 <template>
   <!-- Leadership Banner -->
   <section class="w-full overflow-hidden shadow-lg">
-    <div class="relative w-full h-64 sm:h-80 md:h-96 overflow-hidden">
+    <div class="relative w-full h-40 sm:h-44 md:h-70 overflow-hidden">
       <img 
         src="@/assets/leadershipbanner.png" 
         alt="About Banner" 
@@ -63,7 +82,7 @@ const closeModal = () => {
 
   <!-- Leadership Grid -->
   <div class="max-w-7xl mx-auto mt-8 sm:mt-12 mb-16 px-4 sm:px-6">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 px-10">
       <div
   v-for="(leader, index) in (activeTab === 'management' ? managementData : boardData)"
   :key="index"
@@ -72,7 +91,7 @@ const closeModal = () => {
 >
 
         <img
-          src="@/assets/aboutUsimage4.jpg"
+          :src= "leader.img"
           alt="Leader"
           class="w-24 sm:w-28 h-full object-cover"
         />
@@ -132,10 +151,11 @@ const closeModal = () => {
 
     <div class="grid md:grid-cols-3 gap-6 p-6">
       
-      <!-- Image -->
+    
+    <!-- Image -->
       <div class="md:col-span-1">
         <img
-          src="@/assets/aboutUsimage4.jpg"
+          :src="selectedLeader?.img"
           alt="Leader"
           class="w-full h-full object-cover rounded-lg"
         />

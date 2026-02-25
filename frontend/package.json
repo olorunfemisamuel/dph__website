@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "@heroicons/vue": "^2.2.0",
+    "axios": "^1.13.5",
+    "socket.io-client": "^4.8.3",
     "vue": "^3.5.25",
     "vue-router": "^4.6.4"
   },

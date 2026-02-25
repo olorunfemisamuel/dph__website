@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+
+// existing imports...
 import InvestNow from '@/views/InvestNow.vue'
 import HomePage from '@/views/HomePage.vue'
 import AboutUs from '@/views/AboutUs.vue'
@@ -16,7 +18,6 @@ import ExchangeTradedFunds from '@/views/ExchangeTradedFunds.vue'
 import MutualFunds from '@/views/MutualFunds.vue'
 import AlternativeInvestment from '@/views/AlternativeInvestment.vue'
 import SubsidiariesPage from '@/views/SubsidiariesPage.vue'
-
 import Insightpage from '@/views/Insightpage.vue'
 import InsightsExtendPage from '@/views/InsightsExtendPage.vue'
 import MDMessagePage from '@/views/MDMessagePage.vue'
@@ -27,10 +28,31 @@ import StructuredFinance from '../views/StructuredFinance.vue'
 import ProjectFinance from '@/views/ProjectFinance.vue'
 import FinancialAdvisory from '@/views/FinancialAdvisory.vue'
 
+import EquityDebtCapitalMarket from '@/views/EquityDebtCapitalMarket.vue'
+import Alternativeinvest from '@/views/Alternativeinvest.vue'
+import StockBroking from '@/views/StockBroking.vue'
+import SecurityDealing from '@/views/SecurityDealing.vue'
+import FixedIncomeSecurity from '@/views/FixedIncomeSecurity.vue'
+import Equities from '@/views/Equities.vue'
+import DerivativesInstruments from '@/views/DerivativesInstruments.vue'
+import CommodityTrading from '@/views/CommodityTrading.vue'
+import ForeignExchange from '@/views/ForeignExchange.vue'
+import SecuredandUnsecuredInsurance from '@/views/SecuredandUnsecuredInsurance.vue'
+import CooporateTrust from '@/views/CooporateTrust.vue'
+import ConsultancyService from '@/views/ConsultancyService.vue'
+import VentureCapital from '@/views/VentureCapital.vue'
+import CookiesPolicy from '@/views/CookiesPolicy.vue'
+
+
+
+
+// new imports
+
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
+
     {
       path: '/',
       name: 'Home',
@@ -148,6 +170,8 @@ const router = createRouter({
   component: SubsidiariesPage
 },
 
+
+// Insights and Services routes
 {
   name: '/merger-acquisition',
   path: '/merger-acquisition',
@@ -176,7 +200,95 @@ const router = createRouter({
   name: '/financial-advisory',
   path: '/financial-advisory',
   component: FinancialAdvisory
+},
+
+{
+  name: '/equity-debt-capital-market',
+  path: '/equity-debt-capital-market',
+  component:EquityDebtCapitalMarket
+},
+
+{
+  name: '/alternative-invest',
+  path: '/alternative-invest',
+  component: Alternativeinvest
+},
+
+{
+  name:'/stockbroking',
+  path: '/stockbroking',
+  component: StockBroking
+},
+
+{
+  name:'/security-dealing',
+  path: '/security-dealing',
+  component: SecurityDealing
+},
+
+{
+  name: '/fixed-income-security',
+  path: '/fixed-income-security',
+  component: FixedIncomeSecurity
+},
+
+{
+  name: '/equities',
+  path: '/equities',
+  component: Equities
+},
+
+{
+  name: '/derivatives-instruments',
+  path: '/derivatives-instruments',
+  component: DerivativesInstruments
+},
+
+{
+  name: '/commodity-trading',
+  path: '/commodity-trading',
+  component: CommodityTrading
+},
+
+{
+  name: '/foreign-exchange',
+  path: '/foreign-exchange',
+  component: ForeignExchange
+},
+
+{
+  name:'/secured-unsecured',
+  path: '/secured-unsecured',
+  component: SecuredandUnsecuredInsurance
+},
+
+{
+  name:'/cooporate-trust',
+  path: '/cooporate-trust',
+  component: CooporateTrust
+},
+
+{
+  name: '/consultancy-service',
+  path: '/consultancy-service',
+  component: ConsultancyService
+},
+
+{
+  name: '/venture-capital',
+  path: '/venture-capital',
+  component: VentureCapital
+},
+
+{
+  name: '/cookies-policy',
+  path: '/cookies-policy',
+  component: CookiesPolicy
 }
+
+
+
+
 
   ],
 
@@ -184,5 +296,8 @@ const router = createRouter({
     return { top: 0 }
   }
 })
+
+// Route guard for protected pages
+
 
 export default router

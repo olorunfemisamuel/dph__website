@@ -5,7 +5,7 @@
 <template>
 
     <section class="w-full overflow-hidden shadow-lg">
-      <div class="relative w-full h-52 sm:h-64 md:h-96 overflow-hidden">
+       <div class="relative w-full h-40 sm:h-44 md:h-70 overflow-hidden">
         <img 
           src="@/assets/Trusteesbannerimg.png" 
           alt="About Banner" 
