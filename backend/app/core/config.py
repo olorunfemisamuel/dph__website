@@ -32,6 +32,7 @@ class Settings(BaseSettings):
         "http://localhost:5173",
         "http://localhost:4173",
         "http://127.0.0.1:5173",
+        "https://your-frontend-domain.com",
     ]
 
     class Config:
