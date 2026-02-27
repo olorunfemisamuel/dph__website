@@ -1,7 +1,7 @@
-<!-- frontend/src/views/DashboardView.vue -->
+frontend/src/views/DashboardView.vue
 <template>
   <!-- <div class="max-w-7xl mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-8">Welcome, {{ user?.firstName }}!</h1> -->
+    <h1 class="text-3xl font-bold mb-8">Welcome, {{ user?.firstName }}!</h1> --> -->
 
     <!-- <div class="grid md:grid-cols-3 gap-6"> -->
       <!-- Investment Portfolio Card -->
@@ -12,8 +12,8 @@
         <router-link to="/investmentdashboard"
                      class="mt-4 inline-block text-blue-600 hover:text-blue-700">
           View Details →
-        </router-link> -->
-      <!-- </div> -->
+        </router-link>
+      </div> -->
 
       <!-- Recent Insights Card -->
       <!-- <div class="bg-white p-6 rounded-lg shadow">
@@ -29,7 +29,7 @@
       </div> -->
 
       <!-- WebSocket Status Card -->
-      <!-- <div class="bg-white p-6 rounded-lg shadow">
+      <!-- <div class="bg-white p-6 rounded-lg shadow"> 
         <h2 class="text-xl font-semibold mb-4">Market Status</h2>
         <APITest />
       </div>
@@ -37,18 +37,18 @@
   </div> -->
 </template>
 
-<script setup lang="ts">
-// import { ref, onMounted } from 'vue'
-// import { getUserFromStorage } from '../services/authservice'
-// import APITest from '../components/APITest.vue'
+<!-- <script setup lang="ts">
+import { ref, onMounted } from 'vue'
+import { getUserFromStorage } from '../services/authservice'
+import APITest from '../components/APITest.vue'
 
-// const user = ref(getUserFromStorage())
-// const portfolioValue = ref('12,345.67')
-// const portfolioGrowth = ref('2.3')
-// const recentInsights = ref([])
+const user = ref(getUserFromStorage())
+const portfolioValue = ref('12,345.67')
+const portfolioGrowth = ref('2.3')
+const recentInsights = ref([])
 
-// onMounted(async () => {
-  // Fetch user's portfolio data
-  // Fetch recent insights
-// })
-</script>
+onMounted(async () => {
+  Fetch user's portfolio data
+  Fetch recent insights
+})
+</script> -->
