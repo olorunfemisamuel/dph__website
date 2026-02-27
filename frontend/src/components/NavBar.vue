@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 
 //Navigastion to a section
@@ -75,6 +75,7 @@ const openMega = (menu: MegaMenu) => {
 const closeMega = () => {
   closeTimer = window.setTimeout(() => {
     activeMega.value = null
+    hoveredMiddle.value = null
   }, 180)
 }
 
@@ -90,8 +91,74 @@ const closeAllMenus = () => {
   activeAboutSub.value = null
   activeServicesSub.value = null
   isMenuOpen.value = false
+  hoveredMiddle.value = null
 }
 
+
+
+
+// ─── SERVICE LEFT PANEL IMAGES (imports) ───
+import investmegaIMG from '@/assets/investmentbankingMegaIMGS/investmegaIMG.png'
+// import assetImg from '@/assets/assetmanagement.png'
+// import privateImg from '@/assets/corporateTrust/corporatetrust.png'
+// import securitiesImg from '@/assets/foreignexchangeIMG/foreignexchange.png'
+// import trusteesImg from '@/assets/corporateTrust/corporatetrust.png'
+// import ventureImg from '@/assets/alternativeinvestIMAGE.png'
+// import consultancyImg from '@/assets/assetmanagement.png'
+
+// ─── INVESTMENT BANKING MIDDLE IMAGES ───
+import coorporatemegamiddleMegaIMG from '@/assets/investmentbankingMegaIMGS/cooporatemegamiddleMegaIMG.png'
+import macquisitionmiddlemegaIMG from '@/assets/investmentbankingMegaIMGS/macquisitionmiddlemegaIMG.png'
+import financialadvisorymiddlemegaIMG from '@/assets/investmentbankingMegaIMGS/financialadvisorymiddlemegaIMG.png'
+import projectfinancemiddlemegaIMG from '@/assets/investmentbankingMegaIMGS/projectfinancemiddlemegaIMG.png'
+import equitydebtcapitalmiddleMegaIMG from '@/assets/investmentbankingMegaIMGS/equitydebtcapitalmiddleMegaIMG.png'
+import alternativeinvestmiddlemegaIMG from '@/assets/investmentbankingMegaIMGS/alternativeinvestmiddlemegaIMG.png'
+
+// ─── ASSET MANAGEMENT MIDDLE IMAGES ───
+// import mutualFundsImg from '@/assets/mutualfundsIMG/mutualfund.png'
+// import portfolioImg from '@/assets/assetmanagement.png'
+// import hedgeFundImg from '@/assets/assetmanagement.png'
+// import investAdvisoryImg from '@/assets/assetmanagement.png'
+
+
+
+
+const hoveredMiddle = ref<string | null>(null)
+
+// Right panel images per LEFT service
+const serviceImages: Record<string, string> = {
+  // asset:       assetImg,
+  investment:  investmegaIMG,
+  //private:     privateImg,
+  //securities:  securitiesImg,
+  //trustees:    trusteesImg,
+  //venture:     ventureImg,
+  //consultancy: consultancyImg,
+}
+
+const middleImages: Record<string, string> = {
+  // Investment Banking
+  'corporate-finance':       coorporatemegamiddleMegaIMG,
+  'mergers-acquisitions':    macquisitionmiddlemegaIMG,
+  'financial-advisory':      financialadvisorymiddlemegaIMG,
+  'project-finance':         projectfinancemiddlemegaIMG,
+  'equity-debt-capital':     equitydebtcapitalmiddleMegaIMG,
+  'alternative-investments': alternativeinvestmiddlemegaIMG,
+
+  // Asset Management
+  // 'mutual-funds':            mutualFundsImg,
+  // 'portfolio-management':    portfolioImg,
+  // 'hedge-fund':              hedgeFundImg,
+  // 'investment-advisory':     investAdvisoryImg,
+}
+
+// Computed: middle hover takes priority, else use left service image
+const rightPanelImage = computed(() => {
+  if (hoveredMiddle.value && middleImages[hoveredMiddle.value]) {
+    return middleImages[hoveredMiddle.value]
+  }
+  return serviceImages[activeServicesSub.value ?? 'asset'] ?? '/navigation1.png'
+})
 </script>
 
 <template>
@@ -444,45 +511,49 @@ const closeAllMenus = () => {
           </div>
 
           <div v-if="activeServicesSub === 'investment'" class="space-y-4">
-            <RouterLink 
-  to="/Investment-Banking" 
-  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
-  @click="navigateToSection('corporate-finance')"
->Corporate Finance</RouterLink>
+           <div v-if="activeServicesSub === 'investment'" class="space-y-4">
+  <RouterLink to="/Investment-Banking" 
+    class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100"
+    @mouseenter="hoveredMiddle = 'corporate-finance'"
+    
+    @click="navigateToSection('corporate-finance')"
+  >Corporate Finance</RouterLink>
 
-           <RouterLink 
-  to="/Investment-Banking" 
-  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
-  @click="navigateToSection('mergersacquisitions')"
->Mergers and Acquisitions</RouterLink>
+  <RouterLink to="/Investment-Banking"
+    class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100"
+    @mouseenter="hoveredMiddle = 'mergers-acquisitions'"
+   
+    @click="navigateToSection('mergersacquisitions')"
+  >Mergers and Acquisitions</RouterLink>
 
+  <RouterLink to="/Investment-Banking"
+    class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100"
+    @mouseenter="hoveredMiddle = 'financial-advisory'"
+    
+    @click="navigateToSection('financial-advisory')"
+  >Financial Advisory</RouterLink>
 
-<RouterLink 
-  to="/Investment-Banking" 
-  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
-  @click="navigateToSection('financial-advisory')"
->Financial Advisory</RouterLink>
+  <RouterLink to="/Investment-Banking"
+    class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100"
+    @mouseenter="hoveredMiddle = 'project-finance'"
+   
+    @click="navigateToSection('project-finance')"
+  >Project Finance</RouterLink>
 
+  <RouterLink to="/Investment-Banking"
+    class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100"
+    @mouseenter="hoveredMiddle = 'equity-debt-capital'"
+   
+    @click="navigateToSection('equity-debt-capital-market')"
+  >Equity and Debt Capital Market</RouterLink>
 
-
-<RouterLink 
-  to="/Investment-Banking" 
-  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
-  @click="navigateToSection('project-finance')"
-> Project Finance</RouterLink>
-
-<RouterLink 
-  to="/Investment-Banking" 
-  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
-  @click="navigateToSection('equity-debt-capital-market')"
-> Equity and Debt Capital Market </RouterLink>
-
-<RouterLink 
-  to="/Investment-Banking" 
-  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
-  @click="navigateToSection('alternative-investments')"
-> Alternative Investments</RouterLink>
-            
+  <RouterLink to="/Investment-Banking"
+    class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100"
+    @mouseenter="hoveredMiddle = 'alternative-investments'"
+   
+    @click="navigateToSection('alternative-investments')"
+  >Alternative Investments</RouterLink>
+</div>
            
            
            
@@ -591,7 +662,11 @@ const closeAllMenus = () => {
 
         <!-- RIGHT -->
         <div class="bg-gray-50 rounded-xl p-4 flex flex-col justify-between">
-          <img src="/navigation1.png" alt="Our Businesses" class="rounded-lg mb-4" />
+         <img 
+    :src="rightPanelImage" 
+    alt="Our Businesses" 
+    class="rounded-lg mb-4 w-full h-48 object-cover transition-all duration-300" 
+  />
           <p class="font-medium text-lg">Explore our<br /><span class="font-semibold">business divisions</span></p>
           <RouterLink to="/contact" class="mt-4 text-center border border-black rounded-lg py-2">Contact Us</RouterLink>
         </div>

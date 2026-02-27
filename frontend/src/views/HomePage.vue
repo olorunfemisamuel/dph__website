@@ -7,11 +7,10 @@ import whatwedoIMG3private from '@/assets/whatwedoIMGS/whatwedoIMG3private.jpg'
 import whatwedoIMG4security from '@/assets/whatwedoIMGS/whatwedoIMG4security.jpg'
 import whatwedoIMG5trustees from '@/assets/whatwedoIMGS/whatwedoIMG5trustees.jpg'
 import HeroImage from "@/assets/HeroImage.png"
-import secondsliderImage from '@/assets/secondsliderImage.png'
+import investheroIMG from '@/assets/heroIMGS/investheroIMG.png'
 import thirdsliderImage from '@/assets/thirdsliderImage.png'
 import fourthsliderImage from '@/assets/fourthsliderImage.png'
 import fifthsliderImage from '@/assets/fifthsliderImage.png'
-import sixthsliderImage from '@/assets/sixthsliderImage.png'
 import venturecapitalimage from '@/assets/venturecapitalimg.png'
 
 import whatwedoIMG6venture from '@/assets/whatwedoIMGS/whatwedoIMG6venture.jpg'
@@ -79,7 +78,7 @@ const slides: SlideType[] = [
 
  {
     type: 'image',
-    src: sixthsliderImage,
+    src: investheroIMG,
     title: 'INVESTMENT BANKING',
     subtitle: '',
     description:
@@ -90,7 +89,7 @@ const slides: SlideType[] = [
 
   {
     type: 'image',
-    src: secondsliderImage,
+    src: investheroIMG,
     title: 'ASSET MANAGEMENT',
     subtitle: '',
     description: 'We deliver top of the line Investment Management services to our clients and manage funds for Individuals and Companies.',
@@ -167,6 +166,41 @@ const isFirstSlide = () => activeSlide.value === 0
 const currentSlide = computed<SlideType>(() => {
   return (slides[activeSlide.value] ?? slides[0]) as SlideType
 })
+
+
+//Newsletter Endpoint Logic
+const email   = ref('')
+const loading = ref(false)
+const message = ref('')
+const success = ref(false)
+
+async function handleSubscribe() {
+  if (!email.value) return
+
+  loading.value = true
+  message.value = ''
+
+  try {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/newsletter/subscribe`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email.value }),
+    })
+
+    const data = await res.json()
+
+   if (!res.ok) throw new Error(data.error || data.message || 'Subscription failed')
+
+    success.value = true
+    message.value = 'Thank you for subscribing!'
+    email.value   = ''
+  } catch (err: any) {
+    success.value = false
+    message.value = err.message || 'Something went wrong. Please try again.'
+  } finally {
+    loading.value = false
+  }
+}
 </script>
 
 <template>
@@ -399,21 +433,31 @@ const currentSlide = computed<SlideType>(() => {
         <p class="mb-6">
           Stay updated with the latest news and insights from Deutsche Partners Holding.
         </p>
-        <form
-          class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-4xl mx-auto"
-        >
-          <input
-            type="email"
-            placeholder="Your Email Address"
-            class="w-full sm:flex-1 bg-white/10 border border-white/30 px-4 sm:px-6 py-3 rounded text-white placeholder:text-white/60 focus:outline-none focus:bg-white/20"
-          />
-          <button
-            type="submit"
-            class="w-full sm:w-auto border-2 border-white px-8 sm:px-10 py-3 rounded font-bold hover:bg-white hover:text-[#2e8b3b] transition duration-300 uppercase text-sm sm:text-base tracking-widest"
-          >
-            Subscribe
-          </button>
-        </form>
+       <form
+  @submit.prevent="handleSubscribe"
+  class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-4xl mx-auto"
+>
+  <input
+    v-model="email"
+    type="email"
+    placeholder="Your Email Address"
+    required
+    :disabled="loading"
+    class="w-full sm:flex-1 bg-white/10 border border-white/30 px-4 sm:px-6 py-3 rounded text-white placeholder:text-white/60 focus:outline-none focus:bg-white/20 disabled:opacity-50"
+  />
+  <button
+    type="submit"
+    :disabled="loading"
+    class="w-full sm:w-auto border-2 border-white px-8 sm:px-10 py-3 rounded font-bold hover:bg-white hover:text-[#2e8b3b] transition duration-300 uppercase text-sm sm:text-base tracking-widest disabled:opacity-50"
+  >
+    {{ loading ? 'Subscribing...' : 'Subscribe' }}
+  </button>
+</form>
+
+<!-- Success / Error message -->
+<p v-if="message" :class="success ? 'text-green-200' : 'text-red-300'" class="mt-4 text-sm">
+  {{ message }}
+</p>
       </div>
     </div>
   </main>
