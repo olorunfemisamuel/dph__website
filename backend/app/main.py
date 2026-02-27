@@ -1,27 +1,13 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from contextlib import asynccontextmanager
-
 from app.core.config import settings
 from app.db.mongodb import connect_to_mongo, close_mongo_connection
-from app.routers import auth, users, chat
+from app.routers import auth, users, chat, newsletter          # ← added newsletter
 from app.websockets.chat_ws import router as ws_router
 
+app = FastAPI(title=settings.APP_NAME)
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    await connect_to_mongo()
-    yield
-    await close_mongo_connection()
-
-
-app = FastAPI(
-    title="DPH Website API",
-    description="Backend API for the DPH website — powers Lola chatbot, auth, and data.",
-    version="1.0.0",
-    lifespan=lifespan,
-)
-
+# CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],
@@ -30,12 +16,22 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(auth.router,  prefix="/api/auth",  tags=["Auth"])
-app.include_router(users.router, prefix="/api/users", tags=["Users"])
-app.include_router(chat.router,  prefix="/api/chat",  tags=["Chat"])
-app.include_router(ws_router)
+# Routers
+app.include_router(auth.router, prefix="/auth", tags=["Auth"])
+app.include_router(users.router, prefix="/users", tags=["Users"])
+app.include_router(chat.router, prefix="/chat", tags=["Chat"])
+app.include_router(ws_router, prefix="/ws", tags=["WebSocket"])
+app.include_router(newsletter.router, prefix="/newsletter", tags=["Newsletter"])  # ← added
 
+# DB lifecycle
+@app.on_event("startup")
+async def startup():
+    await connect_to_mongo()
 
-@app.get("/", tags=["Health"])
+@app.on_event("shutdown")
+async def shutdown():
+    await close_mongo_connection()
+
+@app.get("/")
 async def root():
-    return {"status": "DPH API is running ✅"}
+    return {"message": "DPH API is running"}
