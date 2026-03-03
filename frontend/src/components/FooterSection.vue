@@ -14,7 +14,7 @@
                         <li><RouterLink to="/about" class="text-gray-300 hover:text-white transition">Who we are</RouterLink></li>
                         <li><RouterLink to="/MDmessage" class="text-gray-300 hover:text-white transition">MD's Message</RouterLink></li>
                         <li><RouterLink to = "/Leadership" class="text-gray-300 hover:text-white transition">Leadership</RouterLink></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Subsidiaries</a></li>
+                        <li><RouterLink to="/Subsidiaries" class="text-gray-300 hover:text-white transition">Subsidiaries</RouterLink></li>
                     </ul>
                 </div>
 
@@ -27,7 +27,7 @@
                         <li><RouterLink to="/Private-Equity" class="text-gray-300 hover:text-white transition">Private Equity</RouterLink></li>
                         <li><RouterLink to="/Securities-Trading" class="text-gray-300 hover:text-white transition">Security Trading</RouterLink></li>
                         <li><RouterLink to="/Trustees" class="text-gray-300 hover:text-white transition">Trustees</RouterLink></li>
-                        <li><RouterLink to="/Trustees" class="text-gray-300 hover:text-white transition">Venture Capital</RouterLink></li>
+                        <li><RouterLink to="/venture-capital" class="text-gray-300 hover:text-white transition">Venture Capital</RouterLink></li>
                     </ul>
                 </div>
 
@@ -36,9 +36,9 @@
                     <h3 class="text-lg font-bold mb-4 text-green-400">PRODUCTS</h3>
                     <ul class="space-y-2">
                         <li><a href="#" class="text-gray-300 hover:text-white transition"></a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Mutual Funds</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Exchange Traded Funds</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Alternative Investment Scheme</a></li>
+                        <li><RouterLink to="/Mutual-Funds" class="text-gray-300 hover:text-white transition">Mutual Funds</RouterLink></li>
+                        <li><RouterLink to="/Exchange-Traded-Funds" class="text-gray-300 hover:text-white transition">Exchange Traded Funds</RouterLink></li>
+                        <li><RouterLink to="/alternative-investment" class="text-gray-300 hover:text-white transition">Alternative Investment Scheme</RouterLink></li>
                         <!-- <li><a href="#" class="text-gray-300 hover:text-white transition">Trustees</a></li> -->
                     </ul>
                 </div>
@@ -47,10 +47,10 @@
                 <div>
                     <h3 class="text-lg font-bold mb-4 text-green-400">RESOURCES</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Gallery</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Insights</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Policy</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition">Career</a></li>
+                        <li><RouterLink to="/gallery" class="text-gray-300 hover:text-white transition">Gallery</RouterLink></li>
+                        <li><RouterLink to="/Insight" class="text-gray-300 hover:text-white transition">Insights</RouterLink></li>
+                        <li><RouterLink to="/cookies-policy" class="text-gray-300 hover:text-white transition">Policy</RouterLink></li>
+                        <li><RouterLink to="/Career" class="text-gray-300 hover:text-white transition">Career</RouterLink></li>
                     </ul>
                 </div>
 
