@@ -742,7 +742,7 @@ async function saveBlogPost() {
       // ── MOCK ──
       const idx = blogPosts.value.findIndex(p => p._id === editingPost.value!._id)
       if (idx !== -1) blogPosts.value[idx] = { ...blogPosts.value[idx], ...payload }
-      showToast('Post updated successfully')
+      showToast('Post updated successfully')r
     } else {
       /*
        * ── REAL API ──

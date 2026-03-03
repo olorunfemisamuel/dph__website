@@ -99,12 +99,12 @@ const closeAllMenus = () => {
 
 // ─── SERVICE LEFT PANEL IMAGES (imports) ───
 import investmegaIMG from '@/assets/investmentbankingMegaIMGS/investmegaIMG.png'
-// import assetImg from '@/assets/assetmanagement.png'
-// import privateImg from '@/assets/corporateTrust/corporatetrust.png'
-// import securitiesImg from '@/assets/foreignexchangeIMG/foreignexchange.png'
-// import trusteesImg from '@/assets/corporateTrust/corporatetrust.png'
-// import ventureImg from '@/assets/alternativeinvestIMAGE.png'
-// import consultancyImg from '@/assets/assetmanagement.png'
+import assetMega from '@/assets/assetmanagementMega/assetMega.png'
+import Privateequity from '@/assets/Privateequity.jpg'
+import securitiesbannerimg from '@/assets/securitiesbannerimg.png'
+import Trusteesbannerimg from '@/assets/Trusteesbannerimg.png'
+import VENTURECAPITAL from '@/assets/consultancyventuretrusteesprivateequity/VENTURECAPITAL.jpeg'
+import CONSULTANCYSERVICE from '@/assets/consultancyventuretrusteesprivateequity/CONSULTANCYSERVICE.jpeg'
 
 // ─── INVESTMENT BANKING MIDDLE IMAGES ───
 import coorporatemegamiddleMegaIMG from '@/assets/investmentbankingMegaIMGS/cooporatemegamiddleMegaIMG.png'
@@ -115,10 +115,79 @@ import equitydebtcapitalmiddleMegaIMG from '@/assets/investmentbankingMegaIMGS/e
 import alternativeinvestmiddlemegaIMG from '@/assets/investmentbankingMegaIMGS/alternativeinvestmiddlemegaIMG.png'
 
 // ─── ASSET MANAGEMENT MIDDLE IMAGES ───
-// import mutualFundsImg from '@/assets/mutualfundsIMG/mutualfund.png'
+import assetMegamutual from '@/assets/assetmanagementMega/assetMegamutual.png'
+import assetMegaportfolio from '@/assets/assetmanagementMega/assetMegaportfolio.png'
+import assetMegahedge from '@/assets/assetmanagementMega/assetMegahedge.png'
+import assetMegaventure from '@/assets/assetmanagementMega/assetMegaventure.png'
+import assetMegainvestment from '@/assets/assetmanagementMega/assetMegainvestment.png'
+
+
+// ─── PRIVATE EQUITY MIDDLE IMAGES ───
+import businesincubationinvestment from '@/assets/privateequityIMGS/businesincubationinvestment.jpg'
+import healthinvestment from '@/assets/privateequityIMGS/healthinvestment.jpg'
+import hospitalityandentatainment from '@/assets/privateequityIMGS/hospitalityandentatainment.jpg'
+import privateequityfunds from '@/assets/privateequityIMGS/privateequityfunds.jpg'
+import realestateinvestnent from '@/assets/privateequityIMGS/realestateinvestnent.jpg'
+
+
+// ─── SECURITY TRADING MANAGEMENT MIDDLE IMAGES ───
+import commoditytrading from '@/assets/securitytradingIMGS/commoditytrading.jpg'
+import derivativeinstrment from '@/assets/securitytradingIMGS/derivativeinstrment.jpg'
+import equties from '@/assets/securitytradingIMGS/equties.jpg'
+import fixedincomesecurities from '@/assets/securitytradingIMGS/fixedincomesecurities.jpg'
+import foreignexchange from '@/assets/securitytradingIMGS/foreignexchange.jpg'
+import securitydealing from '@/assets/securitytradingIMGS/securitydealing.jpg'
+import stockbroking from '@/assets/securitytradingIMGS/stockbroking.jpg'
+
+
+
+// ─── TRUSTEES MIDDLE IMAGES ───
+import bondtrustship from '@/assets/trustees/bondtrustship.jpeg'
+import coporatetrust from '@/assets/trustees/coporatetrust.jpg'
+import estatcplanning from '@/assets/trustees/estatcplanning.jpeg'
+import privatetrust from '@/assets/trustees/privatetrust.jpg'
+import securedandunsecurednoteissuances from '@/assets/trustees/securedandunsecurednoteissuances.jpeg'
+
+
+// ─── VENTURE CAPITAL MIDDLE IMAGES ───
+// import businesincubationinvestment from '@/assets/privateequityIMGS/businesincubationinvestment.jpg'
 // import portfolioImg from '@/assets/assetmanagement.png'
 // import hedgeFundImg from '@/assets/assetmanagement.png'
 // import investAdvisoryImg from '@/assets/assetmanagement.png'
+
+
+// ─── CONSULTANCY MIDDLE IMAGES ───
+// import businesincubationinvestment from '@/assets/privateequityIMGS/businesincubationinvestment.jpg'
+// import portfolioImg from '@/assets/assetmanagement.png'
+// import hedgeFundImg from '@/assets/assetmanagement.png'
+// import investAdvisoryImg from '@/assets/assetmanagement.png'
+
+
+
+
+// ─── PRODUCT LEFT PANEL IMAGES (imports) ───
+import mutualfunds from '@/assets/mutualfunds/mutualfunds.jpeg'
+import exchangetraededfund from '@/assets/exchangetradedfund/exchangetraededfund.jpeg'
+import ALTERNATEINVESTMENTSSCHEME from '@/assets/alternateinvestmentsscheme/ALTERNATEINVESTMENTSSCHEME.jpeg'
+
+
+// ─── MUTUAL FUNDS MIDDLE IMAGES ───
+import eqityfund from '@/assets/mutualfunds/eqityfund.jpeg'
+import ethicalfund from '@/assets/mutualfunds/ethicalfund.jpg'
+import moneymarketfund from '@/assets/mutualfunds/moneymarketfund.jpeg'
+import privatedfixedincomefund from '@/assets/mutualfunds/privatedfixedincomefund.jpeg'
+
+
+// ─── EXCHANGE-TRADED FUNDS MIDDLE IMAGES ───
+import AGROETF from '@/assets/exchangetradedfund/AGROETF.jpg'
+import GOLDETF from '@/assets/exchangetradedfund/GOLDETF.jpg'
+
+
+// ─── ALTERNATIVE INVESTMENT SCHEME MIDDLE IMAGES ───
+import INSTITUTIOALASSETMANAGEN from '@/assets/alternateinvestmentsscheme/INSTITUTIOALASSETMANAGEN.jpeg'
+import PRIVATEASSETMANAGEMENT  from '@/assets/alternateinvestmentsscheme/PRIVATEASSETMANAGEMENT.jpeg'
+
+
 
 
 
@@ -127,14 +196,21 @@ const hoveredMiddle = ref<string | null>(null)
 
 // Right panel images per LEFT service
 const serviceImages: Record<string, string> = {
-  // asset:       assetImg,
+  asset:       assetMega,
   investment:  investmegaIMG,
-  //private:     privateImg,
-  //securities:  securitiesImg,
-  //trustees:    trusteesImg,
-  //venture:     ventureImg,
-  //consultancy: consultancyImg,
+  private:     Privateequity,
+  securities:  securitiesbannerimg,
+  trustees:   Trusteesbannerimg,
+  venture:     VENTURECAPITAL,
+  consultancy: CONSULTANCYSERVICE,
 }
+
+
+
+
+
+
+
 
 const middleImages: Record<string, string> = {
   // Investment Banking
@@ -146,19 +222,102 @@ const middleImages: Record<string, string> = {
   'alternative-investments': alternativeinvestmiddlemegaIMG,
 
   // Asset Management
+  'mutual-funds':            assetMegamutual,
+  'portfolio-management':    assetMegaportfolio,
+  'hedge-fund':              assetMegahedge,
+  'investment-advisory':     assetMegainvestment,
+
+    // Private Equity
+  'business-incubation':     businesincubationinvestment,
+  'health-investment':       healthinvestment,
+  'hospitality-entertainment': hospitalityandentatainment,
+  'private-equity-funds':    privateequityfunds,
+  'real-estate-investment':  realestateinvestnent,
+
+   // Security Trading
+  'stock-broking':            stockbroking,
+  'equties':                 equties,
+  'derivatives-instrument':   derivativeinstrment,
+  'commodities-trading':    commoditytrading,
+  'security-dealing':         securitydealing,
+  'fixed-income-securities': fixedincomesecurities,
+  'foreign-exchange':          foreignexchange,
+
+
+ // Trustees
+  'secured-unsecured':           securedandunsecurednoteissuances ,
+  'bond-trustship':                bondtrustship,
+  'private-trust':              privatetrust,
+  'corporate-trust':    coporatetrust,
+  'estate-planning':     estatcplanning,
+
+
+   // Venture Capital
   // 'mutual-funds':            mutualFundsImg,
   // 'portfolio-management':    portfolioImg,
   // 'hedge-fund':              hedgeFundImg,
   // 'investment-advisory':     investAdvisoryImg,
+
+
 }
 
-// Computed: middle hover takes priority, else use left service image
+
+const productImages: Record<string, string> = {
+  mutual:            mutualfunds,
+ 'exchange-traded': exchangetraededfund,  // key must match the ProductsSub type exactly
+  alternative: ALTERNATEINVESTMENTSSCHEME,
+}
+
+
+const prodmiddleImages: Record<string, string> = {
+  //Mutual Funds
+  'money-market' :    moneymarketfund,
+  'equity-fund' :     eqityfund,
+  'private-fixed-income': privatedfixedincomefund,
+  'ethical-funds':        ethicalfund,
+
+
+  //Exchange Traded Funds
+  'agro-etf' :    AGROETF,
+  'gold-etf' :     GOLDETF,
+
+
+
+
+  // Alternative Investment Schemes
+  'private-wealth' :    INSTITUTIOALASSETMANAGEN,
+  'instution-asset-management' :     PRIVATEASSETMANAGEMENT,
+
+}
+
+
+
+
+const prodhoveredMiddle = ref<string | null>(null)
+
+
+
+
+
+
+// Computed: middle hover takes priority, else use left service/product image
 const rightPanelImage = computed(() => {
+  // Products mega menu
+  if (activeMega.value === 'products') {
+    if (prodhoveredMiddle.value && prodmiddleImages[prodhoveredMiddle.value]) {
+      return prodmiddleImages[prodhoveredMiddle.value]
+    }
+    return productImages[activeProductsSub.value ?? 'mutual'] ?? '/navigation1.png'
+  }
+
+  // Services mega menu (default)
   if (hoveredMiddle.value && middleImages[hoveredMiddle.value]) {
     return middleImages[hoveredMiddle.value]
   }
   return serviceImages[activeServicesSub.value ?? 'asset'] ?? '/navigation1.png'
 })
+
+
 </script>
 
 <template>
@@ -458,7 +617,7 @@ const rightPanelImage = computed(() => {
         </div>
 
         <!-- MIDDLE -->
-        <div>
+        <div @mouseleave="hoveredMiddle = null">
           <p class="text-xs tracking-widest text-gray-400 mb-4">WHAT WE DO</p>
 
           <div v-if="activeServicesSub === 'asset'" class="space-y-4">
@@ -478,6 +637,7 @@ const rightPanelImage = computed(() => {
 <RouterLink 
   to="/Asset-Management" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @mouseenter= "hoveredMiddle = 'portfolio-management'"
   @click="navigateToSection('wealth-management')"
 >Portfolio Management</RouterLink>
 
@@ -485,6 +645,7 @@ const rightPanelImage = computed(() => {
 <RouterLink 
   to="/Asset-Management" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @mouseenter= "hoveredMiddle = 'hedge-fund'"
   @click="navigateToSection('hedge-fund')"
 >Hedge Fund</RouterLink>
 
@@ -494,6 +655,7 @@ const rightPanelImage = computed(() => {
            <RouterLink 
   to="/Asset-Management" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @mouseenter= "hoveredMiddle = 'investment-advisory'"
   @click="navigateToSection('venture-capital')"
 >Venture Capital</RouterLink>
 
@@ -504,6 +666,7 @@ const rightPanelImage = computed(() => {
 <RouterLink 
   to="/Asset-Management" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @mouseenter= "hoveredMiddle = 'investment-advisory'"
   @click="navigateToSection('investment-advisory')"
 >Investment Advisory</RouterLink>
            
@@ -561,11 +724,44 @@ const rightPanelImage = computed(() => {
           </div>
 
           <div v-if="activeServicesSub === 'private'" class="space-y-4">
-            <RouterLink to="/Private-Equity" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Private Equity Funds</RouterLink>
-            <RouterLink to="/Private-Equity" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Business Incubation Investment</RouterLink>
-            <RouterLink to="/Private-Equity" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Health Investment</RouterLink>
-            <RouterLink to="/Private-Equity" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Hospitality & Entertainment Investment</RouterLink>
-            <RouterLink to="/Private-Equity" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Real Estate Investment Trust</RouterLink>
+          <RouterLink to="/Private-Equity"
+    class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100"
+    @mouseenter="hoveredMiddle = 'private-equity-funds'"
+    @click="closeAllMenus"
+    >Private Equity Funds</RouterLink>
+
+
+      <RouterLink to="/Private-Equity"
+    class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100"
+    @mouseenter="hoveredMiddle = 'business-incubation'"
+    @click="closeAllMenus"
+    >Business Incubation Investment</RouterLink>
+
+
+      <RouterLink to="/Private-Equity"
+    class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100"
+    @mouseenter="hoveredMiddle = 'health-investment'"
+    @click="closeAllMenus"
+    >Health Investment</RouterLink>
+
+
+    <RouterLink to="/Private-Equity"
+    class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100"
+    @mouseenter="hoveredMiddle = 'hospitality-entertainment'"
+    @click="closeAllMenus"
+    >Hospitality & Entertainment Investment</RouterLink>
+
+    <RouterLink to="/Private-Equity"
+    class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100"
+    @mouseenter="hoveredMiddle = 'real-estate-investment'"
+    @click="closeAllMenus"
+    >Real Estate Investment Trust</RouterLink>
+  
+            <!-- <RouterLink to="/Private-Equity" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Private Equity Funds</RouterLink> -->
+            <!-- <RouterLink to="/Private-Equity" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Business Incubation Investment</RouterLink> -->
+            <!-- <RouterLink to="/Private-Equity" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Health Investment</RouterLink> -->
+            <!-- <RouterLink to="/Private-Equity" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Hospitality & Entertainment Investment</RouterLink> -->
+            <!-- <RouterLink to="/Private-Equity" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Real Estate Investment Trust</RouterLink> -->
           </div>
 
           <div v-if="activeServicesSub === 'securities'" class="space-y-4">
@@ -573,6 +769,7 @@ const rightPanelImage = computed(() => {
             <RouterLink 
   to="/Securities-Trading" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @mouseenter="hoveredMiddle = 'stock-broking'"
   @click="navigateToSection('stock-broking')"
 > Stock Broking</RouterLink>
 
@@ -580,7 +777,9 @@ const rightPanelImage = computed(() => {
  <RouterLink 
   to="/Securities-Trading" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @mouseenter="hoveredMiddle = 'equities'"
   @click="navigateToSection('equities')"
+
 > Equities</RouterLink>
 
 
@@ -593,12 +792,15 @@ const rightPanelImage = computed(() => {
  <RouterLink 
   to="/Securities-Trading" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @mouseenter="hoveredMiddle = 'commodities-trading'"
   @click="navigateToSection('commodities-trading')"
 > Commodites Trading</RouterLink>
 
 <RouterLink 
   to="/Securities-Trading" 
-  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100"
+
+  @mouseenter="hoveredMiddle = 'security-dealing'"
   @click="navigateToSection('security-dealing')"
 > Security Dealing</RouterLink>
 
@@ -606,17 +808,21 @@ const rightPanelImage = computed(() => {
 <RouterLink 
   to="/Securities-Trading" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+
+  @mouseenter="hoveredMiddle = 'fixed-income-securities'"
   @click="navigateToSection('fixed-income-securities')"
 > Fixed Income Securities</RouterLink>
 
 <RouterLink 
   to="/Securities-Trading" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @mouseenter="hoveredMiddle = 'foreign-exchange'"
   @click="navigateToSection('foreign-exchange')"
 > Foreign Exhchange </RouterLink>
             
 
             
+<!----TRUSTEES SERVICES-->
             
             <!-- <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="closeAllMenus">Economic Profiling</RouterLink> -->
           </div>
@@ -625,6 +831,7 @@ const rightPanelImage = computed(() => {
              <RouterLink 
   to="/Trustees" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+   @mouseenter="hoveredMiddle = 'secured-unsecured'"
   @click="navigateToSection('secured-unsecured')"
 > Secured and unsecured note issuances</RouterLink>
 
@@ -632,12 +839,14 @@ const rightPanelImage = computed(() => {
          <RouterLink 
   to="/Trustees" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
-  @click="navigateToSection('bond-trusteeship')"
+  @mouseenter="hoveredMiddle = 'bond-trustship'"
+  @click="navigateToSection('bond-trustship')"
 > Bond Trusteeship</RouterLink>
 
          <RouterLink 
   to="/Trustees" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @mouseenter="hoveredMiddle = 'private-trust'"
   @click="navigateToSection('private-trust')"
 > Private Trust</RouterLink>
             
@@ -645,12 +854,15 @@ const rightPanelImage = computed(() => {
      <RouterLink 
   to="/Trustees" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @mouseenter="hoveredMiddle = 'corporate-trust'"
   @click="navigateToSection('corporate-trust')"
 > Corporate Trust</RouterLink>
 
 <RouterLink 
   to="/Trustees" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  
+  @mouseenter="hoveredMiddle = 'estate-planning'"
   @click="navigateToSection('estate-planning')"
 > Estate Planning </RouterLink>
             
@@ -679,7 +891,7 @@ const rightPanelImage = computed(() => {
       <div v-if="activeMega === 'products'" class="grid grid-cols-[260px_1fr_360px] gap-8">
 
         <!-- LEFT -->
-        <div class="border-r pr-4">
+        <div class="border-r pr-4" @mouseenter="prodhoveredMiddle = null">
           <p class="text-xs tracking-widest text-gray-400 mb-4">OUR PRODUCTS</p>
           <ul class="space-y-2">
 
@@ -708,12 +920,14 @@ const rightPanelImage = computed(() => {
 
         <!-- MIDDLE -->
         <div>
-          <p class="text-xs tracking-widest text-gray-400 mb-4">WHAT WE DO</p>
+          <p class="text-xs tracking-widest text-black mb-4">WHAT WE DO</p>
 
           <div v-if="activeProductsSub === 'mutual'" class="space-y-4">
             <RouterLink 
   to="/mutual-funds" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+    @mouseenter = "prodhoveredMiddle = 'money-market'"
+   
   @click="navigateToSection('money-market')"
 >Deutsche Money Market Fund</RouterLink>
 
@@ -721,6 +935,8 @@ const rightPanelImage = computed(() => {
         <RouterLink 
   to="/mutual-funds" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @mouseenter = "prodhoveredMiddle = 'equity-fund'"
+  
   @click="navigateToSection('equity-fund')"
 >Deutsche Equity Fund</RouterLink>
             
@@ -728,6 +944,8 @@ const rightPanelImage = computed(() => {
     <RouterLink 
   to="/mutual-funds" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @mouseenter = "prodhoveredMiddle = 'private-fixed-income'"
+  
   @click="navigateToSection('fixed-income')"
 >Deutsche Private Fixed Income Fund</RouterLink>
 
@@ -735,6 +953,8 @@ const rightPanelImage = computed(() => {
     <RouterLink 
   to="/mutual-funds" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @mouseenter = "prodhoveredMiddle = 'ethical-funds'"
+ 
   @click="navigateToSection('ethical-funds')"
 >Deutsche Ethical Funds</RouterLink>
 
@@ -748,12 +968,15 @@ const rightPanelImage = computed(() => {
                 <RouterLink 
   to="/exchange-traded-funds" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @mouseenter="prodhoveredMiddle = 'agro-etf'"
   @click="navigateToSection('ethical-funds')"
+
 >Deutsche Agro-ETF</RouterLink>
 
 <RouterLink 
   to="/exchange-traded-funds" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @mouseenter="prodhoveredMiddle = 'gold-etf'"
   @click="navigateToSection('gold-etf')"
 >Deutsche Gold-ETF</RouterLink>
             
@@ -765,6 +988,7 @@ const rightPanelImage = computed(() => {
             <RouterLink 
   to="/alternative-investment" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @mouseenter = "prodhoveredMiddle = 'private-wealth'"
   @click="navigateToSection('private-wealth-management')"
 >Deutsche Private Wealth Management</RouterLink>
 
@@ -772,6 +996,7 @@ const rightPanelImage = computed(() => {
           <RouterLink 
   to="/alternative-investment" 
   class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" 
+  @mouseenter = "prodhoveredMiddle = 'instution-asset-management'"
   @click="navigateToSection('asset-manange')"
 >Deutsche Institutional Asset Management</RouterLink>
 
@@ -782,7 +1007,7 @@ const rightPanelImage = computed(() => {
 
         <!-- RIGHT -->
         <div class="bg-gray-50 rounded-xl p-4 flex flex-col justify-between">
-          <img src="/navigation1.png" alt="Our Businesses" class="rounded-lg mb-4" />
+          <img :src="rightPanelImage"  alt="Our Businesses" class="rounded-lg mb-4" />
           <p class="font-medium text-lg">Explore our<br /><span class="font-semibold">business divisions</span></p>
           <RouterLink to="/contact" class="mt-4 text-center border border-black rounded-lg py-2">Contact Us</RouterLink>
         </div>

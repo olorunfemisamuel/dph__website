@@ -1,7 +1,7 @@
 frontend/src/views/DashboardView.vue
 <template>
   <!-- <div class="max-w-7xl mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-8">Welcome, {{ user?.firstName }}!</h1> --> -->
+    <h1 class="text-3xl font-bold mb-8">Welcome, {{ user?.firstName }}!</h1> --> 
 
     <!-- <div class="grid md:grid-cols-3 gap-6"> -->
       <!-- Investment Portfolio Card -->
