@@ -318,6 +318,29 @@ const rightPanelImage = computed(() => {
 })
 
 
+
+const hoveredResource = ref<string | null>(null)
+
+
+// ─── RESOURCES IMAGES ───
+// import resourcesMegagallery from '@/assets/resourcesMega/resourcesMegagallery.png'
+import resourcesMegagallery from '@/assets/resourcesMega/resourcesMegagallery.png'
+import resourcesMegaresourcesMegacareer from '@/assets/resourcesMega/resourcesMegacareer.png'
+import resourcesMegapolicy from '@/assets/resourcesMega/resourcesMegapolicy.png'
+import resourcesMegainvestment from '@/assets/resourcesMega/resourcesMegainvestment.png'
+
+
+
+const resourceImages: Record<string, string> = {
+  insights:  resourcesMegagallery,
+  gallery:   resourcesMegagallery,
+  career:     resourcesMegaresourcesMegacareer,
+  policy:     resourcesMegapolicy,
+  dashboard:  resourcesMegainvestment,
+}
+
+
+
 </script>
 
 <template>
@@ -1017,23 +1040,52 @@ const rightPanelImage = computed(() => {
 
 
       <!-- ========== RESOURCES ========== -->
-      <div v-if="activeMega === 'resources'" class="grid grid-cols-[1fr_360px] gap-8">
+      <!-- ========== RESOURCES ========== -->
+<div v-if="activeMega === 'resources'" class="grid grid-cols-[1fr_360px] gap-8">
 
-        <!-- LEFT -->
-        <div class="space-y-2">
-          <RouterLink to="/Insight" class="block px-4 py-3 hover:bg-green-50 rounded-lg" @click="closeAllMenus">Insights</RouterLink>
-          <RouterLink to="/gallery" class="block px-4 py-3 hover:bg-green-50 rounded-lg" @click="closeAllMenus">Gallery</RouterLink>
-          <RouterLink to="/career" class="block px-4 py-3 hover:bg-green-50 rounded-lg" @click="closeAllMenus">Career</RouterLink>
-          <RouterLink to="/cookies-policy" class="block px-4 py-3 hover:bg-green-50 rounded-lg" @click="closeAllMenus">Policy</RouterLink>
-          <RouterLink to="/investmentdashboard" class="block px-4 py-3 hover:bg-green-50 rounded-lg" @click="closeAllMenus">Investment Dashboard</RouterLink>
-        </div>
+  <!-- LEFT -->
+  <div class="space-y-2" @mouseleave="hoveredResource = null">
+    <RouterLink to="/Insight"
+      class="block px-4 py-3 hover:bg-green-50 rounded-lg"
+      @mouseenter="hoveredResource = 'insights'"
+    
+      @click="closeAllMenus">Insights</RouterLink>
 
-        <!-- RIGHT -->
-        <div class="hidden md:block">
-          <img src="/navigation2.png" alt="Our Businesses" class="w-full h-full object-cover rounded-lg" />
-        </div>
+    <RouterLink to="/gallery"
+      class="block px-4 py-3 hover:bg-green-50 rounded-lg"
+      @mouseenter="hoveredResource = 'gallery'"
+      
+      @click="closeAllMenus">Gallery</RouterLink>
 
-      </div>
+    <RouterLink to="/career"
+      class="block px-4 py-3 hover:bg-green-50 rounded-lg"
+      @mouseenter="hoveredResource = 'career'"
+     
+      @click="closeAllMenus">Career</RouterLink>
+
+    <RouterLink to="/cookies-policy"
+      class="block px-4 py-3 hover:bg-green-50 rounded-lg"
+      @mouseenter="hoveredResource = 'policy'"
+   
+      @click="closeAllMenus">Policy</RouterLink>
+
+    <RouterLink to="/investmentdashboard"
+      class="block px-4 py-3 hover:bg-green-50 rounded-lg"
+      @mouseenter="hoveredResource = 'dashboard'"
+
+      @click="closeAllMenus">Investment Dashboard</RouterLink>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="hidden md:block">
+    <img
+      :src="hoveredResource ? resourceImages[hoveredResource] : '/navigation2.png'"
+      alt="Resources"
+      class="w-full h-full object-cover rounded-lg transition-all duration-300"
+    />
+  </div>
+
+</div>
       <!-- ========== END RESOURCES ========== -->
 
     </div>
