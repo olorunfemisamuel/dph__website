@@ -1040,7 +1040,7 @@ const resourceImages: Record<string, string> = {
 
 
       <!-- ========== RESOURCES ========== -->
-      <!-- ========== RESOURCES ========== -->
+     
 <div v-if="activeMega === 'resources'" class="grid grid-cols-[1fr_360px] gap-8">
 
   <!-- LEFT -->
