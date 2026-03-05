@@ -6,7 +6,7 @@ import InsightsPage from '@/components/InsightsPage.vue';
   <!-- Hero Section -->
   <section class="relative w-full h-[35vh] sm:h-[45vh] md:h-[55vh] overflow-hidden">
     <img
-      src="@/assets/CareerBannerImg.png"
+      src="@/assets/CareerBannerImg.webp"
       alt="Career"
       class="absolute inset-0 w-full h-full object-cover"
     />
@@ -50,7 +50,7 @@ import InsightsPage from '@/components/InsightsPage.vue';
     </div>
 
     <div class="relative w-full">
-      <img src="@/assets/CareerImg.png" class="rounded-xl shadow-lg w-full h-auto" alt="Team" />
+      <img src="@/assets/CareerImg.webp" class="rounded-xl shadow-lg w-full h-auto" alt="Team" />
    
      
     </div>
