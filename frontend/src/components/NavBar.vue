@@ -98,55 +98,55 @@ const closeAllMenus = () => {
 
 
 // ─── SERVICE LEFT PANEL IMAGES (imports) ───
-import investmegaIMG from '@/assets/investmentbankingMegaIMGS/investmegaIMG.png'
-import assetMega from '@/assets/assetmanagementMega/assetMega.png'
-import Privateequity from '@/assets/Privateequity.jpg'
-import securitiesbannerimg from '@/assets/securitiesbannerimg.png'
-import Trusteesbannerimg from '@/assets/Trusteesbannerimg.png'
-import VENTURECAPITAL from '@/assets/consultancyventuretrusteesprivateequity/VENTURECAPITAL.jpeg'
-import CONSULTANCYSERVICE from '@/assets/consultancyventuretrusteesprivateequity/CONSULTANCYSERVICE.jpeg'
+import investmegaIMG from '@/assets/investmentbankingMegaIMGS/investmegaIMG.webp'
+import assetMega from '@/assets/assetmanagementMega/assetMega.webp'
+import Privateequity from '@/assets/Privateequity.webp'
+import securitiesbannerimg from '@/assets/securitiesbannerimg.webp'
+import Trusteesbannerimg from '@/assets/Trusteesbannerimg.webp'
+import VENTURECAPITAL from '@/assets/consultancyventuretrusteesprivateequity/VENTURECAPITAL.webp'
+import CONSULTANCYSERVICE from '@/assets/consultancyventuretrusteesprivateequity/CONSULTANCYSERVICE.webp'
 
 // ─── INVESTMENT BANKING MIDDLE IMAGES ───
-import coorporatemegamiddleMegaIMG from '@/assets/investmentbankingMegaIMGS/cooporatemegamiddleMegaIMG.png'
-import macquisitionmiddlemegaIMG from '@/assets/investmentbankingMegaIMGS/macquisitionmiddlemegaIMG.png'
-import financialadvisorymiddlemegaIMG from '@/assets/investmentbankingMegaIMGS/financialadvisorymiddlemegaIMG.png'
-import projectfinancemiddlemegaIMG from '@/assets/investmentbankingMegaIMGS/projectfinancemiddlemegaIMG.png'
-import equitydebtcapitalmiddleMegaIMG from '@/assets/investmentbankingMegaIMGS/equitydebtcapitalmiddleMegaIMG.png'
-import alternativeinvestmiddlemegaIMG from '@/assets/investmentbankingMegaIMGS/alternativeinvestmiddlemegaIMG.png'
+import coorporatemegamiddleMegaIMG from '@/assets/investmentbankingMegaIMGS/cooporatemegamiddleMegaIMG.webp'
+import macquisitionmiddlemegaIMG from '@/assets/investmentbankingMegaIMGS/macquisitionmiddlemegaIMG.webp'
+import financialadvisorymiddlemegaIMG from '@/assets/investmentbankingMegaIMGS/financialadvisorymiddlemegaIMG.webp'
+import projectfinancemiddlemegaIMG from '@/assets/investmentbankingMegaIMGS/projectfinancemiddlemegaIMG.webp'
+import equitydebtcapitalmiddleMegaIMG from '@/assets/investmentbankingMegaIMGS/equitydebtcapitalmiddleMegaIMG.webp'
+import alternativeinvestmiddlemegaIMG from '@/assets/investmentbankingMegaIMGS/alternativeinvestmiddlemegaIMG.webp'
 
 // ─── ASSET MANAGEMENT MIDDLE IMAGES ───
-import assetMegamutual from '@/assets/assetmanagementMega/assetMegamutual.png'
-import assetMegaportfolio from '@/assets/assetmanagementMega/assetMegaportfolio.png'
-import assetMegahedge from '@/assets/assetmanagementMega/assetMegahedge.png'
-import assetMegaventure from '@/assets/assetmanagementMega/assetMegaventure.png'
-import assetMegainvestment from '@/assets/assetmanagementMega/assetMegainvestment.png'
+import assetMegamutual from '@/assets/assetmanagementMega/assetMegamutual.webp'
+import assetMegaportfolio from '@/assets/assetmanagementMega/assetMegaportfolio.webp'
+import assetMegahedge from '@/assets/assetmanagementMega/assetMegahedge.webp'
+import assetMegaventure from '@/assets/assetmanagementMega/assetMegaventure.webp'
+import assetMegainvestment from '@/assets/assetmanagementMega/assetMegainvestment.webp'
 
 
 // ─── PRIVATE EQUITY MIDDLE IMAGES ───
-import businesincubationinvestment from '@/assets/privateequityIMGS/businesincubationinvestment.jpg'
-import healthinvestment from '@/assets/privateequityIMGS/healthinvestment.jpg'
-import hospitalityandentatainment from '@/assets/privateequityIMGS/hospitalityandentatainment.jpg'
-import privateequityfunds from '@/assets/privateequityIMGS/privateequityfunds.jpg'
-import realestateinvestnent from '@/assets/privateequityIMGS/realestateinvestnent.jpg'
+import businesincubationinvestment from '@/assets/privateequityIMGS/businesincubationinvestment.webp'
+import healthinvestment from '@/assets/privateequityIMGS/healthinvestment.webp'
+import hospitalityandentatainment from '@/assets/privateequityIMGS/hospitalityandentatainment.webp'
+import privateequityfunds from '@/assets/privateequityIMGS/privateequityfunds.webp'
+import realestateinvestnent from '@/assets/privateequityIMGS/realestateinvestnent.webp'
 
 
 // ─── SECURITY TRADING MANAGEMENT MIDDLE IMAGES ───
-import commoditytrading from '@/assets/securitytradingIMGS/commoditytrading.jpg'
-import derivativeinstrment from '@/assets/securitytradingIMGS/derivativeinstrment.jpg'
-import equties from '@/assets/securitytradingIMGS/equties.jpg'
-import fixedincomesecurities from '@/assets/securitytradingIMGS/fixedincomesecurities.jpg'
-import foreignexchange from '@/assets/securitytradingIMGS/foreignexchange.jpg'
-import securitydealing from '@/assets/securitytradingIMGS/securitydealing.jpg'
-import stockbroking from '@/assets/securitytradingIMGS/stockbroking.jpg'
+import commoditytrading from '@/assets/securitytradingIMGS/commoditytrading.webp'
+import derivativeinstrment from '@/assets/securitytradingIMGS/derivativeinstrment.webp'
+import equties from '@/assets/securitytradingIMGS/equties.webp'
+import fixedincomesecurities from '@/assets/securitytradingIMGS/fixedincomesecurities.webp'
+import foreignexchange from '@/assets/securitytradingIMGS/foreignexchange.webp'
+import securitydealing from '@/assets/securitytradingIMGS/securitydealing.webp'
+import stockbroking from '@/assets/securitytradingIMGS/stockbroking.webp'
 
 
 
 // ─── TRUSTEES MIDDLE IMAGES ───
-import bondtrustship from '@/assets/trustees/bondtrustship.jpeg'
-import coporatetrust from '@/assets/trustees/coporatetrust.jpg'
-import estatcplanning from '@/assets/trustees/estatcplanning.jpeg'
-import privatetrust from '@/assets/trustees/privatetrust.jpg'
-import securedandunsecurednoteissuances from '@/assets/trustees/securedandunsecurednoteissuances.jpeg'
+import bondtrustship from '@/assets/trustees/bondtrustship.webp'
+import coporatetrust from '@/assets/trustees/coporatetrust.webp'
+import estatcplanning from '@/assets/trustees/estatcplanning.webp'
+import privatetrust from '@/assets/trustees/privatetrust.webp'
+import securedandunsecurednoteissuances from '@/assets/trustees/securedandunsecurednoteissuances.webp'
 
 
 // ─── VENTURE CAPITAL MIDDLE IMAGES ───
@@ -166,26 +166,26 @@ import securedandunsecurednoteissuances from '@/assets/trustees/securedandunsecu
 
 
 // ─── PRODUCT LEFT PANEL IMAGES (imports) ───
-import mutualfunds from '@/assets/mutualfunds/mutualfunds.jpeg'
-import exchangetraededfund from '@/assets/exchangetradedfund/exchangetraededfund.jpeg'
-import ALTERNATEINVESTMENTSSCHEME from '@/assets/alternateinvestmentsscheme/ALTERNATEINVESTMENTSSCHEME.jpeg'
+import mutualfunds from '@/assets/mutualfunds/mutualfunds.webp'
+import exchangetraededfund from '@/assets/exchangetradedfund/exchangetraededfund.webp'
+import ALTERNATEINVESTMENTSSCHEME from '@/assets/alternateinvestmentsscheme/ALTERNATEINVESTMENTSSCHEME.webp'
 
 
 // ─── MUTUAL FUNDS MIDDLE IMAGES ───
-import eqityfund from '@/assets/mutualfunds/eqityfund.jpeg'
-import ethicalfund from '@/assets/mutualfunds/ethicalfund.jpg'
-import moneymarketfund from '@/assets/mutualfunds/moneymarketfund.jpeg'
-import privatedfixedincomefund from '@/assets/mutualfunds/privatedfixedincomefund.jpeg'
+import eqityfund from '@/assets/mutualfunds/eqityfund.webp'
+import ethicalfund from '@/assets/mutualfunds/ethicalfund.webp'
+import moneymarketfund from '@/assets/mutualfunds/moneymarketfund.webp'
+import privatedfixedincomefund from '@/assets/mutualfunds/privatedfixedincomefund.webp'
 
 
 // ─── EXCHANGE-TRADED FUNDS MIDDLE IMAGES ───
-import AGROETF from '@/assets/exchangetradedfund/AGROETF.jpg'
-import GOLDETF from '@/assets/exchangetradedfund/GOLDETF.jpg'
+import AGROETF from '@/assets/exchangetradedfund/AGROETF.webp'
+import GOLDETF from '@/assets/exchangetradedfund/GOLDETF.webp'
 
 
 // ─── ALTERNATIVE INVESTMENT SCHEME MIDDLE IMAGES ───
-import INSTITUTIOALASSETMANAGEN from '@/assets/alternateinvestmentsscheme/INSTITUTIOALASSETMANAGEN.jpeg'
-import PRIVATEASSETMANAGEMENT  from '@/assets/alternateinvestmentsscheme/PRIVATEASSETMANAGEMENT.jpeg'
+import INSTITUTIOALASSETMANAGEN from '@/assets/alternateinvestmentsscheme/INSTITUTIOALASSETMANAGEN.webp'
+import PRIVATEASSETMANAGEMENT  from '@/assets/alternateinvestmentsscheme/PRIVATEASSETMANAGEMENT.webp'
 
 
 
