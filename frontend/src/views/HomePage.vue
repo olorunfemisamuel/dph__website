@@ -2,19 +2,19 @@
 
 import InsightsPage from '@/components/InsightsPage.vue'
 import whatwedoIMG1invest from '@/assets/whatwedoIMGS/whatwedoIMG1invest.jpg'
-import whatwedoIMG2asset from '@/assets/whatwedoIMGS/whatwedoIMG2asset.jpg'
-import whatwedoIMG3private from '@/assets/whatwedoIMGS/whatwedoIMG3private.jpg'
-import whatwedoIMG4security from '@/assets/whatwedoIMGS/whatwedoIMG4security.jpg'
-import whatwedoIMG5trustees from '@/assets/whatwedoIMGS/whatwedoIMG5trustees.jpg'
-import HeroImage from "@/assets/HeroImage.png"
-import investheroIMG from '@/assets/heroIMGS/investheroIMG.png'
-import thirdsliderImage from '@/assets/thirdsliderImage.png'
-import fourthsliderImage from '@/assets/fourthsliderImage.png'
-import fifthsliderImage from '@/assets/fifthsliderImage.png'
-import venturecapitalimage from '@/assets/venturecapitalimg.png'
+import whatwedoIMG2asset from '@/assets/whatwedoIMGS/whatwedoIMG2asset.webp'
+import whatwedoIMG3private from '@/assets/whatwedoIMGS/whatwedoIMG3private.webp'
+import whatwedoIMG4security from '@/assets/whatwedoIMGS/whatwedoIMG4security.webp'
+import whatwedoIMG5trustees from '@/assets/whatwedoIMGS/whatwedoIMG5trustees.webp'
+import HeroImage from "@/assets/HeroImage.webp"
+import investheroIMG from '@/assets/heroIMGS/investheroIMG.webp'
+import thirdsliderImage from '@/assets/thirdsliderImage.webp'
+import fourthsliderImage from '@/assets/fourthsliderImage.webp'
+import fifthsliderImage from '@/assets/fifthsliderImage.webp'
+import venturecapitalimage from '@/assets/venturecapitalimg.webp'
 
-import whatwedoIMG6venture from '@/assets/whatwedoIMGS/whatwedoIMG6venture.jpg'
-import whatwedoIMG7consult from '@/assets/whatwedoIMGS/whatwedoIMG7consult.jpg'
+import whatwedoIMG6venture from '@/assets/whatwedoIMGS/whatwedoIMG6venture.webp'
+import whatwedoIMG7consult from '@/assets/whatwedoIMGS/whatwedoIMG7consult.webp'
 
 
 import { computed } from 'vue'
