@@ -324,10 +324,10 @@ const hoveredResource = ref<string | null>(null)
 
 // ─── RESOURCES IMAGES ───
 // import resourcesMegagallery from '@/assets/resourcesMega/resourcesMegagallery.png'
-import resourcesMegagallery from '@/assets/resourcesMega/resourcesMegagallery.png'
-import resourcesMegaresourcesMegacareer from '@/assets/resourcesMega/resourcesMegacareer.png'
-import resourcesMegapolicy from '@/assets/resourcesMega/resourcesMegapolicy.png'
-import resourcesMegainvestment from '@/assets/resourcesMega/resourcesMegainvestment.png'
+import resourcesMegagallery from '@/assets/resourcesMega/resourcesMegagallery.webp'
+import resourcesMegaresourcesMegacareer from '@/assets/resourcesMega/resourcesMegacareer.webp'
+import resourcesMegapolicy from '@/assets/resourcesMega/resourcesMegapolicy.webp'
+import resourcesMegainvestment from '@/assets/resourcesMega/resourcesMegainvestment.webp'
 
 
 
