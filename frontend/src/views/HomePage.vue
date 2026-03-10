@@ -20,6 +20,7 @@ import whatwedoIMG7consult from '@/assets/whatwedoIMGS/whatwedoIMG7consult.webp'
 import { computed } from 'vue'
 
 import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
+import NewsLetter from '@/components/NewsLetter.vue'
 
 type SlideType = {
   type: string
@@ -168,39 +169,7 @@ const currentSlide = computed<SlideType>(() => {
 })
 
 
-//Newsletter Endpoint Logic
-const email   = ref('')
-const loading = ref(false)
-const message = ref('')
-const success = ref(false)
 
-async function handleSubscribe() {
-  if (!email.value) return
-
-  loading.value = true
-  message.value = ''
-
-  try {
-    const res = await fetch(`${import.meta.env.VITE_API_URL}/newsletter/subscribe`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: email.value }),
-    })
-
-    const data = await res.json()
-
-   if (!res.ok) throw new Error(data.error || data.message || 'Subscription failed')
-
-    success.value = true
-    message.value = 'Thank you for subscribing!'
-    email.value   = ''
-  } catch (err: any) {
-    success.value = false
-    message.value = err.message || 'Something went wrong. Please try again.'
-  } finally {
-    loading.value = false
-  }
-}
 </script>
 
 <template>
@@ -270,7 +239,7 @@ async function handleSubscribe() {
         <img
           v-else
           :src="currentSlide.src"
-          class="w-full h-auto object-cover"
+          class="w-full h-full object-cover"
           alt="Slide background"
         />
 
@@ -427,39 +396,8 @@ async function handleSubscribe() {
     <!---End of Latest News and Insights-->
 
     <!---News letter section -->
-    <div class="bg-green-700 text-white py-10">
-      <div class="max-w-3xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
-        <p class="mb-6">
-          Stay updated with the latest news and insights from Deutsche Partners Holding.
-        </p>
-       <form
-  @submit.prevent="handleSubscribe"
-  class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-4xl mx-auto"
->
-  <input
-    v-model="email"
-    type="email"
-    placeholder="Your Email Address"
-    required
-    :disabled="loading"
-    class="w-full sm:flex-1 bg-white/10 border border-white/30 px-4 sm:px-6 py-3 rounded text-white placeholder:text-white/60 focus:outline-none focus:bg-white/20 disabled:opacity-50"
-  />
-  <button
-    type="submit"
-    :disabled="loading"
-    class="w-full sm:w-auto border-2 border-white px-8 sm:px-10 py-3 rounded font-bold hover:bg-white hover:text-[#2e8b3b] transition duration-300 uppercase text-sm sm:text-base tracking-widest disabled:opacity-50"
-  >
-    {{ loading ? 'Subscribing...' : 'Subscribe' }}
-  </button>
-</form>
 
-<!-- Success / Error message -->
-<p v-if="message" :class="success ? 'text-green-200' : 'text-red-300'" class="mt-4 text-sm">
-  {{ message }}
-</p>
-      </div>
-    </div>
+    <NewsLetter />
   </main>
 </template>
 

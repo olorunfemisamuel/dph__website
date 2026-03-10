@@ -226,6 +226,7 @@ const middleImages: Record<string, string> = {
   'portfolio-management':    assetMegaportfolio,
   'hedge-fund':              assetMegahedge,
   'investment-advisory':     assetMegainvestment,
+  'venture-capital':            assetMegaventure,
 
     // Private Equity
   'business-incubation':     businesincubationinvestment,
@@ -347,7 +348,9 @@ const resourceImages: Record<string, string> = {
   <header class="fixed top-0 left-0 w-full z-50 bg-white shadow-lg">
 
     <nav class="w-full flex items-center justify-between py-4 px-6 md:px-12">
-      <img src="/dphLogo.jpg" alt="DPH Logo" class="h-10 w-auto"/>
+    <RouterLink to="/">
+  <img src="/dphLogo.jpg" alt="DPH Logo" class="h-10 w-auto"/>
+</RouterLink>
 
       <ul class="hidden md:flex gap-8 text-black transition">
 

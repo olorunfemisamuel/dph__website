@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import InsightsPage from '@/components/InsightsPage.vue';
 import newsletterimg1 from '@/assets/newsletterimg/newsletterimg1.png';
+import NewsLetter from '@/components/NewsLetter.vue';
 
 const featuredCards = Array.from({ length: 3 })
 const notes = Array.from({ length: 12 })
@@ -94,19 +95,5 @@ const notes = Array.from({ length: 12 })
   </section>
 
   <!-- SUBSCRIBE BAR -->
-  <section class="bg-green-800 text-white py-6">
-       <form class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-4xl mx-auto">
-        <input 
-          type="email" 
-          placeholder="Your Email Address" 
-          class="w-full sm:flex-1 bg-white/10 border border-white/30 px-4 sm:px-6 py-3 rounded text-white placeholder:text-white/60 focus:outline-none focus:bg-white/20" 
-        />
-        <button 
-          type="submit" 
-          class="w-full sm:w-auto border-2 border-white px-8 sm:px-10 py-3 rounded font-bold hover:bg-white hover:text-[#2e8b3b] transition duration-300 uppercase text-sm sm:text-base tracking-widest"
-        >
-          Subscribe
-        </button>  
-      </form>
-  </section>
+ <NewsLetter/>
 </template>

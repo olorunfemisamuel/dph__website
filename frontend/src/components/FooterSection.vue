@@ -114,5 +114,17 @@
             </div>
         </div>
     </section>
+
+    <!-- Bottom Bar -->
+    <div class="border-t bg-gray-900 border-gray-900">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
+        <p class="text-white text-xs">© 2026 DPH. All rights reserved.</p>
+        <div class="flex items-center gap-2 text-gray-400 text-xs">
+          <span>English (US)</span>
+          <span class="text-white">|</span>
+          <span>Abuja, Nigeria</span>
+        </div>
+      </div>
+    </div>
 </template>
     

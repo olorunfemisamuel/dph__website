@@ -41,6 +41,7 @@ const closeModal = () => {
   selectedLeader.value = null;
 };
 
+import NewsLetter from '@/components/NewsLetter.vue';
 
 </script>
 
@@ -108,28 +109,7 @@ const closeModal = () => {
   </div>
 
   <!-- Subscription Section -->
-  <div class="bg-[#2e8b3b] text-white py-12 sm:py-16">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
-      <h2 class="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">
-        Sign Up To Subscribe To The Latest Insight from DPH
-      </h2>
-      
-      <form class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-4xl mx-auto">
-        <input 
-          type="email" 
-          placeholder="Your Email Address" 
-          class="w-full sm:flex-1 bg-white/10 border border-white/30 px-4 sm:px-6 py-3 rounded text-white placeholder:text-white/60 focus:outline-none focus:bg-white/20" 
-        />
-        <button 
-          type="submit" 
-          class="w-full sm:w-auto border-2 border-white px-8 sm:px-10 py-3 rounded font-bold hover:bg-white hover:text-[#2e8b3b] transition duration-300 uppercase text-sm sm:text-base tracking-widest"
-        >
-          Subscribe
-        </button>  
-      </form>
-    </div>
-  </div>
-
+ <NewsLetter />
 
 <!---Modal-->
 <!-- MODAL -->
