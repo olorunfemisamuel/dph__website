@@ -1,8 +1,6 @@
 from pydantic_settings import BaseSettings
-from typing import List, Optional
+from typing import List
 from dotenv import load_dotenv
-import json
-import os
 
 # Load .env file
 load_dotenv()
@@ -11,7 +9,7 @@ load_dotenv()
 class Settings(BaseSettings):
     APP_NAME: str = "DPH Website API"
     DEBUG: bool = False
-    ENVIRONMENT: str = "development"  # Added missing field
+    ENVIRONMENT: str = "development"
 
     MONGODB_URL: str
     MONGODB_DB_NAME: str = "dph_db"
@@ -35,8 +33,14 @@ class Settings(BaseSettings):
         "If you don't know something specific, direct the user to contact DPH directly."
     )
 
-    # FIX: Rename this to match what main.py is looking for
-    # Or keep both for compatibility
+    # SMTP Email Settings
+    SMTP_HOST: str = "smtp.gmail.com"
+    SMTP_PORT: int = 587
+    SMTP_USERNAME: str = "info@deutschepartners.com"
+    SMTP_PASSWORD: str = ""
+    SMTP_FROM_EMAIL: str = "info@deutschepartners.com"
+    SMTP_NOTIFY_EMAIL: str = "info@deutschepartners.com"
+
     ALLOWED_ORIGINS: List[str] = [
         "http://localhost:5173",
         "http://localhost:4173",
@@ -44,21 +48,18 @@ class Settings(BaseSettings):
         "https://your-frontend-domain.com",
     ]
 
-    # Add BACKEND_CORS_ORIGINS that points to ALLOWED_ORIGINS
     @property
     def BACKEND_CORS_ORIGINS(self) -> List[str]:
-        """Compatibility property for main.py"""
         return self.ALLOWED_ORIGINS
 
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"
-        extra = "ignore"  # Allow extra fields in .env
+        extra = "ignore"
 
 
 settings = Settings()
 
-# Debug print (remove after fixing)
 print("✅ Settings loaded!")
 print(f"📋 CORS Origins: {settings.ALLOWED_ORIGINS}")
 print(f"🔧 Environment: {settings.ENVIRONMENT}")

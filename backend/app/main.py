@@ -9,6 +9,9 @@ from contextlib import asynccontextmanager
 from app.core.config import settings
 from app.db.mongodb import connect_to_mongo, close_mongo_connection, check_connection_health
 from app.routers import auth, users, chat, newsletter
+from app.routers.contact import router as contact_router
+from app.routers.consultation import router as consultation_router
+from app.routers.admin import router as admin_router
 from app.websockets.chat_ws import router as ws_router
 
 # Configure logging
@@ -58,7 +61,10 @@ app = FastAPI(
 # CORS configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.BACKEND_CORS_ORIGINS,
+    allow_origins=[
+        "http://localhost:5173",
+        "https://your-app.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -105,33 +111,16 @@ async def general_exception_handler(request, exc):
 
 
 # Include routers with proper prefixes
-API_PREFIX = "/api/v1"  # You can version your API
+API_PREFIX = "/api/v1"
 
-app.include_router(
-    auth.router,
-    prefix=f"{API_PREFIX}/auth",
-    tags=["Authentication"]
-)
-app.include_router(
-    users.router,
-    prefix=f"{API_PREFIX}/users",
-    tags=["Users"]
-)
-app.include_router(
-    chat.router,
-    prefix=f"{API_PREFIX}/chat",
-    tags=["Chat"]
-)
-app.include_router(
-    newsletter.router,
-    prefix=f"{API_PREFIX}/newsletter",
-    tags=["Newsletter"]
-)
-app.include_router(
-    ws_router,
-    prefix="/ws",
-    tags=["WebSocket"]
-)
+app.include_router(auth.router, prefix=f"{API_PREFIX}/auth", tags=["Authentication"])
+app.include_router(users.router, prefix=f"{API_PREFIX}/users", tags=["Users"])
+app.include_router(chat.router, prefix=f"{API_PREFIX}/chat", tags=["Chat"])
+app.include_router(newsletter.router, prefix=f"{API_PREFIX}/newsletter", tags=["Newsletter"])
+app.include_router(ws_router, prefix="/ws", tags=["WebSocket"])
+app.include_router(contact_router)
+app.include_router(consultation_router)
+app.include_router(admin_router, prefix=f"{API_PREFIX}/admin", tags=["Admin"])
 
 
 # Health check endpoints
@@ -151,16 +140,11 @@ async def root():
 async def health_check():
     """Comprehensive health check endpoint"""
     db_health = await check_connection_health()
-
-    # Check all services
     services = {
         "database": db_health,
         "api": {"status": "healthy", "message": "API is operational"},
     }
-
-    # Determine overall status
     all_healthy = all(s.get("status") == "healthy" for s in services.values())
-
     return {
         "success": all_healthy,
         "status": "healthy" if all_healthy else "degraded",
@@ -177,8 +161,6 @@ async def detailed_health_check():
     import time
 
     db_health = await check_connection_health()
-
-    # System metrics
     process = psutil.Process()
     memory_info = process.memory_info()
 
@@ -201,22 +183,17 @@ async def detailed_health_check():
     }
 
 
-# Optional: Add middleware for request logging
 @app.middleware("http")
 async def log_requests(request, call_next):
     """Log all requests in debug mode"""
     if settings.DEBUG:
         logger.debug(f"Request: {request.method} {request.url.path}")
         start_time = __import__("time").time()
-
         response = await call_next(request)
-
         process_time = (__import__("time").time() - start_time) * 1000
         logger.debug(f"Response: {response.status_code} ({process_time:.2f}ms)")
         return response
-
     return await call_next(request)
 
 
-# Export app for uvicorn
 __all__ = ["app"]
