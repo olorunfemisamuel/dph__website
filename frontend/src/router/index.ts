@@ -42,7 +42,8 @@ import CooporateTrust from '@/views/CooporateTrust.vue'
 import ConsultancyService from '@/views/ConsultancyService.vue'
 import VentureCapital from '@/views/VentureCapital.vue'
 import CookiesPolicy from '@/views/CookiesPolicy.vue'
-
+import admindashboard from '@/views/Admin/admindashboard.vue'
+import login from '@/views/Admin/login.vue'
 
 
 
@@ -284,9 +285,19 @@ const router = createRouter({
   name: '/cookies-policy',
   path: '/cookies-policy',
   component: CookiesPolicy
+},
+
+{
+  name: '/admin',
+  path: '/admin',
+  component: admindashboard
+},
+
+{
+  name:'/login',
+  path: '/login',
+  component:login
 }
-
-
 
 
 

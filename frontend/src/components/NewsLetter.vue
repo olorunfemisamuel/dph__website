@@ -31,12 +31,12 @@ async function handleSubscribe() {
     success.value = true
     message.value = 'Thank you for subscribing!'
     email.value = ''
-    setTimeout(() => { message.value = '' }, 2000)
+    setTimeout(() => { message.value = '' }, 7000)
 
   } catch (err: any) {
     success.value = false
     message.value = err.message || 'Something went wrong. Please try again.'
-    setTimeout(() => { message.value = '' }, 3000)
+    setTimeout(() => { message.value = '' }, 7000)
   } finally {
     loading.value = false
   }

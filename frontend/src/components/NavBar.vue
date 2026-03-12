@@ -372,7 +372,7 @@ const resourceImages: Record<string, string> = {
 
         <!-- ABOUT US -->
         <li class="relative" @mouseenter="openMega('about')" @mouseleave="closeMega">
-          <span class="cursor-pointer font-semibold">About Us</span>
+          <span class="cursor-pointer  font-semibold">About Us</span>
         </li>
 
         <!-- OUR SERVICES -->
@@ -468,7 +468,7 @@ const resourceImages: Record<string, string> = {
 
         <!-- LEFT -->
         <div class="border-r pr-4">
-          <p class="text-sm tracking-widest text-gray-400 mb-4">About Us</p>
+          <p class="text-sm font-black tracking-widest text-gray-700 mb-4">About Us</p>
           <ul class="space-y-2">
           
 
@@ -505,7 +505,7 @@ const resourceImages: Record<string, string> = {
 
         <!-- MIDDLE -->
         <div>
-          <p class="text-xs tracking-widest text-gray-700 mb-4">OVERVIEW</p>
+          <p class="text-sm font-black tracking-widest text-gray-700 mb-4">OVERVIEW</p>
 
           <!-- Who We Are -->
           <div v-if="activeAboutSub === 'who'" class="space-y-4">
@@ -594,7 +594,7 @@ const resourceImages: Record<string, string> = {
 
         <!-- LEFT -->
         <div class="border-r pr-4">
-          <p class="text-xs tracking-widest text-gray-400 mb-4">OUR SERVICES</p>
+          <p class="text-sm font-black tracking-widest text-gray-700 mb-4">OUR SERVICES</p>
           <ul class="space-y-2">
             <RouterLink to="/Investment-Banking" 
   class="block px-4 py-3 rounded-lg font-medium transition-colors"
@@ -644,7 +644,7 @@ const resourceImages: Record<string, string> = {
 
         <!-- MIDDLE -->
         <div @mouseleave="hoveredMiddle = null">
-          <p class="text-xs tracking-widest text-gray-400 mb-4">WHAT WE DO</p>
+          <p class="text-sm font-black tracking-widest text-gray-700 mb-4">WHAT WE DO</p>
 
           <div v-if="activeServicesSub === 'asset'" class="space-y-4">
 <RouterLink 
@@ -918,7 +918,7 @@ const resourceImages: Record<string, string> = {
 
         <!-- LEFT -->
         <div class="border-r pr-4" @mouseenter="prodhoveredMiddle = null">
-          <p class="text-xs tracking-widest text-gray-400 mb-4">OUR PRODUCTS</p>
+          <p class="text-sm font-black tracking-widest text-gray-700 mb-4">OUR PRODUCTS</p>
           <ul class="space-y-2">
 
             <RouterLink to="/mutual-funds" 
@@ -946,7 +946,7 @@ const resourceImages: Record<string, string> = {
 
         <!-- MIDDLE -->
         <div>
-          <p class="text-xs tracking-widest text-black mb-4">WHAT WE DO</p>
+          <p class="text-sm font-black tracking-widest text-gray-700 mb-4">WHAT WE DO</p>
 
           <div v-if="activeProductsSub === 'mutual'" class="space-y-4">
             <RouterLink 
