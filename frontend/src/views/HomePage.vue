@@ -12,6 +12,7 @@ import whatwedoIMG6venture from '@/assets/whatwedoIMGS/whatwedoIMG6venture.webp'
 import whatwedoIMG7consult from '@/assets/whatwedoIMGS/whatwedoIMG7consult.webp'
 import HeroImage from '@/assets/HeroImage.webp'
 import investheroIMG from '@/assets/heroIMGS/investheroIMG.webp'
+import assetmanagementslider from '@/assets/homepagesliderIMGS/assetmanagementslider.jpg'
 import thirdsliderImage from '@/assets/thirdsliderImage.webp'
 import fourthsliderImage from '@/assets/fourthsliderImage.webp'
 import fifthsliderImage from '@/assets/fifthsliderImage.webp'
@@ -41,7 +42,7 @@ const slides: SlideType[] = [
     buttonText: 'Explore \u2192', link: '/Investment-Banking',
   },
   {
-    type: 'image', src: investheroIMG,
+    type: 'image', src: assetmanagementslider,
     title: 'ASSET MANAGEMENT', subtitle: '',
     description: 'We deliver top of the line Investment Management services to our clients and manage funds for Individuals and Companies.',
     buttonText: 'Explore \u2192', link: '/Asset-Management',
