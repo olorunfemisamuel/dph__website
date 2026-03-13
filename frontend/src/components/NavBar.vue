@@ -17,7 +17,7 @@ const navigateToSection = (sectionId: string) => {
 }
 
 
-type AboutSub = 'who'| 'lead' | 'sub' | null
+type AboutSub = 'who' | 'lead' | 'sub' | 'md' | null
 const activeAboutSub = ref<AboutSub>('who')
 
 type WhoSub = 'mission' | 'vision' | 'corevalues' | null
@@ -44,7 +44,7 @@ type ServicesSub =
   | 'venture'
   | null
 
-const activeServicesSub = ref<ServicesSub>('asset')
+const activeServicesSub = ref<ServicesSub>('investment')
 
 type ProductsSub =
   | 'mutual'
@@ -63,7 +63,7 @@ const openMega = (menu: MegaMenu) => {
   }
   activeMega.value = menu
   if (menu === 'about') activeAboutSub.value = 'who'
-  if (menu === 'services') activeServicesSub.value = 'asset'
+  if (menu === 'services') activeServicesSub.value = 'investment'
   if (menu === 'products') activeProductsSub.value = 'mutual'
 }
 
@@ -360,7 +360,9 @@ const resourceImages: Record<string, string> = {
               @click="closeAllMenus">Who We Are</RouterLink>
 
             <RouterLink to="/MDmessage"
-              class="block px-4 py-3 rounded-lg hover:bg-green-100"
+              class="block px-4 py-3 rounded-lg font-medium transition-colors"
+                :class="activeAboutSub === 'md' ? 'bg-green-700 text-white' : 'hover:bg-green-100'"
+                 @mouseenter="activeAboutSub = 'md'"
               @click="closeAllMenus">MD's Message</RouterLink>
 
             <RouterLink to="/Leadership"
@@ -508,7 +510,7 @@ const resourceImages: Record<string, string> = {
           <div v-if="activeServicesSub === 'securities'" class="space-y-2">
             <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'stock-broking'" @click="navigateToSection('stock-broking')">Stock Broking</RouterLink>
             <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'equties'" @click="navigateToSection('equities')">Equities</RouterLink>
-            <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @click="navigateToSection('derivatives-instrument')">Derivatives Instrument</RouterLink>
+           <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'derivatives-instrument'" @click="navigateToSection('derivatives-instrument')">Derivatives Instrument</RouterLink>
             <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'commodities-trading'" @click="navigateToSection('commodities-trading')">Commodities Trading</RouterLink>
             <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'security-dealing'" @click="navigateToSection('security-dealing')">Security Dealing</RouterLink>
             <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'fixed-income-securities'" @click="navigateToSection('fixed-income-securities')">Fixed Income Securities</RouterLink>
