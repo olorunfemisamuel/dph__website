@@ -124,9 +124,9 @@ import subsidiariesIMAGE from '@/assets/subsidiariesIMAGE/subsidiariesIMAGE.png'
               their investment objectives.
             </p>
           </div>
-          <button class="bg-white text-black px-6 py-2.5 rounded-md text-sm font-medium hover:bg-gray-100 transition w-fit">
+          <RouterLink to= "/Private-Equity" class="bg-white text-black px-6 py-2.5 rounded-md text-sm font-medium hover:bg-gray-100 transition w-fit">
             View Services
-          </button>
+          </RouterLink>
         </div>
 
         <!-- Image overlapping -->

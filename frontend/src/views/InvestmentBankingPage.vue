@@ -3,7 +3,7 @@
 
 <template>
   <section class="w-full overflow-hidden shadow-lg">
-    <div class="relative w-full h-40 sm:h-44 md:h-70 overflow-hidden">
+    <div class="relative w-full h-48 sm:h-64 md:h-[420px] overflow-hidden">
       <img
         src="@/assets/Investmentbankingbanner.png"
         alt="About Banner"
@@ -40,29 +40,8 @@
     </div>
   </section>
 
-  <!-- Cards Section — unstacked, normal flow -->
+  <!-- Cards Section -->
   <section class="max-w-7xl mx-auto py-16 px-6 space-y-8">
-
-    <!-- Mergers and Acquisitions (first) -->
-    <!-- <div class="flex flex-col md:flex-row bg-[#F0F5F7] rounded-2xl overflow-hidden shadow-lg">
-      <div class="flex-1 p-10 flex flex-col justify-center">
-        <h4 class="text-[#2554B9] font-bold text-3xl mb-4">Mergers and Acquisitions</h4>
-        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
-          <p class="text-black/90 text-xs leading-relaxed md:w-3/4">
-            The Mergers and Acquisitions (M&A) Group at Deutsche partners holding is one of the leading M&A advisors in Africa. Providing the full spectrum of strategic Financial Advisory Services. Our Team delivers expert guidance and execution for mergers, acquisitions, divestitures, and cross border transactions, offering innovative, fully integrated solutions to help clients navigate complex deals and achieve strategic goals.
-          </p>
-          <div class="md:w-auto">
-            <button class="inline-flex items-center gap-1 border-2 border-[#2554B9] text-[#2554B9] px-5 py-2 rounded-md font-semibold text-sm hover:bg-[#2554B9] hover:text-white transition-all duration-300">
-              Read More
-              <span class="flex items-center -space-x-1 text-lg"><span>›</span><span>›</span></span>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="w-full md:w-1/3 h-64 md:h-auto">
-        <img src="@/assets/InvestmentBankingimg2.png" class="w-full h-full object-cover" />
-      </div>
-    </div> -->
 
     <!-- Corporate Finance -->
     <div id="corporate-finance" class="flex flex-col md:flex-row bg-[#C4E5F2] rounded-2xl overflow-hidden shadow-lg">
@@ -88,7 +67,7 @@
       </div>
     </div>
 
-    <!-- Mergers and Acquisitions (second) -->
+    <!-- Mergers and Acquisitions -->
     <div id="mergersacquisitions" class="flex flex-col md:flex-row bg-[#F0F5F7] rounded-2xl overflow-hidden shadow-lg">
       <div class="flex-1 p-10 flex flex-col justify-center">
         <h4 class="text-[#2554B9] font-bold text-3xl mb-4">Mergers and Acquisitions</h4>

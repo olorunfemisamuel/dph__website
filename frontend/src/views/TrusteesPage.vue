@@ -5,20 +5,27 @@
   <div class="bg-white min-h-screen pb-20">
 
     <!-- Banner -->
-    <section class="w-full overflow-hidden shadow-lg">
-      <div class="relative w-full h-40 sm:h-44 md:h-70 overflow-hidden">
-        <img
-          src="@/assets/securitiesbannerimg.png"
-          alt="About Banner"
-          class="w-full h-full object-cover"
-        />
-        <div class="absolute inset-0 bg-black/50"></div>
-        <h3 class="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 md:bottom-10 md:left-10 text-white font-bold text-2xl sm:text-3xl md:text-5xl z-10">
-          Trustees
-        </h3>
-      </div>
-    </section>
 
+
+
+    <section class="w-full overflow-hidden shadow-lg">
+    <div class="relative w-full h-48 sm:h-64 md:h-[420px] overflow-hidden">
+      <img
+        src="@/assets/securitiesbannerimg.png"
+        alt="About Banner"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/50"></div>
+      <h3 class="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 md:bottom-10 md:left-10 text-white font-bold text-2xl sm:text-3xl md:text-5xl z-10">
+       Trustees
+      </h3>
+    </div>
+  </section>
+    
+
+
+
+ 
     <!-- Image + Green Content Block -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
       <div class="flex flex-col md:flex-row items-stretch gap-6">

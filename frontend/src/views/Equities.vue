@@ -34,10 +34,16 @@
         </div>
       </section>
 
-      <!-- PLACEHOLDER IMAGE SECTION -->
+      <!-- IMAGE SECTION -->
       <section class="w-full bg-white pb-12 md:pb-16">
         <div class="max-w-7xl mx-auto px-6 md:px-10">
-          <div class="w-full h-48 md:h-64 bg-gray-300 rounded-lg"></div>
+          <div class="w-full rounded-xl overflow-hidden shadow-md">
+            <img
+              src="@/assets/equitiesMIDDLEIMG/equitiesmiddleIMG.png"
+              alt="Equities"
+              class="w-full h-auto object-cover"
+            />
+          </div>
         </div>
       </section>
 

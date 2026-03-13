@@ -34,6 +34,15 @@
       </p>
     </div>
 
+    <!-- Middle Image -->
+    <div class="mb-16 rounded-2xl overflow-hidden shadow-md">
+      <img
+        src="@/assets/mergerandacquisitionIMG/mergeracquisitionmiddleimage.png"
+        alt="Merger and Acquisition"
+        class="w-full h-auto object-cover"
+      />
+    </div>
+
     <!-- Core Services Section -->
     <div class="mb-12">
       <h2 class="text-3xl font-bold text-green-700 mb-8">
