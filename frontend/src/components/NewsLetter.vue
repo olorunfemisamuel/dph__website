@@ -13,13 +13,14 @@ async function handleSubscribe() {
   message.value = ''
 
   try {
-    const res = await fetch(`${import.meta.env.VITE_API_URL}/newsletter/subscribe`, {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/newsletter/subscribe`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: email.value }),
     })
 
-    const data = await res.json()
+    const text = await res.text()
+    const data = text ? JSON.parse(text) : {}
 
     if (!res.ok) {
       if (res.status === 400 && data.detail === 'Email already subscribed') {
@@ -74,7 +75,6 @@ async function handleSubscribe() {
           </button>
         </div>
 
-        <!-- ✅ Message now sits BELOW the input+button row -->
         <p
           v-if="message"
           :class="success ? 'text-green-200' : 'text-red-300'"
