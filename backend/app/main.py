@@ -118,8 +118,8 @@ app.include_router(users.router, prefix=f"{API_PREFIX}/users", tags=["Users"])
 app.include_router(chat.router, prefix=f"{API_PREFIX}/chat", tags=["Chat"])
 app.include_router(newsletter.router, prefix=f"{API_PREFIX}/newsletter", tags=["Newsletter"])
 app.include_router(ws_router, prefix="/ws", tags=["WebSocket"])
-app.include_router(contact_router)
-app.include_router(consultation_router)
+app.include_router(contact_router, prefix="/api/v1")
+app.include_router(consultation_router, prefix="/api/v1")
 app.include_router(admin_router, prefix=f"{API_PREFIX}/admin", tags=["Admin"])
 
 
