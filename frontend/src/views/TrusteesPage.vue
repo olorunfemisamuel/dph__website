@@ -27,31 +27,35 @@
 
  
     <!-- Image + Green Content Block -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
-      <div class="flex flex-col md:flex-row items-stretch gap-6">
+<section class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+  <div class="flex flex-col md:flex-row items-center">
+    
+    <div class="z-20 w-full md:w-2/5 md:mr-[-80px]">
+      <img
+        src="@/assets/TrusteesBoximg.png"
+        alt="Client Meeting"
+        class="w-full h-64 md:h-[450px] object-cover rounded-2xl shadow-xl"
+      />
+    </div>
 
-        <!-- Left Image -->
-        <div class="relative md:w-1/3 w-full right-[-50px]">
-          <img
-            src="@/assets/TrusteesBoximg.png"
-            alt="Client Meeting"
-            class="w-full h-full object-cover rounded-xl"
-          />
-        </div>
+    <div 
+      class="relative z-10 w-full md:w-3/5 bg-[#0B4D2E] rounded-2xl 
+             p-8 md:pl-28 md:py-16 
+             mt-4 md:mt-0 
+             shadow-lg"
+    >
+      <p class="text-white text-base md:text-lg leading-relaxed text-center md:text-left">
+        Our clients rely on us to deliver first-class trust services tailored
+        to both local and international standards. Drawing on deep professional
+        expertise, strong governance infrastructure, and regulatory oversight,
+        we provide comprehensive fiduciary, custody, and accounting services
+        for every client we serve.
+      </p>
+    </div>
 
-        <!-- Right Green Box -->
-        <div class="md:w-2/3 w-full bg-[#0B4D2E] rounded-xl p-6 sm:p-8 flex items-center h-[368px] mt-12">
-          <p class="text-white text-sm sm:text-[13px] leading-relaxed">
-            Our clients rely on us to deliver first-class trust services tailored
-            to both local and international standards. Drawing on deep professional
-            expertise, strong governance infrastructure, and regulatory oversight,
-            we provide comprehensive fiduciary, custody, and accounting services
-            for every client we serve.
-          </p>
-        </div>
+  </div>
+</section>
 
-      </div>
-    </section>
 
     <!-- Cards Section — unstacked, normal flow -->
     <section class="max-w-7xl mx-auto py-12 px-4 sm:px-6 space-y-6">

@@ -42,7 +42,7 @@ import CooporateTrust from '@/views/CooporateTrust.vue'
 import ConsultancyService from '@/views/ConsultancyService.vue'
 import VentureCapital from '@/views/VentureCapital.vue'
 import CookiesPolicy from '@/views/CookiesPolicy.vue'
-import admindashboard from '@/views/Admin/admindashboard.vue'
+import dashboard from '@/views/Admin/dashboard.vue'
 import login from '@/views/Admin/login.vue'
 
 
@@ -288,14 +288,14 @@ const router = createRouter({
 },
 
 {
-  name: '/admin',
-  path: '/admin',
-  component: admindashboard
+  name: '/admin/dashboard',
+  path: '/admin/dashboard',
+  component: dashboard
 },
 
 {
-  name:'/login',
-  path: '/login',
+  name:'/admin/login',
+  path: '/admin/login',
   component:login
 }
 

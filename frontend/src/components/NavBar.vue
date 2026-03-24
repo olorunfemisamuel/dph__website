@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import { ref, computed } from 'vue'
+import { ref, watch, computed } from 'vue'
 
 
 //Navigation to a section
@@ -23,13 +23,28 @@ const activeAboutSub = ref<AboutSub>('who')
 type WhoSub = 'mission' | 'vision' | 'corevalues' | null
 const activeWhoSub = ref<WhoSub>(null)
 
+
+  //Mobile Menu Script 
 const isMenuOpen = ref(false)
 const aboutOpen = ref(false)
 const businessOpen = ref(false)
+const productsOpen = ref(false)
+const resourcesOpen = ref(false)
+
+
+watch(isMenuOpen, (val) => {
+  if (val) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = ''
+  }
+})
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
 }
+//End of Mobile Menu Script
+
 
 type MegaMenu = 'about' | 'services' | 'resources' | 'products' | null
 const activeMega = ref<MegaMenu>(null)
@@ -593,40 +608,104 @@ const resourceImages: Record<string, string> = {
 
 
     <!-- MOBILE MENU -->
-    <div v-show="isMenuOpen" class="md:hidden bg-white shadow-lg border-t px-6 py-6 space-y-6">
-      <RouterLink to="/" @click="toggleMenu" class="block font-medium">Home</RouterLink>
-      <div>
-        <button @click="aboutOpen = !aboutOpen" class="w-full flex items-center justify-between font-medium">
-          About Us
-          <span class="transition-transform" :class="aboutOpen ? 'rotate-180' : ''">▼</span>
-        </button>
-        <div v-show="aboutOpen" class="pl-4 mt-3 space-y-2 text-sm">
-          <RouterLink to="/about" @click="toggleMenu" class="block">Who we are</RouterLink>
-          <RouterLink to="/MDmessage" @click="toggleMenu" class="block">MD's Message</RouterLink>
-          <RouterLink to="/Leadership" @click="toggleMenu" class="block">Leadership</RouterLink>
-          <RouterLink to="/subsidiaries" @click="toggleMenu" class="block">Subsidiaries</RouterLink>
-        </div>
-      </div>
-      <div>
-        <button @click="businessOpen = !businessOpen" class="w-full flex items-center justify-between font-medium">
-          Our Businesses
-          <span class="transition-transform" :class="businessOpen ? 'rotate-180' : ''">▼</span>
-        </button>
-        <div v-show="businessOpen" class="pl-4 mt-3 space-y-2 text-sm">
-          <RouterLink to="/Asset-Management" @click="toggleMenu" class="block">Asset Management</RouterLink>
-          <RouterLink to="/Investment-Banking" @click="toggleMenu" class="block">Investment Banking</RouterLink>
-          <RouterLink to="/Private-Equity" @click="toggleMenu" class="block">Private Equity</RouterLink>
-          <RouterLink to="/Securities-Trading" @click="toggleMenu" class="block">Securities Trading</RouterLink>
-          <RouterLink to="/Trustees" @click="toggleMenu" class="block">Trustees</RouterLink>
-        </div>
-      </div>
-      <RouterLink to="/Insight" @click="toggleMenu" class="block font-medium">Insights</RouterLink>
-      <RouterLink to="/career" @click="toggleMenu" class="block font-medium">Career</RouterLink>
-      <RouterLink to="/contact" @click="toggleMenu" class="block font-medium">Contact</RouterLink>
-      <RouterLink to="/invest-now" @click="toggleMenu">
-        <button class="w-full mt-4 bg-green-700 text-white py-3 rounded-xl">Invest Now</button>
-      </RouterLink>
+   <Transition name="slide">
+  <div v-show="isMenuOpen" class="fixed inset-y-0 right-0 z-50 w-64 bg-white shadow-2xl border-l px-6 py-6 space-y-6 overflow-y-auto md:hidden">
+    <div class="flex justify-end mb-4">
+      <button @click="toggleMenu" class="text-2xl">&times;</button>
     </div>
+
+    <RouterLink to="/" @click="toggleMenu" class="block font-medium">Home</RouterLink>
+    
+    <div>
+      <button @click="aboutOpen = !aboutOpen" class="w-full flex items-center justify-between font-medium">
+        About Us
+        <span class="transition-transform" :class="aboutOpen ? 'rotate-180' : ''">▼</span>
+      </button>
+      <div v-show="aboutOpen" class="pl-4 mt-3 space-y-2 text-sm">
+        <RouterLink to="/about" @click="toggleMenu" class="block">Who we are</RouterLink>
+        <RouterLink to="/MDmessage" @click="toggleMenu" class="block">MD's Message</RouterLink>
+        <RouterLink to="/Leadership" @click="toggleMenu" class="block">Leadership</RouterLink>
+        <RouterLink to="/subsidiaries" @click="toggleMenu" class="block">Subsidiaries</RouterLink>
+      </div>
+    </div>
+
+    <div>
+      <button @click="businessOpen = !businessOpen" class="w-full flex items-center justify-between font-medium">
+        Our Services
+        <span class="transition-transform" :class="businessOpen ? 'rotate-180' : ''">▼</span>
+      </button>
+      <div v-show="businessOpen" class="pl-4 mt-3 space-y-2 text-sm">
+        <RouterLink to="/Asset-Management" @click="toggleMenu" class="block">Asset Management</RouterLink>
+        <RouterLink to="/Investment-Banking" @click="toggleMenu" class="block">Investment Banking</RouterLink>
+        <RouterLink to="/Private-Equity" @click="toggleMenu" class="block">Private Equity</RouterLink>
+        <RouterLink to="/Securities-Trading" @click="toggleMenu" class="block">Securities Trading</RouterLink>
+        <RouterLink to="/Trustees" @click="toggleMenu" class="block">Trustees</RouterLink>
+      </div>
+    </div>
+
+    <!---Product Section Mobile-->
+     <div>
+  
+      <button @click="productsOpen = !productsOpen" class="w-full flex items-center justify-between font-medium">
+        Our Products
+        <span class="transition-transform" :class="productsOpen ? 'rotate-180' : ''">▼</span>
+      </button>
+      <div v-show="productsOpen" class="pl-4 mt-3 space-y-2 text-sm">
+        <RouterLink to="/mutual-funds" @click="toggleMenu" class="block">Mutual Funds</RouterLink>
+        <RouterLink to="/exchange-traded-funds" @click="toggleMenu" class="block">Exchange Traded Funds</RouterLink>
+        <RouterLink to="/alternative-investment" @click="toggleMenu" class="block">Alternative Investment Scheme</RouterLink>
+      
+      </div>
+    </div>
+
+
+    <!---Resources Section Mobile-->
+    <div>
+  
+      <button @click="resourcesOpen = !resourcesOpen" class="w-full flex items-center justify-between font-medium">
+        Our Resources
+        <span class="transition-transform" :class="resourcesOpen ? 'rotate-180' : ''">▼</span>
+      </button>
+      <div v-show="resourcesOpen" class="pl-4 mt-3 space-y-2 text-sm">
+        <RouterLink to="/Insight" @click="toggleMenu" class="block">Insights</RouterLink>
+        <RouterLink to="/gallery" @click="toggleMenu" class="block">Gallery</RouterLink>
+        <RouterLink to="/career" @click="toggleMenu" class="block">Career</RouterLink>
+          <RouterLink to="/cookies-policy" @click="toggleMenu" class="block">Policy</RouterLink>
+            <RouterLink to="/investmentdashboard" @click="toggleMenu" class="block">Investment Dashboard</RouterLink>
+      
+      </div>
+    </div>
+
+    <!-- <RouterLink to="/Insight" @click="toggleMenu" class="block font-medium">Insights</RouterLink>
+    <RouterLink to="/career" @click="toggleMenu" class="block font-medium">Career</RouterLink> -->
+    <RouterLink to="/contact" @click="toggleMenu" class="block font-medium">Contact</RouterLink>
+    
+    <RouterLink to="/invest-now" @click="toggleMenu">
+      <button class="w-full mt-4 bg-green-700 text-white py-3 rounded-xl">Invest Now</button>
+    </RouterLink>
+  </div>
+</Transition>
+
+<div v-if="isMenuOpen" @click="toggleMenu" class="fixed inset-0 bg-black/50 z-40 md:hidden"></div>
 
   </header>
 </template>
+
+
+<style scoped>
+/* Sidebar Slide Effect */
+.slide-enter-active, .slide-leave-active {
+  transition: transform 0.3s ease-out;
+}
+.slide-enter-from, .slide-leave-to {
+  transform: translateX(100%);
+}
+
+/* Backdrop Fade Effect */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+</style>
