@@ -1,6 +1,11 @@
 @import './base.css';
 @import "tailwindcss";
 
+/* Smooth scrolling for all pages */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
 }
