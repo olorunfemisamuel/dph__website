@@ -45,11 +45,10 @@
              shadow-lg"
     >
       <p class="text-white text-base md:text-lg leading-relaxed text-center md:text-left">
-        Our clients rely on us to deliver first-class trust services tailored
-        to both local and international standards. Drawing on deep professional
-        expertise, strong governance infrastructure, and regulatory oversight,
-        we provide comprehensive fiduciary, custody, and accounting services
-        for every client we serve.
+        We provide independent trusteeship and fiduciary services that protect the interests of issuers, 
+        investors, and beneficiaries across diverse financial transactions. 
+        Through effective trust administration, regulatory compliance, and sound governance, we deliver tailored trust solutions that support capital market transactions 
+        and long-term wealth preservation.
       </p>
     </div>
 

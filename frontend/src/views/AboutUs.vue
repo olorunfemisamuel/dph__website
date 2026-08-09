@@ -56,55 +56,17 @@ onMounted(() => {
     <div class="w-full lg:w-11/12 border-l-4 border-gray-300 pl-6 reveal">
       <p class="text-black text-sm md:text-base leading-relaxed text-justify">
       
-Deutsche Partners
-Holding (DPH) is an
-independently-owned
-financial services Group with core
-competence and specialty in
-Asset Management, Investment
-Banking, Private Equity, Securities
-and Trustees.
-DPH is a Group that is strongly
-committed to the success,
-development and growth of her
-clients and their assets. We create
-solutions that are relevant and
-add value to the specific needs
-and goals of each one of our
-clients. We work with a diversified
-clientele that consists of Financial
-Institutions, Corporations, Private
-Clients and Governments. We are
-licensed and registered as
-Fund/Portfolio Managers, Issuing
-House, Investment Adviser
-amongst others by the Securities
-& Exchange Commission (SEC).
-We are qualified to provide a wide
-range of financial services to our
-clients including individuals,
-corporate & financial Institutions,
-as well as high net worth
-individuals.
-We understand that our clients
-DPH contributes to the
-vitalization of household financial
-assets by providing high quality
-products and services that are
-suitable for medium to long term
-asset building for individuals.
-have different needs and
-objectives, and this is reflected in
-our tailored investment
-approach. Decisions are not
-made for clients: instead, they
-are advised and educated in
-order to make their own
-informed investment decisions.
-Clients are treated with the
-utmost respect as we recognize
-their concerns and their financial
-needs.
+At DPH, we combine strategic insight, financial expertise, and execution excellence to deliver innovative solutions that create lasting value for our clients and stakeholders. 
+Our multidisciplinary capabilities span investment banking, asset management, securities, private equity, trusteeship, and strategic advisory, enabling us to support governments, corporations, 
+financial institutions, development finance institutions, and private investors across a broad spectrum of financial and investment needs.
+
+Most recently, DPH served as Transaction Adviser and Financial Adviser to the Taraba State Government on the successful arrangement and execution of a USD 268 million financing package with the ECOWAS Bank for Investment and Development (EBID). 
+The financing supports the development of an integrated industrial park, irrigated rice production and processing infrastructure, and a 50MW solar photovoltaic power plant—transformational projects expected to accelerate industrialisation, 
+strengthen food security, expand access to clean energy, and promote sustainable economic growth.
+
+Through a commitment to professionalism, integrity, and client-focused innovation, 
+DPH continues to deliver tailored financial and advisory solutions that strengthen institutions, 
+unlock opportunities, and contribute to long-term economic development.
       </p>
     </div>
   </div>
@@ -123,7 +85,8 @@ needs.
       <div class="relative z-10 text-white">
         <h3 class="text-xl font-bold mb-4 uppercase tracking-widest">Our Mission</h3>
         <p class="leading-relaxed text-sm sm:text-base font-medium max-w-sm">
-          To provide creative, world-class financial services and ethical investment solutions driven towards wealth creation.
+          To deliver innovative, client-focused financial and investment solutions through exceptional expertise, strategic partnerships, 
+          and a commitment to excellence, creating sustainable value for our clients, stakeholders, and the communities we serve.
         </p>
       </div>
     </div>
@@ -138,7 +101,10 @@ needs.
       <div class="relative z-10 text-white">
         <h3 class="text-xl font-bold mb-4 uppercase tracking-widest">Our Vision</h3>
         <p class="leading-relaxed text-sm sm:text-base font-medium max-w-sm">
-          To become the leading integrated investment management firm in Africa.
+         To be the preferred financial services group in Africa, 
+         renowned for delivering worldclass investment, advisory, 
+         and asset management solutions that drive economic growth, 
+         inspire confidence, and create lasting prosperity.
         </p>
       </div>
     </div>
@@ -151,7 +117,7 @@ needs.
   <div class="text-center mb-10">
     <h2 class="text-xl font-bold text-gray-800 uppercase tracking-widest">Our Core Values</h2>
     <p class="text-gray-500 text-sm mt-2 max-w-2xl mx-auto">
-      DPH has six Core Values that are entranced in our everyday dealings. They describe the foundation of our approach with each other, our responsibility, our client and towards our company.
+      DPH has five Core Values that are entranced in our everyday dealings. They describe the foundation of our approach with each other, our responsibility, our client and towards our company.
     </p>
   </div>
 
@@ -163,9 +129,9 @@ needs.
           <i class="far fa-list-alt text-green-600 text-2xl"></i>
         </div>
       </div>
-      <h3 class="text-base font-bold text-green-700 mb-3 text-center">Accountability</h3>
+      <h3 class="text-base font-bold text-green-700 mb-3 text-center">Professionalism</h3>
       <p class="text-gray-600 text-xs leading-relaxed text-center">
-        Our directors and management team well recognize that they are accountable for all their decisions and actions and are liable to all stakeholders and open to assessment in accordance to the code of ethics. We Make Sound and Ethical Professional Decisions Every Time.
+        We conduct our business with discipline, respect, and responsibility, ensuring every client engagement reflects the highest standards of competence and integrity.
       </p>
     </div>
 
@@ -190,9 +156,9 @@ needs.
           <i class="fas fa-crosshairs text-gray-700 text-2xl"></i>
         </div>
       </div>
-      <h3 class="text-base font-bold text-gray-800 mb-3 text-center">Customer Focus</h3>
+      <h3 class="text-base font-bold text-gray-800 mb-3 text-center">Innovation</h3>
       <p class="text-gray-600 text-xs leading-relaxed text-center">
-        We are focused on building a customer focused culture, knowing that high standards of service delivery and high levels of customer satisfaction create a win for both the stakeholders and the customers. We Treat Everyone with Care and Respect.
+       We embrace forward thinking ideas and evolving market opportunities to develop solutions that address complex financial challenges and create sustainable value
       </p>
     </div>
 
@@ -216,22 +182,9 @@ needs.
           <i class="fas fa-users text-blue-600 text-2xl"></i>
         </div>
       </div>
-      <h3 class="text-base font-bold text-blue-700 mb-3 text-center">Social Responsibility</h3>
+      <h3 class="text-base font-bold text-blue-700 mb-3 text-center">Client-Centric</h3>
       <p class="text-gray-600 text-xs leading-relaxed text-center">
-        Realizing our social responsibility, we will preserve our environment and cultural heritage, and promoting human rights and supporting the transition to a green and sustainable economy.
-      </p>
-    </div>
-
-    <!-- Transparency -->
-   <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-lg transition-shadow hover:border-green-600 reveal" style="transition-delay: 500ms">
-      <div class="flex justify-center mb-4">
-        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
-          <i class="far fa-eye text-gray-700 text-2xl"></i>
-        </div>
-      </div>
-      <h3 class="text-base font-bold text-gray-800 mb-3 text-center">Transparency</h3>
-      <p class="text-gray-600 text-xs leading-relaxed text-center">
-        Transparency is the bedrock guiding all our decisions and policies on the disclosure of information to all stakeholders including regulators, shareholders, investors, in a timely and appropriate manner.
+       Our clients are at the heart of everthing we do. We build enduring relationships by understanding their unique needs and delivering tailored solutions that support their long-term success.
       </p>
     </div>
 </div>

@@ -272,12 +272,12 @@ onBeforeUnmount(() => {
             <div class="absolute bottom-0 left-0 right-0 h-16 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-12 group-hover:bg-black/40"></div>
             <div class="absolute bottom-3 left-0 right-0 text-center text-white font-semibold text-xs sm:text-sm tracking-wide drop-shadow-md">Trustees</div>
           </RouterLink>
-          <RouterLink to="/Venture-Capital" class="relative w-[47%] sm:w-[23%] h-36 sm:h-44 rounded-2xl overflow-hidden reveal group cursor-pointer shrink-0">
+          <RouterLink to="/" class="relative w-[47%] sm:w-[23%] h-36 sm:h-44 rounded-2xl overflow-hidden reveal group cursor-pointer shrink-0">
             <img :src="whatwedoIMG6venture" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110" />
             <div class="absolute bottom-0 left-0 right-0 h-16 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-12 group-hover:bg-black/40"></div>
             <div class="absolute bottom-3 left-0 right-0 text-center text-white font-semibold text-xs sm:text-sm tracking-wide drop-shadow-md">Venture Capital</div>
           </RouterLink>
-          <RouterLink to="/Consultancy-Service" class="relative w-[47%] sm:w-[23%] h-36 sm:h-44 rounded-2xl overflow-hidden reveal group cursor-pointer shrink-0">
+          <RouterLink to="/C" class="relative w-[47%] sm:w-[23%] h-36 sm:h-44 rounded-2xl overflow-hidden reveal group cursor-pointer shrink-0">
             <img :src="whatwedoIMG7consult" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110" />
             <div class="absolute bottom-0 left-0 right-0 h-16 bg-black/70 rounded-b-2xl transition-all duration-500 group-hover:h-12 group-hover:bg-black/40"></div>
             <div class="absolute bottom-3 left-0 right-0 text-center text-white font-semibold text-xs sm:text-sm tracking-wide drop-shadow-md">Consultancy Service</div>

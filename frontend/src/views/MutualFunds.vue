@@ -1,339 +1,199 @@
-<template>
-  <div class="mutual-funds-page">
+<script setup lang="ts">
+const services = [
+  {
+    id: 'money-market',
+    label: 'Advisory 01',
+    title: 'Privatization & Concession Advisory',
+    description:
+      'We advise governments and public institutions on the planning, structuring, and execution of privatization and concession transactions, helping unlock value, attract private investment, and improve operational efficiency.',
+    benefits: [
+      'Transaction structuring',
+      'PPP and concession advisory',
+      'Privatization strategy',
+      'Bid process management',
+      'Regulatory and stakeholder advisory',
+    ],
+  },
+  {
+    id: 'equity-fund',
+    label: 'Advisory 02',
+    title: 'Debt & Equity Capital Raising',
+    description:
+      'We support clients in raising capital through debt and equity markets by developing tailored financing strategies, structuring transactions, and connecting businesses with suitable funding sources to achieve their growth objectives.',
+    benefits: [
+      'Debt financing solutions',
+      'Equity capital raising',
+      'Capital structure advisory',
+      'Investor engagement',
+      'Transaction execution support',
+    ],
+  },
+  {
+    id: 'fixed-income',
+    label: 'Advisory 03',
+    title: 'Public & Private Sector Advisory',
+    description:
+      'We provide strategic financial and investment advisory services to governments, public institutions, and private enterprises, delivering solutions that enhance project execution, financial sustainability, and long-term economic value.',
+    benefits: [
+      'Financial advisory',
+      'Infrastructure and project advisory',
+      'Policy and institutional support',
+      'Investment strategy',
+      'Business transformation',
+    ],
+  },
+  {
+    id: 'ethical-funds',
+    label: 'Advisory 04',
+    title: 'Mergers & Acquisitions and Leveraged Buyouts',
+    description:
+      'We advise clients throughout the transaction lifecycle, from opportunity identification and valuation to negotiation and execution, helping businesses pursue strategic acquisitions, mergers, divestitures, and leveraged buyouts with confidence.',
+    benefits: [
+      'Buy-side and sell-side advisory',
+      'Business valuation',
+      'Financial due diligence',
+      'Deal structuring and negotiation',
+      'Transaction execution',
+    ],
+  },
+  {
+    id: 'financial-restructuring',
+    label: 'Advisory 05',
+    title: 'Financial Restructuring & Capital Optimization',
+    description:
+      'We help organizations strengthen financial performance through capital restructuring, balance sheet optimization, debt restructuring, and strategic financial planning, positioning businesses for resilience, efficiency, and sustainable growth.',
+    benefits: [
+      'Debt restructuring',
+      'Capital optimization',
+      'Balance sheet restructuring',
+      'Liquidity management',
+      'Financial recovery planning',
+    ],
+  },
+]
+</script>
 
-    <!-- Hero Banner -->
-    <section class="w-full overflow-hidden shadow-lg">
-      <div class="relative w-full h-40 sm:h-44 md:h-70 overflow-hidden">
-        <img
-          src="@/assets/ExchangeTradedimg.png"
-          alt="Mutual Funds"
-          class="w-full h-full object-cover"
-        />
-        <div class="absolute inset-0 bg-black/60"></div>
-        <div class="absolute inset-0 flex flex-col justify-center px-4 sm:px-8 md:px-10">
-          <h2 class="capitalize text-white text-2xl sm:text-2xl md:text-3xl font-bold mb-1">
-            Mutual Funds
-          </h2>
+<template>
+  <div class="mutual-funds-page bg-gradient-to-b from-[#f5f8f6] to-white">
+    <!-- Hero Section -->
+    <section class="relative isolate overflow-hidden bg-[#092719] text-white">
+      <img
+        src="@/assets/ExchangeTradedimg.png"
+        alt="Mutual Funds"
+        class="absolute inset-0 -z-20 h-full w-full object-cover opacity-40"
+      />
+      <div class="absolute inset-0 -z-10 bg-gradient-to-br from-[#061b11]/95 via-[#092719]/90 to-[#0b4d2e]/85"></div>
+
+      <div class="mx-auto max-w-7xl px-6 py-20 sm:px-10 md:py-28 lg:px-12 lg:py-32">
+        <div class="grid gap-12 md:grid-cols-[1.2fr_0.8fr] md:items-center lg:gap-16">
+          <!-- Left Column -->
+          <div class="max-w-3xl space-y-8">
+            <p class="inline-block rounded-full bg-green-500/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-green-300 backdrop-blur-sm">
+              Deutsche Partners Holding
+            </p>
+            <h1 class="text-5xl font-bold leading-[1.1] sm:text-6xl lg:text-7xl">
+              Corporate Finance Advisory
+            </h1>
+            <p class="max-w-2xl text-lg leading-relaxed text-white/90 sm:text-xl">
+              Practical transaction support for public institutions, private enterprises, investors, and boards making capital decisions.
+            </p>
+          </div>
+
+          <!-- Right Column - Focus Areas Card -->
+          <div class="rounded-lg border border-green-400/30 bg-white/5 p-8 shadow-2xl backdrop-blur-md">
+            <p class="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-green-300">
+              Focus Areas
+            </p>
+            <div class="grid gap-4 text-sm">
+              <span class="rounded border border-white/20 bg-white/10 px-4 py-3.5 text-center font-medium text-white transition hover:bg-white/20">
+                Capital Raising
+              </span>
+              <span class="rounded border border-white/20 bg-white/10 px-4 py-3.5 text-center font-medium text-white transition hover:bg-white/20">
+                M&A Advisory
+              </span>
+              <span class="rounded border border-white/20 bg-white/10 px-4 py-3.5 text-center font-medium text-white transition hover:bg-white/20">
+                Restructuring
+              </span>
+              <span class="rounded border border-white/20 bg-white/10 px-4 py-3.5 text-center font-medium text-white transition hover:bg-white/20">
+                Public Sector
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Fund Sections -->
-    <section class="w-full bg-gray-100 py-10 px-3 sm:px-6 md:px-10 space-y-10">
-
-      <!-- ── MONEY MARKET FUND ── -->
-      <div id="money-market" class="bg-white rounded-xl shadow-sm">
-
-        <!-- Risk badge -->
-        <div class="px-6 pt-6 pb-2">
-          <span class="bg-gray-200 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Low Risk</span>
+    <!-- Services Section -->
+    <section class="px-6 py-20 sm:px-10 lg:px-12 lg:py-28">
+      <div class="mx-auto max-w-7xl">
+        <!-- Section Header -->
+        <div class="mb-16 max-w-3xl space-y-5">
+          <p class="inline-block rounded-full bg-green-100 px-4 py-1.5 text-sm font-semibold uppercase tracking-[0.18em] text-green-700">
+            What We Deliver
+          </p>
+          <h2 class="text-4xl font-bold leading-tight text-gray-950 sm:text-5xl lg:text-6xl">
+            Structured advice for complex transactions
+          </h2>
+          <p class="text-lg leading-relaxed text-gray-600">
+            Each service is built around the same discipline: define the transaction path, prepare the capital story, align stakeholders, and support execution through close.
+          </p>
         </div>
 
-        <!-- Title + Description LEFT | Key Features RIGHT -->
-        <div class="flex flex-col md:flex-row gap-6 px-3 sm:px-6 pt-2 pb-6 items-stretch">
-
-          <!-- LEFT -->
-          <div class="md:w-2/3 space-y-3">
-            <h3 class="text-gray-900 text-xl font-bold">Money Market Fund</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">
-              Deutsche Money Market Fund aims to generate income as well as preserve investors' capital by diversifying investment across a range of high-quality, short-term debt securities or money market instruments as approved by the SEC; and short-term debt securities of varying maturities of not more than 365 days, issued or guaranteed by the Federal Government of Nigeria. It will operate as an Open-ended Fund which allows investors to buy and sell units of the Fund on a continuous basis from the Fund Manager. The Fund seeks to provide current income while maintaining liquidity and a stable price of N5,000 for all classes of investors that value liquidity and security of assets. The Fund is aimed at investors who are interested in a steady stream of income at money market rates while preserving the value of their investment. The Fund is marketable to all retail investors, and as appropriate to other institutional investors.
-            </p>
-          </div>
-
-          <!-- RIGHT: Key Features -->
-          <div class="md:w-1/3 self-stretch">
-            <div class="bg-green-700 text-white rounded-xl px-4 py-5 h-full flex flex-col">
-              <h4 class="font-bold text-xs mb-4 bg-green-600 inline-block self-start px-3 py-1 rounded-full">Key Benefits</h4>
-              <ul class="text-xs space-y-2.5 flex-1">
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Low initial investment threshold</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Capital Preservation Focus</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Investment in high quality, short-term instruments</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> High Liquidity with continuous subscription and redemption</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Competitive money market returns</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Returns Superior to standard Savings account</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Flexible Additional contributions at any time</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Assets held in an independent custodian account</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Suitable for both retail and institutional investors</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Unified dark bottom section -->
-        <div class="bg-[#0f1520] text-white rounded-b-xl pt-10 pb-6">
-          <!-- Stats row: white rounded card on dark bg -->
-          <div class="mx-4 my-6 px-6 py-6 rounded-2xl bg-white shadow-sm flex flex-col sm:flex-row divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
-            <div class="flex-1 px-6 py-5">
-              <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">Minimum Initial</p>
-              <p class="text-2xl font-bold text-gray-900">#1000</p>
-            </div>
-            <div class="flex-1 px-6 py-5">
-              <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">Minimum Additional</p>
-              <p class="text-2xl font-bold text-gray-900">#500</p>
-            </div>
-            <div class="flex-1 px-6 py-5">
-              <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">Risk Level</p>
-              <p class="text-2xl font-bold text-gray-900">LOW</p>
-            </div>
-          </div>
-          <!-- What the Fund Invests In -->
-          <div class="px-4 sm:px-6 py-6">
-            <h4 class="text-white font-bold text-base mb-1">What the Fund Invests in</h4>
-            <p class="text-gray-400 text-xs mb-6 max-w-xs leading-relaxed">The fund diversifies across high-quality short-term instruments to preserve capital and generate income.</p>
-            <div class="space-y-5">
-              <div>
-                <div class="flex justify-between items-center mb-1.5">
-                  <span class="text-gray-300 text-xs font-medium">Short Term Govt Securities</span>
-                  <span class="text-green-400 text-xs font-semibold">25% - 95%</span>
+        <!-- Services Grid -->
+        <div class="grid gap-8 lg:grid-cols-2">
+          <article
+            v-for="(service, index) in services"
+            :id="service.id"
+            :key="service.id"
+            class="group overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:border-green-300 hover:shadow-2xl"
+            :class="index === 0 ? 'lg:col-span-2' : ''"
+          >
+            <div class="grid h-full gap-0" :class="index === 0 ? 'md:grid-cols-[1.4fr_1fr]' : 'md:grid-cols-1'">
+              <!-- Content Section -->
+              <div class="space-y-6 p-8 sm:p-10 lg:p-12">
+                <!-- Number Badge and Label -->
+                <div class="flex items-center gap-4">
+                  <span class="flex h-14 w-14 items-center justify-center rounded-lg bg-green-700 text-lg font-bold text-white shadow-md">
+                    {{ String(index + 1).padStart(2, '0') }}
+                  </span>
+                  <span class="rounded-full bg-green-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-green-700">
+                    {{ service.label }}
+                  </span>
                 </div>
-                <div class="w-full bg-white/10 rounded-full h-1">
-                  <div class="bg-green-500 h-1 rounded-full" style="width: 75%"></div>
+
+                <!-- Title and Description -->
+                <div class="space-y-4">
+                  <h3 class="text-3xl font-bold leading-tight text-gray-950 sm:text-4xl">
+                    {{ service.title }}
+                  </h3>
+                  <p class="text-base leading-relaxed text-gray-600 sm:text-lg">
+                    {{ service.description }}
+                  </p>
                 </div>
               </div>
-              <div>
-                <div class="flex justify-between items-center mb-1.5">
-                  <span class="text-gray-300 text-xs font-medium">Other Money Market Instruments</span>
-                  <span class="text-green-400 text-xs font-semibold">5% - 75%</span>
-                </div>
-                <div class="w-full bg-white/10 rounded-full h-1">
-                  <div class="bg-green-500 h-1 rounded-full" style="width: 40%"></div>
-                </div>
+
+              <!-- Benefits Section -->
+              <div class="space-y-6 bg-gradient-to-br from-[#0b4d2e] to-[#092719] p-8 text-white sm:p-10 lg:p-12">
+                <h4 class="text-sm font-semibold uppercase tracking-[0.2em] text-green-200">
+                  Key Benefits
+                </h4>
+                <ul class="space-y-5">
+                  <li
+                    v-for="benefit in service.benefits"
+                    :key="benefit"
+                    class="flex gap-4"
+                  >
+                    <span class="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded bg-green-400 text-sm font-bold text-[#0b4d2e] shadow-md">
+                      ✓
+                    </span>
+                    <span class="leading-relaxed">{{ benefit }}</span>
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
-
-      <!-- ── DPH EQUITY FUND ── -->
-      <div id="equity-fund" class="bg-gray-100 rounded-xl shadow-sm">
-
-        <!-- Risk badge -->
-        <div class="px-6 pt-6 pb-4">
-          <span class="bg-gray-300 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">High Risk</span>
-        </div>
-
-        <!-- Title + Description LEFT | Key Features RIGHT -->
-        <div class="flex flex-col md:flex-row gap-6 px-3 sm:px-6 pb-6 items-start">
-
-          <!-- LEFT: gray card -->
-          <div class="md:flex-1 bg-gray-50 border border-gray-200 rounded-xl p-6 space-y-4 self-stretch">
-            <h3 class="text-gray-900 text-2xl font-bold">Dph Equity Funds</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">
-              The DPH Equity Fund is an open-ended unit trust scheme structured to deliver long-term capital appreciation through active investment in Nigerian equities. The Fund invests predominantly in high-quality companies listed on the Nigerian Exchange (NGX), selected through a rigorous research-driven investment process.
-            </p>
-            <p class="text-sm text-gray-600 leading-relaxed">
-              A minimum of 70% of the Fund's assets is allocated to equities, while up to 30% may be invested in short-term money market instruments and deposits to manage liquidity and moderate volatility. The Fund is designed for investors seeking growth over the long term.
-            </p>
-          </div>
-
-          <!-- RIGHT: tall narrow green card -->
-          <div class="w-64 shrink-0 self-stretch">
-            <div class="bg-green-700 text-white rounded-xl px-5 py-5 h-full flex flex-col">
-              <span class="bg-green-500 text-white text-xs font-semibold px-3 py-1 rounded-full self-start mb-5">Key Benefits</span>
-              <ul class="text-xs space-y-3 flex-1">
-                <li class="flex items-start gap-2"><span class="text-green-300 shrink-0 mt-0.5">✓</span> Minimum 70% exposure to Nigerian listed equities</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 shrink-0 mt-0.5">✓</span> Research driven stock selection process</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 shrink-0 mt-0.5">✓</span> Active Portfolio management</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 shrink-0 mt-0.5">✓</span> Diversification across sectors</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 shrink-0 mt-0.5">✓</span> Liquidity management through fixed income allocation</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 shrink-0 mt-0.5">✓</span> Competitive long term potential</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 shrink-0 mt-0.5">✓</span> Tax-efficient structure</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 shrink-0 mt-0.5">✓</span> Programmed and disciplined investment approach</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 shrink-0 mt-0.5">✓</span> Suitable for individuals, institutions, and diaspora investors</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Unified dark bottom section -->
-        <div class="bg-[#0f1520] text-white rounded-b-xl pt-10 pb-6">
-          <div class="mx-4 my-6 py-6 px-6 rounded-2xl bg-white shadow-sm flex flex-col sm:flex-row divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
-            <div class="flex-1 px-6 py-5">
-              <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">Minimum Initial</p>
-              <p class="text-2xl font-bold text-gray-900">#1000</p>
-            </div>
-            <div class="flex-1 px-6 py-5">
-              <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">Minimum Additional</p>
-              <p class="text-2xl font-bold text-gray-900">#500</p>
-            </div>
-            <div class="flex-1 px-6 py-5">
-              <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">Risk Level</p>
-              <p class="text-2xl font-bold text-gray-900">HIGH</p>
-            </div>
-          </div>
-          <div class="px-4 sm:px-6 py-6">
-            <h4 class="text-white font-bold text-base mb-1">What the Fund Invests in</h4>
-            <p class="text-gray-400 text-xs mb-6 max-w-xs leading-relaxed">Predominantly Nigerian equities listed on the NSE, with a portion in money market instruments for liquidity.</p>
-            <div class="space-y-5">
-              <div>
-                <div class="flex justify-between items-center mb-1.5">
-                  <span class="text-gray-300 text-xs font-medium">Nigerian Equities (NSE Listed)</span>
-                  <span class="text-green-400 text-xs font-semibold">70% - 100%</span>
-                </div>
-                <div class="w-full bg-white/10 rounded-full h-1">
-                  <div class="bg-green-500 h-1 rounded-full" style="width: 85%"></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex justify-between items-center mb-1.5">
-                  <span class="text-gray-300 text-xs font-medium">Money Market Instruments</span>
-                  <span class="text-green-400 text-xs font-semibold">0% - 30%</span>
-                </div>
-                <div class="w-full bg-white/10 rounded-full h-1">
-                  <div class="bg-green-500 h-1 rounded-full" style="width: 30%"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── FIXED INCOME FUND ── -->
-      <div id="fixed-income" class="bg-white rounded-xl shadow-sm">
-
-        <div class="px-6 pt-6 pb-2">
-          <span class="bg-gray-200 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Low Risk</span>
-        </div>
-
-        <div class="flex flex-col md:flex-row gap-6 px-3 sm:px-6 pt-2 pb-6">
-          <div class="md:w-3/5 space-y-3">
-            <h3 class="text-gray-900 text-xl font-bold">Deutsche Private Fixed Income Fund</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">
-              Deutsche Income Fund is an open-ended fund that is authorized and registered in Nigeria as a unit trust scheme under section 160 of the investments and securities Act 2007. The fund has been designed to suit the needs of discerning investors seeking to achieve stable capital appreciation and returns in Nigeria-based investments. Deutsche Income Fund seeks returns above the rate of inflation through investment in Fixed Income grade securities. The returns will be shared pro-rata based on each investor's contribution. The fund manager invests in Naira denominated securities issued by the Central Bank of Nigeria, Corporates, States, and the Federal government of Nigeria. The fund is suitable for individuals as well as institutional investors, employee schemes, trust companies, insurance companies, government parastatals, investment clubs, and other associations. The Fund is ideal for conservative investors seeking to preserve their capital over the medium to the long-term horizon (> 2 years).
-            </p>
-          </div>
-          <div class="md:w-2/5">
-            <div class="bg-green-700 text-white rounded-xl px-6 py-6 h-full">
-              <h4 class="font-bold text-sm mb-4">Key Features</h4>
-              <ul class="text-sm space-y-2">
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Guaranteed principal and interest</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Attractive yields compared to other instruments</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Low-risk investment target, excludes equities</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Returns are tax exempt</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> High-level security</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Professional Management</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Funds are held in a custodian account</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Unified dark bottom section -->
-        <div class="bg-[#0f1520] text-white rounded-b-xl pt-10 pb-6">
-          <div class="mx-4 my-6 px-6 py-6 rounded-2xl bg-white shadow-sm flex flex-col sm:flex-row divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
-            <div class="flex-1 px-6 py-5">
-              <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">Minimum Initial</p>
-              <p class="text-2xl font-bold text-gray-900">#1000</p>
-            </div>
-            <div class="flex-1 px-6 py-5">
-              <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">Minimum Additional</p>
-              <p class="text-2xl font-bold text-gray-900">#500</p>
-            </div>
-            <div class="flex-1 px-6 py-5">
-              <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">Risk Level</p>
-              <p class="text-2xl font-bold text-gray-900">LOW</p>
-            </div>
-          </div>
-          <div class="px-4 sm:px-6 py-6">
-            <h4 class="text-white font-bold text-base mb-1">What the Fund Invests in</h4>
-            <p class="text-gray-400 text-xs mb-6 max-w-xs leading-relaxed">Naira-denominated fixed income securities issued by the CBN, corporates, states, and the federal government.</p>
-            <div class="space-y-5">
-              <div>
-                <div class="flex justify-between items-center mb-1.5">
-                  <span class="text-gray-300 text-xs font-medium">FGN & State Bonds</span>
-                  <span class="text-green-400 text-xs font-semibold">60% - 80%</span>
-                </div>
-                <div class="w-full bg-white/10 rounded-full h-1">
-                  <div class="bg-green-500 h-1 rounded-full" style="width: 70%"></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex justify-between items-center mb-1.5">
-                  <span class="text-gray-300 text-xs font-medium">Corporate Bonds & Securities</span>
-                  <span class="text-green-400 text-xs font-semibold">20% - 40%</span>
-                </div>
-                <div class="w-full bg-white/10 rounded-full h-1">
-                  <div class="bg-green-500 h-1 rounded-full" style="width: 30%"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── ETHICAL FUND ── -->
-      <div id="ethical-funds" class="bg-white rounded-xl shadow-sm">
-
-        <div class="px-6 pt-6 pb-2">
-          <span class="bg-gray-200 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Low Risk</span>
-        </div>
-
-        <div class="flex flex-col md:flex-row gap-6 px-3 sm:px-6 pt-2 pb-6">
-          <div class="md:w-3/5 space-y-3">
-            <h3 class="text-gray-900 text-xl font-bold">Deutsche Ethical Funds</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">
-              Deutsche Ethical Fund is a fund that invests in strict compliance with the investor's ethical values e.g. moral, religious, social, etc. This fund is invested in equities and fixed income securities that comply with individual investors' ethical values. Being a discretionary open-ended collective investment scheme, the fund manager leaves the offer and redemption of units open throughout the lifespan of the fund. The objectives guarding this fund are strict adherence to investors' ethical values; ensure generation of competitive returns on investment and preserve investors' capital. Deutsche Ethical Fund is suitable for individuals whose ethical values cannot be compromised as well as groups, organizations, and institutions founded on some ethical values that cannot be compromised.
-            </p>
-          </div>
-          <div class="md:w-2/5">
-            <div class="bg-green-700 text-white rounded-xl px-6 py-6 h-full">
-              <h4 class="font-bold text-sm mb-4">Key Features</h4>
-              <ul class="text-sm space-y-2">
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Professional Fund and portfolio Management</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Tax advantage</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Competitive returns</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Diversification of portfolio</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Risk Mitigation</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Programmed Investment</li>
-                <li class="flex items-start gap-2"><span class="text-green-300 mt-0.5">✓</span> Transparency and strict compliance with ethical investment rules</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Unified dark bottom section -->
-        <div class="bg-[#0f1520] text-white rounded-b-xl pt-10 pb-6">
-          <div class="mx-4 my-6 px-6 py-6 rounded-2xl bg-white shadow-sm flex flex-col sm:flex-row divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
-            <div class="flex-1 px-6 py-5">
-              <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">Minimum Initial</p>
-              <p class="text-2xl font-bold text-gray-900">#1000</p>
-            </div>
-            <div class="flex-1 px-6 py-5">
-              <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">Minimum Additional</p>
-              <p class="text-2xl font-bold text-gray-900">#500</p>
-            </div>
-            <div class="flex-1 px-6 py-5">
-              <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">Risk Level</p>
-              <p class="text-2xl font-bold text-gray-900">LOW</p>
-            </div>
-          </div>
-          <div class="px-4 sm:px-6 py-6">
-            <h4 class="text-white font-bold text-base mb-1">What the Fund Invests in</h4>
-            <p class="text-gray-400 text-xs mb-6 max-w-xs leading-relaxed">Equities and fixed income securities that strictly comply with investors' ethical, moral, and religious values.</p>
-            <div class="space-y-5">
-              <div>
-                <div class="flex justify-between items-center mb-1.5">
-                  <span class="text-gray-300 text-xs font-medium">Ethical Equities</span>
-                  <span class="text-green-400 text-xs font-semibold">50% - 70%</span>
-                </div>
-                <div class="w-full bg-white/10 rounded-full h-1">
-                  <div class="bg-green-500 h-1 rounded-full" style="width: 60%"></div>
-                </div>
-              </div>
-              <div>
-                <div class="flex justify-between items-center mb-1.5">
-                  <span class="text-gray-300 text-xs font-medium">Fixed Income & Compliant Instruments</span>
-                  <span class="text-green-400 text-xs font-semibold">30% - 50%</span>
-                </div>
-                <div class="w-full bg-white/10 rounded-full h-1">
-                  <div class="bg-green-500 h-1 rounded-full" style="width: 40%"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </section>
   </div>
 </template>

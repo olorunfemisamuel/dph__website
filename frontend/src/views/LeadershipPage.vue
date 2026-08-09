@@ -6,40 +6,23 @@ const activeTab = ref('management');
 
 // Sample data to differentiate the views
 const managementData = [
-  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive Officer', img: new URL('@/assets/leadershipIMGS/mdIMG.jpg', import.meta.url).href },
-  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/mrijomaIMG.jpg', import.meta.url).href },
-  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/misscatherineIMG.jpg', import.meta.url).href },
-  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/missblessingIMG.jpg', import.meta.url).href },
-  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/mrdeideiIMG.jpg', import.meta.url).href },
-  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/bosuIMG.jpg', import.meta.url).href },
-  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/oluchiIMG.jpg', import.meta.url).href },
-  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/mrbrightIMG.jpg', import.meta.url).href },
-  { name: 'Dr Onuoha Nnachi', role: 'Chief Executive', img: new URL('@/assets/leadershipIMGS/mrsamIMG.jpg', import.meta.url).href },
+  { name: 'DR. ONUOHA IKWOR-NNACHI', role: 'Managing Director/CEO', img: new URL('@/assets/ManagementImg/mddph.jpeg', import.meta.url).href },
+  { name: 'CATHERINE NIYI-AFOLABI', role: 'Head, Business Development & CRM', img: new URL('@/assets/ManagementImg/mrscatherinimg.jpeg', import.meta.url).href },
+  { name: 'AKINFENWA APATA', role: 'Fund Manager', img: new URL('@/assets/ManagementImg/mrakindphimg.jpeg', import.meta.url).href },
+  { name: 'BRIGHT OYAKHILOME', role: 'Senior Investment Analyst', img: new URL('@/assets/ManagementImg/mrbrightdp.jpeg', import.meta.url).href },
+  { name: 'BLESSING CHRISTOPHER', role: 'Head, Finance', img: new URL('@/assets/ManagementImg/missblessingdph.jpeg', import.meta.url).href },
+  { name: 'CHIBUGOM NWAFOR', role: 'Head, Human Resource', img: new URL('@/assets/ManagementImg/hrdphimg.jpeg', import.meta.url).href },
 ];
 
 const boardData = [
-  { name: 'Dr Onuoha Nnachi', role: 'Director of Board', img: new URL('@/assets/leadershipIMGS/mdIMG.jpg', import.meta.url).href },
-  { name: 'Dr Onuoha Nnachi', role: 'Director of Board', img: new URL('@/assets/leadershipIMGS/mrijomaIMG.jpg', import.meta.url).href },
-  { name: 'Dr Onuoha Nnachi', role: 'Director of Board', img: new URL('@/assets/leadershipIMGS/misscatherineIMG.jpg', import.meta.url).href },
-  { name: 'Dr Onuoha Nnachi', role: 'Director of Board', img: new URL('@/assets/leadershipIMGS/misscatherineIMG.jpg', import.meta.url).href },
-  { name: 'Dr Onuoha Nnachi', role: 'Director of Board', img: new URL('@/assets/leadershipIMGS/misscatherineIMG.jpg', import.meta.url).href },
-  { name: 'Dr Onuoha Nnachi', role: 'Director of Board', img: new URL('@/assets/leadershipIMGS/misscatherineIMG.jpg', import.meta.url).href },
+  { name: 'CHIEF DAVE OBASI NWACHUKWU', role: 'Chairman of the Board', img: new URL('@/assets/BoardImgs/boardofdirector4.jpeg', import.meta.url).href },
+  { name: 'DR. ONUOHA IKWOR-NNACHI', role: 'Managing Director/CEO', img: new URL('@/assets/BoardImgs/mddph.jpeg', import.meta.url).href },
+  { name: 'SHEIKH IBRAHIM DAHIRU BAUCHI', role: 'Non Executive Director', img: new URL('@/assets/BoardImgs/boardofdirector2.jpeg', import.meta.url).href },
+  { name: 'MR. EMEKA UGWU-OJU', role: 'Non Executive Director', img: new URL('@/assets/BoardImgs/boardofdirector3.jpeg', import.meta.url).href },
+  { name: 'MS RACHEL OGBONNA', role: 'Board Member', img: '' },
+  { name: 'HIGH CHIEF HIGGINS PETERS', role: 'Non Executive Director', img: new URL('@/assets/BoardImgs/boardofdireactor1.jpeg', import.meta.url).href },
 ];
 
-
-const showModal = ref(false);
-
-const selectedLeader = ref<{ name: string; role: string; img: string } | null>(null);
-
-const openModal = (leader: { name: string; role: string; img: string }) => {
-  selectedLeader.value = leader;
-  showModal.value = true;
-};
-
-const closeModal = () => {
-  showModal.value = false;
-  selectedLeader.value = null;
-};
 
 import NewsLetter from '@/components/NewsLetter.vue';
 
@@ -87,15 +70,20 @@ import NewsLetter from '@/components/NewsLetter.vue';
       <div
   v-for="(leader, index) in (activeTab === 'management' ? managementData : boardData)"
   :key="index"
-  @click="openModal(leader)"
-  class="flex bg-[#f8fafc] rounded-2xl shadow-sm border border-gray-100 overflow-hidden cursor-pointer hover:shadow-md transition"
+  class="flex bg-[#f8fafc] rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition"
 >
-
-        <img
-          :src= "leader.img"
-          alt="Leader"
-          class="w-24 sm:w-28 h-full object-cover"
-        />
+        <div class="w-24 sm:w-28 h-full overflow-hidden bg-gray-100 flex items-center justify-center">
+          <template v-if="leader.img">
+            <img
+              :src="leader.img"
+              alt="Leader"
+              class="w-full h-full object-cover"
+            />
+          </template>
+          <template v-else>
+            <span class="text-[10px] text-gray-500">No Image</span>
+          </template>
+        </div>
         <div class="p-3 sm:p-5 flex flex-col justify-center">
           <h4 class="font-bold text-gray-800 text-sm sm:text-base">
             {{ leader.name }}

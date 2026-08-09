@@ -8,35 +8,35 @@ const managementData = [
 const services = [
   {
     id: 'stock-broking',
-    title: 'Stock Broking',
+    title: 'Equity Trading',
     text: 'We provide world-class stockbroking services to both local and international investors in the Nigerian capital market. Our team offers a full range of capital market services, including trading, asset management, and strategic investment guidance. Clients retain control over investment decisions, while we execute trades and manage portfolios based on research, market insights, and professional experience.',
     reverse: false,
     route: '/stockbroking',
   },
   {
     id: 'equities',
-    title: 'Equities',
+    title: 'Fixed Income Trading',
     text: 'The Mergers and Acquisitions (M&A) Group at Deutsche partners holding is one of the leading M&A advisors in Africa. Providing the full spectrum of strategic Financial Advisory Services. Our Team delivers expert guidance and execution for mergers, acquisitions, divestitures, and cross-border transactions, offering innovative, fully integrated solutions to help clients navigate complex deals and achieve strategic goals.',
     reverse: true,
     route: '/Equities',
   },
   {
     id: 'derivatives-instrument',
-    title: 'Derivatives Instrument',
+    title: 'Proprietary Trading',
     text: 'The Mergers and Acquisitions (M&A) Group at Deutsche partners holding is one of the leading M&A advisors in Africa. Providing the full spectrum of strategic Financial Advisory Services. Our Team delivers expert guidance and execution for mergers, acquisitions, divestitures, and cross-border transactions, offering innovative, fully integrated solutions to help clients navigate complex deals and achieve strategic goals.',
     reverse: false,
     route: '/derivatives-instruments',
   },
   {
     id: 'commodities-trading',
-    title: 'Commodities Trading',
+    title: 'Security Analysis',
     text: 'The Mergers and Acquisitions (M&A) Group at Deutsche partners holding is one of the leading M&A advisors in Africa. Providing the full spectrum of strategic Financial Advisory Services. Our Team delivers expert guidance and execution for mergers, acquisitions, divestitures, and cross-border transactions, offering innovative, fully integrated solutions to help clients navigate complex deals and achieve strategic goals.',
     reverse: true,
     route: '/commodity-trading',
   },
   {
     id: 'security-dealing',
-    title: 'Security Dealing',
+    title: 'Economic Profiling',
     text: 'The Mergers and Acquisitions (M&A) Group at Deutsche partners holding is one of the leading M&A advisors in Africa. Providing the full spectrum of strategic Financial Advisory Services. Our Team delivers expert guidance and execution for mergers, acquisitions, divestitures, and cross-border transactions, offering innovative, fully integrated solutions to help clients navigate complex deals and achieve strategic goals.',
     reverse: true,
     route: '/Security-Dealing',
@@ -79,24 +79,14 @@ const services = [
 
     <!-- Green Highlight Section -->
     <section class="max-w-7xl mx-auto mt-12 px-4 sm:px-6">
-      <div class="bg-[#0F3D1F] rounded-2xl overflow-hidden shadow-xl flex flex-col md:flex-row items-stretch">
-        <div class="md:w-2/3 w-full p-6 sm:p-8 md:p-10 text-white">
-          <p class="text-sm sm:text-[13px] leading-relaxed">
-            We have excellent IT processes and have also leveraged technology to provide
-            instant trading capabilities to our clients from our devices. Our team is
-            committed to helping clients make informed decisions that lead to maximized
-            investment returns.
-            <br /><br />
-            Our Securities trading business provides access to primary market opportunities
-            for listed equities (IPOs, Right issues, Offer for Sale and Offer for Subscription)
-            and fixed income securities (Bonds and Treasury bills).
-            <br /><br />
-            In addition to this, we offer secondary market trading services for clients who
-            want to buy and sell their listed Shares and Bonds on the floor of the Nigerian
-            Stock Exchange.
+      <div class="bg-[#0F3D1F] rounded-2xl overflow-hidden shadow-xl flex flex-col md:flex-row items-stretch max-h-[320px]">
+        <div class="md:w-2/3 w-full p-5 sm:p-6 md:p-7 text-white">
+          <p class="text-base sm:text-xl md:text-2xl leading-relaxed">
+           Our securities business provides brokerage, trading, investment research, and market intelligence services, enabling clients to make informed investment decisions 
+           and optimize portfolio performance.
           </p>
         </div>
-        <div class="md:w-1/3 w-full relative">
+        <div class="md:w-1/3 w-full relative max-h-[320px]">
           <img
             src="@/assets/securitiesTradingimg.png"
             alt="Securities Meeting"
@@ -107,7 +97,7 @@ const services = [
     </section>
 
     <!-- Leadership -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+    <!-- <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
       <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Our Leadership</h2>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
         <div
@@ -122,7 +112,7 @@ const services = [
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Service Cards -->
     <section class="max-w-7xl mx-auto py-12 px-4 sm:px-6 space-y-8">
@@ -131,17 +121,29 @@ const services = [
         :key="service.id"
         :id="service.id"
         class="flex bg-[#F0F5F7] rounded-2xl overflow-hidden shadow-lg"
-        :class="service.reverse ? 'flex-col md:flex-row-reverse' : 'flex-col md:flex-row'"
+        :class="[
+          service.reverse ? 'flex-col md:flex-row-reverse' : 'flex-col md:flex-row',
+          service.id === 'stock-broking' ? 'md:max-h-[340px]' : 'md:max-h-[300px]'
+        ]"
       >
         <!-- Text Content -->
-        <div class="md:w-2/3 w-full p-6 sm:p-8 flex flex-col justify-between">
+        <div :class="[
+          service.id === 'stock-broking' ? 'p-4 sm:p-5' : 'p-5 sm:p-6',
+          'md:w-2/3 w-full flex flex-col justify-between'
+        ]">
           <div>
-            <h4 class="text-[#168223] font-semibold text-lg mb-3">{{ service.title }}</h4>
-            <p class="text-black/90 text-sm leading-relaxed">{{ service.text }}</p>
+            <h4 :class="[
+              service.id === 'stock-broking' ? 'text-2xl' : 'text-xl',
+              'text-[#168223] font-semibold mb-3'
+            ]">{{ service.title }}</h4>
+            <p :class="[
+              service.id === 'stock-broking' ? 'text-base md:text-lg' : 'text-base md:text-lg',
+              'text-black/90 leading-relaxed'
+            ]">{{ service.text }}</p>
           </div>
 
           <!-- Read more button — each links to its own page -->
-          <div class="mt-6">
+          <!-- <div class="mt-6">
             <RouterLink
               :to="service.route"
               class="inline-flex items-center gap-2 text-[#168223] text-sm font-medium hover:gap-3 transition-all duration-200 group"
@@ -153,7 +155,7 @@ const services = [
                 </svg>
               </span>
             </RouterLink>
-          </div>
+          </div> -->
         </div>
 
         <!-- Image -->

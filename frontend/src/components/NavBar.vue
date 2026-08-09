@@ -143,7 +143,7 @@ import assetMegainvestment from '@/assets/assetmanagementMega/assetMegainvestmen
 
 // ─── PRIVATE EQUITY MIDDLE IMAGES ───
 import businesincubationinvestment from '@/assets/privateequityIMGS/businesincubationinvestment.webp'
-import healthinvestment from '@/assets/privateequityIMGS/healthinvestment.webp'
+// import healthinvestment from '@/assets/privateequityIMGS/healthinvestment.webp'
 import hospitalityandentatainment from '@/assets/privateequityIMGS/hospitalityandentatainment.webp'
 import privateequityfunds from '@/assets/privateequityIMGS/privateequityfunds.webp'
 import realestateinvestnent from '@/assets/privateequityIMGS/realestateinvestnent.webp'
@@ -161,7 +161,7 @@ import stockbroking from '@/assets/securitytradingIMGS/stockbroking.webp'
 import bondtrustship from '@/assets/trustees/bondtrustship.webp'
 import coporatetrust from '@/assets/trustees/coporatetrust.webp'
 import estatcplanning from '@/assets/trustees/estatcplanning.webp'
-import privatetrust from '@/assets/trustees/privatetrust.webp'
+// import privatetrust from '@/assets/trustees/privatetrust.webp'
 import securedandunsecurednoteissuances from '@/assets/trustees/securedandunsecurednoteissuances.webp'
 
 // ─── PRODUCT LEFT PANEL IMAGES ───
@@ -249,7 +249,7 @@ const middleImages: Record<string, string> = {
   'investment-advisory':       assetMegainvestment,
   'venture-capital':           assetMegaventure,
   'business-incubation':       businesincubationinvestment,
-  'health-investment':         healthinvestment,
+  // 'health-investment':         healthinvestment,
   'hospitality-entertainment': hospitalityandentatainment,
   'private-equity-funds':      privateequityfunds,
   'real-estate-investment':    realestateinvestnent,
@@ -262,7 +262,7 @@ const middleImages: Record<string, string> = {
   'foreign-exchange':          foreignexchange,
   'secured-unsecured':         securedandunsecurednoteissuances,
   'bond-trustship':            bondtrustship,
-  'private-trust':             privatetrust,
+  
   'corporate-trust':           coporatetrust,
   'estate-planning':           estatcplanning,
 }
@@ -347,10 +347,6 @@ const resourceImages: Record<string, string> = {
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
-
-      <RouterLink to="/invest-now" class="hidden md:inline-block ml-2">
-        <button class="px-4 py-2 rounded-xl bg-green-700 hover:bg-green-800 text-white transition">Invest Now</button>
-      </RouterLink>
     </nav>
 
     <!-- UNIFIED MEGA MENU -->
@@ -489,8 +485,8 @@ const resourceImages: Record<string, string> = {
             <RouterLink to="/Private-Equity" class="block px-4 py-3 rounded-lg transition-colors" :class="activeServicesSub === 'private' ? 'bg-green-700 text-white' : 'hover:bg-green-100'" @mouseenter="activeServicesSub = 'private'" @click="closeAllMenus">Private Equity</RouterLink>
             <RouterLink to="/Securities-Trading" class="block px-4 py-3 rounded-lg transition-colors" :class="activeServicesSub === 'securities' ? 'bg-green-700 text-white' : 'hover:bg-green-100'" @mouseenter="activeServicesSub = 'securities'" @click="closeAllMenus">Securities Trading</RouterLink>
             <RouterLink to="/Trustees" class="block px-4 py-3 rounded-lg transition-colors" :class="activeServicesSub === 'trustees' ? 'bg-green-700 text-white' : 'hover:bg-green-100'" @mouseenter="activeServicesSub = 'trustees'" @click="closeAllMenus">Trustees</RouterLink>
-            <RouterLink to="/venture-capital" class="block px-4 py-3 rounded-lg transition-colors" :class="activeServicesSub === 'venture' ? 'bg-green-700 text-white' : 'hover:bg-green-100'" @mouseenter="activeServicesSub = 'venture'" @click="closeAllMenus">Venture Capital</RouterLink>
-            <RouterLink to="/consultancy-service" class="block px-4 py-3 rounded-lg transition-colors" :class="activeServicesSub === 'consultancy' ? 'bg-green-700 text-white' : 'hover:bg-green-100'" @mouseenter="activeServicesSub = 'consultancy'" @click="closeAllMenus">Consultancy Service</RouterLink>
+            <RouterLink to="/" class="block px-4 py-3 rounded-lg transition-colors" :class="activeServicesSub === 'venture' ? 'bg-green-700 text-white' : 'hover:bg-green-100'" @mouseenter="activeServicesSub = 'venture'" @click="closeAllMenus">Venture Capital</RouterLink>
+            <RouterLink to="/" class="block px-4 py-3 rounded-lg transition-colors" :class="activeServicesSub === 'consultancy' ? 'bg-green-700 text-white' : 'hover:bg-green-100'" @mouseenter="activeServicesSub = 'consultancy'" @click="closeAllMenus">Consultancy Service</RouterLink>
           </ul>
         </div>
 
@@ -498,20 +494,20 @@ const resourceImages: Record<string, string> = {
           <p class="text-sm font-black tracking-widest text-gray-700 mb-4">WHAT WE DO</p>
 
           <div v-if="activeServicesSub === 'asset'" class="space-y-2">
-            <RouterLink to="/Asset-Management" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'mutual-funds'" @click="navigateToSection('mutual-funds')">Mutual Funds</RouterLink>
-            <RouterLink to="/Asset-Management" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'portfolio-management'" @click="navigateToSection('portfolio-management')">Portfolio Management</RouterLink>
-            <RouterLink to="/Asset-Management" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'hedge-fund'" @click="navigateToSection('hedge-fund')">Hedge Fund</RouterLink>
-            <RouterLink to="/Asset-Management" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'venture-capital'" @click="navigateToSection('venture-capital')">Venture Capital</RouterLink>
-            <RouterLink to="/Asset-Management" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'investment-advisory'" @click="navigateToSection('investment-advisory')">Investment Advisory</RouterLink>
+            <RouterLink to="/Asset-Management" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'mutual-funds'" @click="navigateToSection('mutual-funds')">Private Wealth Management</RouterLink>
+            <RouterLink to="/Asset-Management" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'portfolio-management'" @click="navigateToSection('portfolio-management')">Fund Management & Advisory</RouterLink>
+            <RouterLink to="/Asset-Management" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'hedge-fund'" @click="navigateToSection('hedge-fund')">Collective Investment Schemes</RouterLink>
+            <RouterLink to="/Asset-Management" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'venture-capital'" @click="navigateToSection('venture-capital')">Special Investment Schemes</RouterLink>
+            <RouterLink to="/Asset-Management" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'investment-advisory'" @click="navigateToSection('investment-advisory')">Portfolio Management</RouterLink>
           </div>
 
           <div v-if="activeServicesSub === 'investment'" class="space-y-2">
-            <RouterLink to="/Investment-Banking" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'corporate-finance'" @click="navigateToSection('corporate-finance')">Corporate Finance</RouterLink>
-            <RouterLink to="/Investment-Banking" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'mergers-acquisitions'" @click="navigateToSection('mergersacquisitions')">Mergers and Acquisitions</RouterLink>
-            <RouterLink to="/Investment-Banking" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'financial-advisory'" @click="navigateToSection('financial-advisory')">Financial Advisory</RouterLink>
-            <RouterLink to="/Investment-Banking" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'project-finance'" @click="navigateToSection('project-finance')">Project Finance</RouterLink>
-            <RouterLink to="/Investment-Banking" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'equity-debt-capital'" @click="navigateToSection('equity-debt-capital-market')">Equity and Debt Capital Market</RouterLink>
-            <RouterLink to="/Investment-Banking" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'alternative-investments'" @click="navigateToSection('alternative-investments')">Alternative Investments</RouterLink>
+            <RouterLink to="/Investment-Banking" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'corporate-finance'" @click="navigateToSection('corporate-finance')">Equity Capital Raising</RouterLink>
+            <RouterLink to="/Investment-Banking" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'financial-advisory'" @click="navigateToSection('financial-advisory')">Finance Advisory</RouterLink>
+            <RouterLink to="/Investment-Banking" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'mergers-acquisitions'" @click="navigateToSection('mergersacquisitions')">Mergers & Acquisition</RouterLink>
+            <RouterLink to="/Investment-Banking" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'project-finance'" @click="navigateToSection('project-finance')">Public Sector Advisory</RouterLink>
+            <RouterLink to="/Investment-Banking" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'equity-debt-capital'" @click="navigateToSection('equity-debt-capital-market')">Structured Finance</RouterLink>
+            <RouterLink to="/Investment-Banking" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'alternative-investments'" @click="navigateToSection('alternative-investments')">Research & Intelligence</RouterLink>
           </div>
 
           <div v-if="activeServicesSub === 'private'" class="space-y-2">
@@ -523,21 +519,22 @@ const resourceImages: Record<string, string> = {
           </div>
 
           <div v-if="activeServicesSub === 'securities'" class="space-y-2">
-            <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'stock-broking'" @click="navigateToSection('stock-broking')">Stock Broking</RouterLink>
-            <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'equties'" @click="navigateToSection('equities')">Equities</RouterLink>
-           <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'derivatives-instrument'" @click="navigateToSection('derivatives-instrument')">Derivatives Instrument</RouterLink>
-            <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'commodities-trading'" @click="navigateToSection('commodities-trading')">Commodities Trading</RouterLink>
-            <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'security-dealing'" @click="navigateToSection('security-dealing')">Security Dealing</RouterLink>
-            <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'fixed-income-securities'" @click="navigateToSection('fixed-income-securities')">Fixed Income Securities</RouterLink>
-            <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'foreign-exchange'" @click="navigateToSection('foreign-exchange')">Foreign Exchange</RouterLink>
+            <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'stock-broking'" @click="navigateToSection('stock-broking')">Equity Trading</RouterLink>
+            <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'equties'" @click="navigateToSection('equities')">Fixed Income Trading</RouterLink>
+           <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'derivatives-instrument'" @click="navigateToSection('derivatives-instrument')">Proprietary Trading</RouterLink>
+            <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'commodities-trading'" @click="navigateToSection('commodities-trading')">Security Analysis</RouterLink>
+            <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'security-dealing'" @click="navigateToSection('security-dealing')">Economic Profiling</RouterLink>
+            <!-- <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'fixed-income-securities'" @click="navigateToSection('fixed-income-securities')">Fixed Income Securities</RouterLink>
+            <RouterLink to="/Securities-Trading" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'foreign-exchange'" @click="navigateToSection('foreign-exchange')">Foreign Exchange</RouterLink> -->
           </div>
 
           <div v-if="activeServicesSub === 'trustees'" class="space-y-2">
-            <RouterLink to="/Trustees" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'secured-unsecured'" @click="navigateToSection('secured-unsecured')">Secured and Unsecured Note Issuances</RouterLink>
-            <RouterLink to="/Trustees" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'bond-trustship'" @click="navigateToSection('bond-trustship')">Bond Trusteeship</RouterLink>
-            <RouterLink to="/Trustees" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'private-trust'" @click="navigateToSection('private-trust')">Private Trust</RouterLink>
-            <RouterLink to="/Trustees" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'corporate-trust'" @click="navigateToSection('corporate-trust')">Corporate Trust</RouterLink>
-            <RouterLink to="/Trustees" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'estate-planning'" @click="navigateToSection('estate-planning')">Estate Planning</RouterLink>
+            <RouterLink to="/Trustees" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'secured-unsecured'" @click="navigateToSection('secured-unsecured')">Corporate Trusteeship</RouterLink>
+            <RouterLink to="/Trustees" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'bond-trustship'" @click="navigateToSection('bond-trustship')">Bond & Note Trusteeship</RouterLink>
+            <RouterLink to="/Trustees" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'private-trust'" @click="navigateToSection('private-trust')">Debenture Trusteeship</RouterLink>
+            <RouterLink to="/Trustees" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'corporate-trust'" @click="navigateToSection('corporate-trust')">Escrow Services</RouterLink>
+            <RouterLink to="/Trustees" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'estate-planning'" @click="navigateToSection('estate-planning')">Agency & Custodial Services</RouterLink>
+            <RouterLink to="/Trustees" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="hoveredMiddle = 'estate-planning'" @click="navigateToSection('estate-planning')">Estate & Wealth Planning Trusts</RouterLink>
           </div>
         </div>
 
@@ -555,27 +552,33 @@ const resourceImages: Record<string, string> = {
         <div class="border-r pr-4" @mouseenter="prodhoveredMiddle = null">
           <p class="text-sm font-black tracking-widest text-gray-700 mb-4">OUR PRODUCTS</p>
           <ul class="space-y-2">
-            <RouterLink to="/mutual-funds" class="block px-4 py-3 rounded-lg font-medium transition-colors" :class="activeProductsSub === 'mutual' ? 'bg-green-700 text-white' : 'hover:bg-green-100'" @mouseenter="activeProductsSub = 'mutual'" @click="closeAllMenus">Mutual Funds</RouterLink>
-            <RouterLink to="/Exchange-Traded-Funds" class="block px-4 py-3 rounded-lg font-medium transition-colors" :class="activeProductsSub === 'exchange-traded' ? 'bg-green-700 text-white' : 'hover:bg-green-100'" @mouseenter="activeProductsSub = 'exchange-traded'" @click="closeAllMenus">Exchange Traded Funds</RouterLink>
-            <RouterLink to="/alternative-investment" class="block px-4 py-3 rounded-lg font-medium transition-colors" :class="activeProductsSub === 'alternative' ? 'bg-green-700 text-white' : 'hover:bg-green-100'" @mouseenter="activeProductsSub = 'alternative'" @click="closeAllMenus">Alternative Investments Scheme</RouterLink>
+            <RouterLink to="/mutual-funds" class="block px-4 py-3 rounded-lg font-medium transition-colors" :class="activeProductsSub === 'mutual' ? 'bg-green-700 text-white' : 'hover:bg-green-100'" @mouseenter="activeProductsSub = 'mutual'" @click="closeAllMenus">Corporate Finance Advisory</RouterLink>
+            <RouterLink to="/Exchange-Traded-Funds" class="block px-4 py-3 rounded-lg font-medium transition-colors" :class="activeProductsSub === 'exchange-traded' ? 'bg-green-700 text-white' : 'hover:bg-green-100'" @mouseenter="activeProductsSub = 'exchange-traded'" @click="closeAllMenus">Business Advisory</RouterLink>
+            <RouterLink to="/alternative-investment" class="block px-4 py-3 rounded-lg font-medium transition-colors" :class="activeProductsSub === 'alternative' ? 'bg-green-700 text-white' : 'hover:bg-green-100'" @mouseenter="activeProductsSub = 'alternative'" @click="closeAllMenus">Fund Management</RouterLink>
           </ul>
         </div>
 
         <div>
           <p class="text-sm font-black tracking-widest text-gray-700 mb-4">WHAT WE DO</p>
           <div v-if="activeProductsSub === 'mutual'" class="space-y-2">
-            <RouterLink to="/mutual-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'money-market'" @click="navigateToSection('money-market')">Deutsche Money Market Fund</RouterLink>
-            <RouterLink to="/mutual-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'equity-fund'" @click="navigateToSection('equity-fund')">Deutsche Equity Fund</RouterLink>
-            <RouterLink to="/mutual-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'private-fixed-income'" @click="navigateToSection('fixed-income')">Deutsche Private Fixed Income Fund</RouterLink>
-            <RouterLink to="/mutual-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'ethical-funds'" @click="navigateToSection('ethical-funds')">Deutsche Ethical Funds</RouterLink>
+            <RouterLink to="/mutual-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'money-market'" @click="navigateToSection('money-market')">Privatization & Concession Advisory</RouterLink>
+            <RouterLink to="/mutual-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'equity-fund'" @click="navigateToSection('equity-fund')">Debt & Equity Capital Raising</RouterLink>
+            <RouterLink to="/mutual-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'private-fixed-income'" @click="navigateToSection('fixed-income')">Public & Private Sector Advisory</RouterLink>
+            <RouterLink to="/mutual-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'ethical-funds'" @click="navigateToSection('ethical-funds')">Mergers & Acquisitions (M&A) & Leveraged Buyouts (LBOS)</RouterLink>
+            <RouterLink to="/mutual-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'ethical-funds'" @click="navigateToSection('ethical-funds')">Financial Restructuring & Capital Optimization</RouterLink>
           </div>
           <div v-if="activeProductsSub === 'exchange-traded'" class="space-y-2">
-            <RouterLink to="/exchange-traded-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'agro-etf'" @click="navigateToSection('agro-etf')">Deutsche Agro-ETF</RouterLink>
-            <RouterLink to="/exchange-traded-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'gold-etf'" @click="navigateToSection('gold-etf')">Deutsche Gold-ETF</RouterLink>
+            <RouterLink to="/exchange-traded-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'agro-etf'" @click="navigateToSection('agro-etf')">DPH Premium Business Advisory Programme</RouterLink>
+            <RouterLink to="/exchange-traded-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'gold-etf'" @click="navigateToSection('gold-etf')">DPH Quarterly Business Clinics</RouterLink>
+             <RouterLink to="/exchange-traded-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'gold-etf'" @click="navigateToSection('gold-etf')">DPH CEO Breakfast Series</RouterLink>
+              <RouterLink to="/exchange-traded-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'gold-etf'" @click="navigateToSection('gold-etf')">DPH Virtual SME Workshops</RouterLink>
+               <RouterLink to="/exchange-traded-funds" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'gold-etf'" @click="navigateToSection('gold-etf')">DPH Private CEO Consultation</RouterLink>
           </div>
           <div v-if="activeProductsSub === 'alternative'" class="space-y-2">
-            <RouterLink to="/alternative-investment" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'private-wealth'" @click="navigateToSection('private-wealth-management')">Deutsche Private Wealth Management</RouterLink>
-            <RouterLink to="/alternative-investment" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'instution-asset-management'" @click="navigateToSection('asset-manange')">Deutsche Institutional Asset Management</RouterLink>
+            <RouterLink to="/alternative-investment" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'private-wealth'" @click="navigateToSection('private-wealth-management')">Discretionary Portfolio Management</RouterLink>
+            <RouterLink to="/alternative-investment" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'instution-asset-management'" @click="navigateToSection('asset-manange')">Non-Discretionary Portfolio Management</RouterLink>
+            <RouterLink to="/alternative-investment" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'instution-asset-management'" @click="navigateToSection('asset-manange')">Mutual Funds</RouterLink>
+            <RouterLink to="/alternative-investment" class="block font-medium rounded-lg px-1 py-3 hover:bg-green-100" @mouseenter="prodhoveredMiddle = 'instution-asset-management'" @click="navigateToSection('asset-manange')">Alternative Investment</RouterLink>
           </div>
         </div>
 
@@ -591,11 +594,8 @@ const resourceImages: Record<string, string> = {
       <!-- ========== RESOURCES ========== -->
       <div v-if="activeMega === 'resources'" class="grid grid-cols-[1fr_360px] gap-8">
         <div class="space-y-2" @mouseleave="hoveredResource = null">
-          <RouterLink to="/Insight" class="block px-4 py-3 hover:bg-green-50 rounded-lg" @mouseenter="hoveredResource = 'insights'" @click="closeAllMenus">Insights</RouterLink>
           <RouterLink to="/gallery" class="block px-4 py-3 hover:bg-green-50 rounded-lg" @mouseenter="hoveredResource = 'gallery'" @click="closeAllMenus">Gallery</RouterLink>
-          <RouterLink to="/career" class="block px-4 py-3 hover:bg-green-50 rounded-lg" @mouseenter="hoveredResource = 'career'" @click="closeAllMenus">Career</RouterLink>
           <RouterLink to="/cookies-policy" class="block px-4 py-3 hover:bg-green-50 rounded-lg" @mouseenter="hoveredResource = 'policy'" @click="closeAllMenus">Policy</RouterLink>
-          <RouterLink to="/investmentdashboard" class="block px-4 py-3 hover:bg-green-50 rounded-lg" @mouseenter="hoveredResource = 'dashboard'" @click="closeAllMenus">Investment Dashboard</RouterLink>
         </div>
         <div class="hidden md:block">
           <img :src="hoveredResource ? resourceImages[hoveredResource] : '/navigation2.png'" alt="Resources" class="w-full h-full object-cover rounded-lg transition-all duration-300" />
@@ -608,85 +608,201 @@ const resourceImages: Record<string, string> = {
 
 
     <!-- MOBILE MENU -->
-   <Transition name="slide">
-  <div v-show="isMenuOpen" class="fixed inset-y-0 right-0 z-50 w-64 bg-white shadow-2xl border-l px-6 py-6 space-y-6 overflow-y-auto md:hidden">
-    <div class="flex justify-end mb-4">
-      <button @click="toggleMenu" class="text-2xl">&times;</button>
-    </div>
+    <Transition name="slide">
+      <div v-show="isMenuOpen" class="fixed inset-0 z-50 bg-gradient-to-br from-[#0f2f1f] via-[#2a6b4f] via-[#1a5570] to-[#000000] overflow-y-auto md:hidden">
+        <div class="min-h-screen px-8 py-8 space-y-8">
+          
+          <!-- Header with Logo and Close Button -->
+          <div class="flex items-center justify-between mb-8">
+            <img src="/dphLogo-removebg.png" alt="DPH Logo" class="h-16 w-auto"/>
+            <button @click="toggleMenu" class="text-white text-5xl leading-none hover:text-blue-400 transition-all duration-300 font-light hover:rotate-90">&times;</button>
+          </div>
 
-    <RouterLink to="/" @click="toggleMenu" class="block font-medium">Home</RouterLink>
-    
-    <div>
-      <button @click="aboutOpen = !aboutOpen" class="w-full flex items-center justify-between font-medium">
-        About Us
-        <span class="transition-transform" :class="aboutOpen ? 'rotate-180' : ''">▼</span>
-      </button>
-      <div v-show="aboutOpen" class="pl-4 mt-3 space-y-2 text-sm">
-        <RouterLink to="/about" @click="toggleMenu" class="block">Who we are</RouterLink>
-        <RouterLink to="/MDmessage" @click="toggleMenu" class="block">MD's Message</RouterLink>
-        <RouterLink to="/Leadership" @click="toggleMenu" class="block">Leadership</RouterLink>
-        <RouterLink to="/subsidiaries" @click="toggleMenu" class="block">Subsidiaries</RouterLink>
+          <!-- Menu Items -->
+          <div class="space-y-6">
+            
+            <!-- Home -->
+            <div class="relative">
+              <RouterLink to="/" @click="toggleMenu" class="block text-white text-2xl font-bold hover:text-blue-400 transition-all duration-300 py-3 tracking-wide">
+                Home
+              </RouterLink>
+            </div>
+            
+            <!-- About Us -->
+            <div class="relative">
+              <button @click="aboutOpen = !aboutOpen; if(aboutOpen) { businessOpen = false; productsOpen = false; resourcesOpen = false; }" class="w-full flex items-center justify-between text-white text-2xl font-bold hover:text-blue-400 transition-all duration-300 py-3 tracking-wide">
+                About Us
+                <svg class="w-7 h-7 transition-transform duration-300" :class="aboutOpen ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <Transition name="expand">
+                <div v-show="aboutOpen" class="pl-4 mt-5 space-y-3 border-l border-green-400/40">
+                  <RouterLink to="/about" @click="toggleMenu" class="block text-blue-200 text-lg hover:text-white hover:translate-x-2 transition-all duration-300 pl-4">
+                    Who we are
+                  </RouterLink>
+                  <RouterLink to="/MDmessage" @click="toggleMenu" class="block text-blue-200 text-lg hover:text-white hover:translate-x-2 transition-all duration-300 pl-4">
+                    MD's Message
+                  </RouterLink>
+                  <RouterLink to="/Leadership" @click="toggleMenu" class="block text-blue-200 text-lg hover:text-white hover:translate-x-2 transition-all duration-300 pl-4">
+                    Leadership
+                  </RouterLink>
+                  <RouterLink to="/subsidiaries" @click="toggleMenu" class="block text-blue-200 text-lg hover:text-white hover:translate-x-2 transition-all duration-300 pl-4">
+                    Subsidiaries
+                  </RouterLink>
+                </div>
+              </Transition>
+            </div>
+
+            <!-- Our Services -->
+            <div class="relative">
+              <button @click="businessOpen = !businessOpen; if(businessOpen) { aboutOpen = false; productsOpen = false; resourcesOpen = false; }" class="w-full flex items-center justify-between text-white text-2xl font-bold hover:text-blue-400 transition-all duration-300 py-3 tracking-wide">
+                Our Services
+                <svg class="w-7 h-7 transition-transform duration-300" :class="businessOpen ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <Transition name="expand">
+                <div v-show="businessOpen" class="pl-4 mt-5 space-y-3 border-l border-green-400/40">
+                  <RouterLink to="/Asset-Management" @click="toggleMenu" class="block text-blue-200 text-lg hover:text-white hover:translate-x-2 transition-all duration-300 pl-4">
+                    Asset Management
+                  </RouterLink>
+                  <RouterLink to="/Investment-Banking" @click="toggleMenu" class="block text-blue-200 text-lg hover:text-white hover:translate-x-2 transition-all duration-300 pl-4">
+                    Investment Banking
+                  </RouterLink>
+                  <RouterLink to="/Private-Equity" @click="toggleMenu" class="block text-blue-200 text-lg hover:text-white hover:translate-x-2 transition-all duration-300 pl-4">
+                    Private Equity
+                  </RouterLink>
+                  <RouterLink to="/Securities-Trading" @click="toggleMenu" class="block text-blue-200 text-lg hover:text-white hover:translate-x-2 transition-all duration-300 pl-4">
+                    Securities Trading
+                  </RouterLink>
+                  <RouterLink to="/Trustees" @click="toggleMenu" class="block text-blue-200 text-lg hover:text-white hover:translate-x-2 transition-all duration-300 pl-4">
+                    Trustees
+                  </RouterLink>
+                  <RouterLink to="/" @click="toggleMenu" class="block text-blue-200 text-lg hover:text-white hover:translate-x-2 transition-all duration-300 pl-4">
+                    Venture Capital
+                  </RouterLink>
+                  <RouterLink to="/" @click="toggleMenu" class="block text-blue-200 text-lg hover:text-white hover:translate-x-2 transition-all duration-300 pl-4">
+                    Consultancy Service
+                  </RouterLink>
+                </div>
+              </Transition>
+            </div>
+
+            <!-- Our Products -->
+            <div class="relative">
+              <button @click="productsOpen = !productsOpen; if(productsOpen) { aboutOpen = false; businessOpen = false; resourcesOpen = false; }" class="w-full flex items-center justify-between text-white text-2xl font-bold hover:text-blue-400 transition-all duration-300 py-3 tracking-wide">
+                Our Products
+                <svg class="w-7 h-7 transition-transform duration-300" :class="productsOpen ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <Transition name="expand">
+                <div v-show="productsOpen" class="pl-4 mt-5 space-y-5 border-l border-green-400/40">
+                  
+                  <!-- Corporate Finance Advisory -->
+                  <div class="space-y-3">
+                    <p class="text-green-300 font-bold text-lg uppercase tracking-wide border-b border-green-400/30 pb-2 pl-4">Corporate Finance Advisory</p>
+                    <div class="pl-6 space-y-2">
+                      <RouterLink to="/mutual-funds" @click="toggleMenu; navigateToSection('money-market')" class="block text-blue-200 text-base hover:text-white hover:translate-x-2 transition-all duration-300">
+                        Privatization & Concession Advisory
+                      </RouterLink>
+                      <RouterLink to="/mutual-funds" @click="toggleMenu; navigateToSection('equity-fund')" class="block text-blue-200 text-base hover:text-white hover:translate-x-2 transition-all duration-300">
+                        Debt & Equity Capital Raising
+                      </RouterLink>
+                      <RouterLink to="/mutual-funds" @click="toggleMenu; navigateToSection('fixed-income')" class="block text-blue-200 text-base hover:text-white hover:translate-x-2 transition-all duration-300">
+                        Public & Private Sector Advisory
+                      </RouterLink>
+                      <RouterLink to="/mutual-funds" @click="toggleMenu; navigateToSection('ethical-funds')" class="block text-blue-200 text-base hover:text-white hover:translate-x-2 transition-all duration-300">
+                        Mergers & Acquisitions (M&A) & LBOs
+                      </RouterLink>
+                      <RouterLink to="/mutual-funds" @click="toggleMenu; navigateToSection('financial-restructuring')" class="block text-blue-200 text-base hover:text-white hover:translate-x-2 transition-all duration-300">
+                        Financial Restructuring & Capital Optimization
+                      </RouterLink>
+                    </div>
+                  </div>
+
+                  <!-- Business Advisory -->
+                  <div class="space-y-3">
+                    <p class="text-green-300 font-bold text-lg uppercase tracking-wide border-b border-green-400/30 pb-2 pl-4">Business Advisory</p>
+                    <div class="pl-6 space-y-2">
+                      <RouterLink to="/exchange-traded-funds" @click="toggleMenu; navigateToSection('agro-etf')" class="block text-blue-200 text-base hover:text-white hover:translate-x-2 transition-all duration-300">
+                        DPH Premium Business Advisory Programme
+                      </RouterLink>
+                      <RouterLink to="/exchange-traded-funds" @click="toggleMenu; navigateToSection('gold-etf')" class="block text-blue-200 text-base hover:text-white hover:translate-x-2 transition-all duration-300">
+                        DPH Quarterly Business Clinics
+                      </RouterLink>
+                      <RouterLink to="/exchange-traded-funds" @click="toggleMenu" class="block text-blue-200 text-base hover:text-white hover:translate-x-2 transition-all duration-300">
+                        DPH CEO Breakfast Series
+                      </RouterLink>
+                      <RouterLink to="/exchange-traded-funds" @click="toggleMenu" class="block text-blue-200 text-base hover:text-white hover:translate-x-2 transition-all duration-300">
+                        DPH Virtual SME Workshops
+                      </RouterLink>
+                      <RouterLink to="/exchange-traded-funds" @click="toggleMenu" class="block text-blue-200 text-base hover:text-white hover:translate-x-2 transition-all duration-300">
+                        DPH Private CEO Consultation
+                      </RouterLink>
+                    </div>
+                  </div>
+
+                  <!-- Fund Management -->
+                  <div class="space-y-3">
+                    <p class="text-green-300 font-bold text-lg uppercase tracking-wide border-b border-green-400/30 pb-2 pl-4">Fund Management</p>
+                    <div class="pl-6 space-y-2">
+                      <RouterLink to="/alternative-investment" @click="toggleMenu; navigateToSection('discretionary-portfolio-management')" class="block text-blue-200 text-base hover:text-white hover:translate-x-2 transition-all duration-300">
+                        Discretionary Portfolio Management
+                      </RouterLink>
+                      <RouterLink to="/alternative-investment" @click="toggleMenu; navigateToSection('non-discretionary-portfolio-management')" class="block text-blue-200 text-base hover:text-white hover:translate-x-2 transition-all duration-300">
+                        Non-Discretionary Portfolio Management
+                      </RouterLink>
+                      <RouterLink to="/alternative-investment" @click="toggleMenu; navigateToSection('mutual-funds')" class="block text-blue-200 text-base hover:text-white hover:translate-x-2 transition-all duration-300">
+                        Mutual Funds
+                      </RouterLink>
+                      <RouterLink to="/alternative-investment" @click="toggleMenu; navigateToSection('alternative-investment-services')" class="block text-blue-200 text-base hover:text-white hover:translate-x-2 transition-all duration-300">
+                        Alternative Investment
+                      </RouterLink>
+                    </div>
+                  </div>
+
+                </div>
+              </Transition>
+            </div>
+
+            <!-- Resources -->
+            <div class="relative">
+              <button @click="resourcesOpen = !resourcesOpen; if(resourcesOpen) { aboutOpen = false; businessOpen = false; productsOpen = false; }" class="w-full flex items-center justify-between text-white text-2xl font-bold hover:text-blue-400 transition-all duration-300 py-3 tracking-wide">
+                Resources
+                <svg class="w-7 h-7 transition-transform duration-300" :class="resourcesOpen ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <Transition name="expand">
+                <div v-show="resourcesOpen" class="pl-4 mt-5 space-y-3 border-l border-green-400/40">
+                  <RouterLink to="/gallery" @click="toggleMenu" class="block text-blue-200 text-lg hover:text-white hover:translate-x-2 transition-all duration-300 pl-4">
+                    Gallery
+                  </RouterLink>
+                  <RouterLink to="/cookies-policy" @click="toggleMenu" class="block text-blue-200 text-lg hover:text-white hover:translate-x-2 transition-all duration-300 pl-4">
+                    Policy
+                  </RouterLink>
+                </div>
+              </Transition>
+            </div>
+
+            <!-- Contact -->
+            <div class="relative">
+              <RouterLink to="/contact" @click="toggleMenu" class="block text-white text-2xl font-bold hover:text-blue-400 transition-all duration-300 py-3 tracking-wide">
+                Contact
+              </RouterLink>
+            </div>
+
+          </div>
+        </div>
       </div>
-    </div>
+    </Transition>
 
-    <div>
-      <button @click="businessOpen = !businessOpen" class="w-full flex items-center justify-between font-medium">
-        Our Services
-        <span class="transition-transform" :class="businessOpen ? 'rotate-180' : ''">▼</span>
-      </button>
-      <div v-show="businessOpen" class="pl-4 mt-3 space-y-2 text-sm">
-        <RouterLink to="/Asset-Management" @click="toggleMenu" class="block">Asset Management</RouterLink>
-        <RouterLink to="/Investment-Banking" @click="toggleMenu" class="block">Investment Banking</RouterLink>
-        <RouterLink to="/Private-Equity" @click="toggleMenu" class="block">Private Equity</RouterLink>
-        <RouterLink to="/Securities-Trading" @click="toggleMenu" class="block">Securities Trading</RouterLink>
-        <RouterLink to="/Trustees" @click="toggleMenu" class="block">Trustees</RouterLink>
-      </div>
-    </div>
-
-    <!---Product Section Mobile-->
-     <div>
-  
-      <button @click="productsOpen = !productsOpen" class="w-full flex items-center justify-between font-medium">
-        Our Products
-        <span class="transition-transform" :class="productsOpen ? 'rotate-180' : ''">▼</span>
-      </button>
-      <div v-show="productsOpen" class="pl-4 mt-3 space-y-2 text-sm">
-        <RouterLink to="/mutual-funds" @click="toggleMenu" class="block">Mutual Funds</RouterLink>
-        <RouterLink to="/exchange-traded-funds" @click="toggleMenu" class="block">Exchange Traded Funds</RouterLink>
-        <RouterLink to="/alternative-investment" @click="toggleMenu" class="block">Alternative Investment Scheme</RouterLink>
-      
-      </div>
-    </div>
-
-
-    <!---Resources Section Mobile-->
-    <div>
-  
-      <button @click="resourcesOpen = !resourcesOpen" class="w-full flex items-center justify-between font-medium">
-        Our Resources
-        <span class="transition-transform" :class="resourcesOpen ? 'rotate-180' : ''">▼</span>
-      </button>
-      <div v-show="resourcesOpen" class="pl-4 mt-3 space-y-2 text-sm">
-        <RouterLink to="/Insight" @click="toggleMenu" class="block">Insights</RouterLink>
-        <RouterLink to="/gallery" @click="toggleMenu" class="block">Gallery</RouterLink>
-        <RouterLink to="/career" @click="toggleMenu" class="block">Career</RouterLink>
-          <RouterLink to="/cookies-policy" @click="toggleMenu" class="block">Policy</RouterLink>
-            <RouterLink to="/investmentdashboard" @click="toggleMenu" class="block">Investment Dashboard</RouterLink>
-      
-      </div>
-    </div>
-
-    <!-- <RouterLink to="/Insight" @click="toggleMenu" class="block font-medium">Insights</RouterLink>
-    <RouterLink to="/career" @click="toggleMenu" class="block font-medium">Career</RouterLink> -->
-    <RouterLink to="/contact" @click="toggleMenu" class="block font-medium">Contact</RouterLink>
-    
-    <RouterLink to="/invest-now" @click="toggleMenu">
-      <button class="w-full mt-4 bg-green-700 text-white py-3 rounded-xl">Invest Now</button>
-    </RouterLink>
-  </div>
-</Transition>
-
-<div v-if="isMenuOpen" @click="toggleMenu" class="fixed inset-0 bg-black/50 z-40 md:hidden"></div>
+    <!-- Backdrop with Blur -->
+    <Transition name="fade">
+      <div v-if="isMenuOpen" @click="toggleMenu" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"></div>
+    </Transition>
 
   </header>
 </template>
@@ -695,7 +811,7 @@ const resourceImages: Record<string, string> = {
 <style scoped>
 /* Sidebar Slide Effect */
 .slide-enter-active, .slide-leave-active {
-  transition: transform 0.3s ease-out;
+  transition: transform 0.4s ease-out;
 }
 .slide-enter-from, .slide-leave-to {
   transform: translateX(100%);
@@ -707,5 +823,21 @@ const resourceImages: Record<string, string> = {
 }
 .fade-enter-from, .fade-leave-to {
   opacity: 0;
+}
+
+/* Dropdown Expand Effect */
+.expand-enter-active, .expand-leave-active {
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.expand-enter-from, .expand-leave-to {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+.expand-enter-to, .expand-leave-from {
+  max-height: 1000px;
+  opacity: 1;
+  transform: translateY(0);
 }
 </style>

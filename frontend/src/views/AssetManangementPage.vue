@@ -62,17 +62,17 @@ async function handleSubmit() {
   </section>
 
   <!-- IMAGE + TEXT SECTION -->
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-16">
-    <div class="grid md:grid-cols-2 gap-0 rounded-2xl overflow-hidden">
-      <div class="relative h-50 md:h-auto">
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 md:py-10">
+    <div class="grid md:grid-cols-2 gap-0 rounded-2xl overflow-hidden md:h-[360px]">
+      <div class="relative h-64 md:h-full">
         <img src="@/assets/assetmanagement1.png" alt="Team collaboration" class="w-full h-full object-cover" />
       </div>
-      <div class="bg-gradient-to-br from-green-900 to-green-800 p-2 md:p-8 flex flex-col justify-center text-white">
+      <div class="bg-gradient-to-br from-green-900 to-green-800 p-4 md:p-6 flex flex-col justify-center text-white md:max-h-[360px]">
         <p class="text-xs md:text-sm leading-relaxed mb-4">
           We invest in practice such as Equity, Fixed Income, Real Estate, Commodities, Alternative Investments and Mutual funds. Accounts held by financial institutions often include checking, savings, certificates of deposit, and MMFs which includes the automated sweep of cash balances into a sweep account that earns interest.
         </p>
         <p class="text-sm md:text-sm leading-relaxed">
-          We deliver top of the line Investment Management services to our clients and engage funds by Institutions and Corporate Entities.
+        We offer professional investment management and wealth preservation solutions tailored to the unique objectives of individuals, institutions, and corporate clients.
         </p>
       </div>
     </div>

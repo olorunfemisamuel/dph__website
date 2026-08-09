@@ -3,124 +3,334 @@
 </script>
 
 <template>
-      <div class="alternative-investment">
+  <div class="alternative-investment bg-gradient-to-b from-gray-50 to-white">
     
-    <section class="w-full overflow-hidden shadow-lg">
-       <div class="relative w-full h-40 sm:h-44 md:h-70 overflow-hidden">
-        <img
-          src="@/assets/ExchangeTradedimg.png"
-          alt="Get in touch"
-          class="w-full h-full object-cover"
-        />
-        <div class="absolute inset-0 bg-black/60"></div>
+    <!-- Hero Section -->
+    <section class="relative isolate overflow-hidden bg-[#092719] text-white">
+      <img
+        src="@/assets/ExchangeTradedimg.png"
+        alt="Alternative Investment"
+        class="absolute inset-0 -z-20 h-full w-full object-cover opacity-40"
+      />
+      <div class="absolute inset-0 -z-10 bg-gradient-to-br from-[#061b11]/95 via-[#092719]/90 to-[#0b4d2e]/85"></div>
 
-        <div class="absolute inset-0 flex flex-col justify-center px-4 sm:px-8 md:px-10">
-          <h2 class="capitalize text-white text-2xl sm:text-2xl md:text-3xl font-bold mb-1">
-           ALTERNATIVE INVESTMENT
-          </h2>
+      <div class="mx-auto max-w-7xl px-6 py-24 sm:px-10 md:py-32 lg:px-12 lg:py-40">
+        <div class="max-w-4xl space-y-6">
+          <p class="inline-block rounded-full bg-green-500/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-green-300 backdrop-blur-sm">
+            Investment Solutions
+          </p>
+          <h1 class="text-5xl font-bold leading-[1.1] sm:text-6xl lg:text-7xl">
+            Fund Management
+          </h1>
+          <p class="max-w-3xl text-lg leading-relaxed text-white/90 sm:text-xl">
+            Diversified investment strategies tailored to your financial objectives, risk tolerance, and long-term wealth creation goals.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- CONTENT WRAPPER -->
-<section class="w-full bg-white py-16 px-4 sm:px-10 space-y-24">
+    <!-- Services Content -->
+    <section class="px-6 py-20 sm:px-10 lg:px-12 lg:py-28">
+      <div class="mx-auto max-w-7xl space-y-32">
 
-  <!-- SECTION ONE -->
-  <div id="private-wealth-management" class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <!-- DISCRETIONARY PORTFOLIO MANAGEMENT -->
+        <div id="discretionary-portfolio-management" class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+          
+          <!-- Text Column -->
+          <div class="space-y-8">
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="flex h-12 w-12 items-center justify-center rounded-lg bg-green-700 text-lg font-bold text-white shadow-md">
+                  01
+                </span>
+                <span class="rounded-full bg-green-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-green-700">
+                  Portfolio Management
+                </span>
+              </div>
+              <h2 class="text-4xl font-bold leading-tight text-gray-950 sm:text-5xl">
+                Discretionary Portfolio Management
+              </h2>
+            </div>
 
-    <!-- Text Column -->
-    <div class="space-y-5">
-      <h3 class="text-green-700 font-semibold text-2xl">
-        Deutsche Private Wealth Management
-      </h3>
+            <p class="text-lg leading-relaxed text-gray-600">
+              Our Discretionary Portfolio Management service enables clients to delegate investment decisions to experienced portfolio managers who actively manage investments in line with agreed objectives, risk tolerance, and investment mandates. This allows for timely execution of investment opportunities and proactive portfolio management.
+            </p>
 
-      <p class="text-sm leading-relaxed text-gray-700">
-      By partnering with Deutsche Partners Holdings, our clients gain unparallel access to unique financial advisory which are suited to meet our clients’ economic goals and financial considerations. 
-      Deutsche partners private wealth management offers informed and compelling insights into a variety of topics ranging from wealth management, & business intelligence to investment strategies. 
-      We nit-pick from a pool of professionals, the best investment analysts and financial advisors who have been trained and have acquired experience in areas such as risk management, investment strategies, market dynamics, and other areas of business intelligence. Protecting and nurturing your funds has always been our top priority. 
-      Our teams of advisors are well 
-      geared up to face any financial complications our clients and potential clients are currently engaged in.
-      </p>
+            <div class="space-y-5">
+              <p class="text-sm font-semibold uppercase tracking-[0.18em] text-green-700">
+                Key Features
+              </p>
+              <ul class="grid gap-4 sm:grid-cols-2">
+                <li class="flex gap-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    ✓
+                  </span>
+                  <span class="text-sm text-gray-700">Personalized Investment Portfolios</span>
+                </li>
+                <li class="flex gap-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    ✓
+                  </span>
+                  <span class="text-sm text-gray-700">Active Portfolio Management</span>
+                </li>
+                <li class="flex gap-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    ✓
+                  </span>
+                  <span class="text-sm text-gray-700">Asset Allocation Strategies</span>
+                </li>
+                <li class="flex gap-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    ✓
+                  </span>
+                  <span class="text-sm text-gray-700">Portfolio Rebalancing</span>
+                </li>
+                <li class="flex gap-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    ✓
+                  </span>
+                  <span class="text-sm text-gray-700">Performance Monitoring & Reporting</span>
+                </li>
+                <li class="flex gap-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    ✓
+                  </span>
+                  <span class="text-sm text-gray-700">Risk Management Solutions</span>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-      <!-- <p class="text-sm leading-relaxed text-gray-700">
-        Content placeholder — structure only.
-      </p> -->
-
-      <div>
-        <p class="text-green-700 font-semibold mb-3 text-5xl translate-x-24 translate-y-30">Our services</p>
-
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-7 translate-x-150">
-          <div class="border rounded-md px-3 py-2 text-xs text-center bg-gray-500 text-white cursor-pointer hover:bg-gray-600">Investment Margin</div>
-          <div class="border rounded-md px-3 py-2 text-xs text-center bg-gray-500 text-white cursor-pointer hover:bg-gray-600">Financial Advisory</div>
-          <div class="border rounded-md px-3 py-2 text-xs text-center bg-gray-500 text-white cursor-pointer hover:bg-gray-600">Tax services, & Asset Management Solutions</div>
-          <div class="border rounded-md px-3 py-2 text-xs text-center bg-gray-500 text-white cursor-pointer hover:bg-gray-600">Individual Savings Plan</div>
-          <div class="border rounded-md px-3 py-2 text-xs text-center bg-gray-500 text-white cursor-pointer hover:bg-gray-600">Tactical financial advisory& execution</div>
-          <div class="border rounded-md px-3 py-2 text-xs text-center bg-gray-500 text-white cursor-pointer hover:bg-gray-600">Strategic Cash Advice</div>
-           <div class="border rounded-md px-3 py-2 text-xs text-center bg-gray-500 text-white cursor-pointer hover:bg-gray-600">Discretionary, Advisory, and Execution Only</div>
-          <div class="border rounded-md px-3 py-2 text-xs text-center bg-gray-500 text-white cursor-pointer hover:bg-gray-600">Investment Management Solutions</div>
-          <div class="border rounded-md px-3 py-2 text-xs text-center bg-gray-500 text-white cursor-pointer hover:bg-gray-600">Risk Management</div>
+          <!-- Image Column -->
+          <div class="relative">
+            <div class="overflow-hidden rounded-2xl shadow-2xl">
+              <img
+                src="@/assets/alternativeinvestIMAGE.png"
+                class="h-[400px] w-full object-cover transition duration-300 hover:scale-105 lg:h-[500px]"
+                alt="Discretionary Portfolio Management"
+              />
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Image Column -->
-    <div class="w-full">
-      <img
-        src="@/assets/alternativeinvestIMAGE.png"
-        class="w-full h-[260px] object-cover rounded-lg px-8"
-        alt=""
-      />
-    </div>
-  </div>
+        <!-- NON-DISCRETIONARY PORTFOLIO MANAGEMENT -->
+        <div id="non-discretionary-portfolio-management" class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center">
 
-  <!-- SECTION TWO -->
-  <div id="asset-manange" class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          <!-- Image Column (First on Desktop) -->
+          <div class="relative order-2 lg:order-1">
+            <div class="overflow-hidden rounded-2xl shadow-2xl">
+              <img
+                src="@/assets/alternativeinvestIMAGE.png"
+                class="h-[400px] w-full object-cover transition duration-300 hover:scale-105 lg:h-[500px]"
+                alt="Non-Discretionary Portfolio Management"
+              />
+            </div>
+          </div>
 
-    <!-- Image Column -->
-    <div class="w-full">
-      <img
-        src="@/assets/alternativeinvestIMAGE.png"
-        class="w-full h-[260px] object-cover rounded-lg"
-        alt=""
-      />
-    </div>
+          <!-- Text Column -->
+          <div class="space-y-8 order-1 lg:order-2">
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="flex h-12 w-12 items-center justify-center rounded-lg bg-green-700 text-lg font-bold text-white shadow-md">
+                  02
+                </span>
+                <span class="rounded-full bg-green-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-green-700">
+                  Advisory Services
+                </span>
+              </div>
+              <h2 class="text-4xl font-bold leading-tight text-gray-950 sm:text-5xl">
+                Non-Discretionary Portfolio Management
+              </h2>
+            </div>
 
-    <!-- Text Column -->
-    <div class="space-y-5">
-      <h3 class="text-green-700 font-semibold text-2xl">
-        Deutsche Institutional Asset Management
-      </h3>
+            <p class="text-lg leading-relaxed text-gray-600">
+              Our Non-Discretionary Portfolio Management service combines professional investment advice with client-directed decision making. Clients retain full control over investment decisions while benefiting from DPH's market insights, research capabilities, and tailored portfolio recommendations.
+            </p>
 
-      <p class="text-sm leading-relaxed text-gray-700">
-      At Deutsche Asset Management, we offer well-tailored investment solutions to achieve your investment goals. 
-      We guarantee you that we will find the right investment plan to suit you. 
-      Our Institutional Asset Managers will work effectively with you, dedicating time and effort to better understand your business with the aim of maximizing income cash flow management and proper investment management, 
-      giving you the spare time to pursue your strategic initiatives. Our clients enjoy wealth maximization through a unique blend of traditional asset management and alternative investment scheme.
-      </p>
-
-      <!-- <p class="text-sm leading-relaxed text-gray-700">
-        Content placeholder — structure only.
-      </p> -->
-
-      <div>
-        <p class="text-green-700 font-semibold mb-3 translate-y-1">Our services</p>
-
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-          <div class="border rounded-md px-3 py-2 text-xs text-center bg-gray-500 text-white cursor-pointer hover:bg-gray-600">Mutual Funds</div>
-          <div class="border rounded-md px-3 py-2 text-xs text-center bg-gray-500 text-white cursor-pointer hover:bg-gray-600">Portfolio Management</div>
-          <div class="border rounded-md px-3 py-2 text-xs text-center bg-gray-500 text-white cursor-pointer hover:bg-gray-600">Investment Advisory</div>
-          <div class="border rounded-md px-3 py-2 text-xs text-center bg-gray-500 text-white cursor-pointer hover:bg-gray-600">Risk Management</div>
-          <div class="border rounded-md px-3 py-2 text-xs text-center bg-gray-500 text-white cursor-pointer hover:bg-gray-600">Gratuity Scheme</div>
-          <div class="border rounded-md px-3 py-2 text-xs text-center bg-gray-500 text-white cursor-pointer hover:bg-gray-600">Liquidity management</div>
-           <div class="border rounded-md px-3 py-2 text-xs text-center bg-gray-500 text-white cursor-pointer hover:bg-gray-600">Employee welfare scheme</div>
-            <div class="border rounded-md px-3 py-2 text-xs text-center bg-gray-500 text-white cursor-pointer hover:bg-gray-600">Asset replacement schemes</div>
+            <div class="space-y-5">
+              <p class="text-sm font-semibold uppercase tracking-[0.18em] text-green-700">
+                Key Features
+              </p>
+              <ul class="grid gap-4 sm:grid-cols-2">
+                <li class="flex gap-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    ✓
+                  </span>
+                  <span class="text-sm text-gray-700">Investment Advisory Services</span>
+                </li>
+                <li class="flex gap-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    ✓
+                  </span>
+                  <span class="text-sm text-gray-700">Portfolio Review & Analysis</span>
+                </li>
+                <li class="flex gap-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    ✓
+                  </span>
+                  <span class="text-sm text-gray-700">Research & Market Intelligence</span>
+                </li>
+                <li class="flex gap-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    ✓
+                  </span>
+                  <span class="text-sm text-gray-700">Asset Allocation Recommendations</span>
+                </li>
+                <li class="flex gap-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    ✓
+                  </span>
+                  <span class="text-sm text-gray-700">Investment Performance Reporting</span>
+                </li>
+                <li class="flex gap-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    ✓
+                  </span>
+                  <span class="text-sm text-gray-700">Wealth Advisory Services</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+
+        <!-- MUTUAL FUNDS -->
+        <div id="mutual-funds" class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+          
+          <!-- Text Column -->
+          <div class="space-y-8">
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="flex h-12 w-12 items-center justify-center rounded-lg bg-green-700 text-lg font-bold text-white shadow-md">
+                  03
+                </span>
+                <span class="rounded-full bg-green-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-green-700">
+                  Investment Funds
+                </span>
+              </div>
+              <h2 class="text-4xl font-bold leading-tight text-gray-950 sm:text-5xl">
+                Mutual Funds
+              </h2>
+            </div>
+
+            <p class="text-lg leading-relaxed text-gray-600">
+              Our Mutual Funds provide professionally managed investment solutions designed to help individuals and institutions achieve their financial objectives through diversified portfolios, disciplined risk management, and long-term wealth creation. The funds offer investors access to a range of asset classes tailored to different investment goals and risk appetites.
+            </p>
+
+            <div class="space-y-5">
+              <p class="text-sm font-semibold uppercase tracking-[0.18em] text-green-700">
+                Key Offerings
+              </p>
+              <ul class="grid gap-4">
+                <li class="flex gap-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    ✓
+                  </span>
+                  <span class="text-sm text-gray-700">Money Market Funds</span>
+                </li>
+                <li class="flex gap-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    ✓
+                  </span>
+                  <span class="text-sm text-gray-700">Balanced Mutual Funds</span>
+                </li>
+                <li class="flex gap-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    ✓
+                  </span>
+                  <span class="text-sm text-gray-700">Real Estate Investment Trusts (REITs)</span>
+                </li>
+                <li class="flex gap-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    ✓
+                  </span>
+                  <span class="text-sm text-gray-700">Exchange Traded Funds (ETFs)</span>
+                </li>
+                <li class="flex gap-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    ✓
+                  </span>
+                  <span class="text-sm text-gray-700">Foreign Funds</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Image Column -->
+          <div class="relative">
+            <div class="overflow-hidden rounded-2xl shadow-2xl">
+              <img
+                src="@/assets/alternativeinvestIMAGE.png"
+                class="h-[400px] w-full object-cover transition duration-300 hover:scale-105 lg:h-[500px]"
+                alt="Mutual Funds"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- ALTERNATIVE INVESTMENT -->
+        <div id="alternative-investment-services" class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+
+          <!-- Image Column (First on Desktop) -->
+          <div class="relative order-2 lg:order-1">
+            <div class="overflow-hidden rounded-2xl shadow-2xl">
+              <img
+                src="@/assets/alternativeinvestIMAGE.png"
+                class="h-[400px] w-full object-cover transition duration-300 hover:scale-105 lg:h-[500px]"
+                alt="Alternative Investment"
+              />
+            </div>
+          </div>
+
+          <!-- Text Column -->
+          <div class="space-y-8 order-1 lg:order-2">
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="flex h-12 w-12 items-center justify-center rounded-lg bg-green-700 text-lg font-bold text-white shadow-md">
+                  04
+                </span>
+                <span class="rounded-full bg-green-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-green-700">
+                  Specialized Investments
+                </span>
+              </div>
+              <h2 class="text-4xl font-bold leading-tight text-gray-950 sm:text-5xl">
+                Alternative Investment
+              </h2>
+            </div>
+
+            <p class="text-lg leading-relaxed text-gray-600">
+              Our Alternative Investments platform provides access to specialized investment opportunities beyond traditional asset classes, enabling investors to diversify portfolios, enhance long-term returns, and participate in high-growth sectors of the economy through carefully structured investment solutions.
+            </p>
+
+            <div class="space-y-5">
+              <p class="text-sm font-semibold uppercase tracking-[0.18em] text-green-700">
+                Key Offerings
+              </p>
+              <ul class="grid gap-4">
+                <li class="flex gap-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    ✓
+                  </span>
+                  <span class="text-sm text-gray-700">Private Equity</span>
+                </li>
+                <li class="flex gap-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    ✓
+                  </span>
+                  <span class="text-sm text-gray-700">Venture Capital</span>
+                </li>
+                <li class="flex gap-3 rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+                  <span class="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-100 text-xs font-bold text-green-700">
+                    ✓
+                  </span>
+                  <span class="text-sm text-gray-700">Infrastructure Funds</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </div>
+    </section>
+
   </div>
-
-</section>
-
-
-    </div>
 </template>

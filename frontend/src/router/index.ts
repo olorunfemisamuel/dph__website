@@ -13,7 +13,6 @@ import SecuritiesPage from '@/views/SecuritiesPage.vue'
 import TrusteesPage from '@/views/TrusteesPage.vue'
 import ContactPage from '@/views/ContactPage.vue'
 import CareerPage from '@/views/CareerPage.vue'
-import InvestmentDashboardPage from '@/views/InvestmentDashboardPage.vue'
 import ExchangeTradedFunds from '@/views/ExchangeTradedFunds.vue'
 import MutualFunds from '@/views/MutualFunds.vue'
 import AlternativeInvestment from '@/views/AlternativeInvestment.vue'
@@ -139,12 +138,6 @@ const router = createRouter({
   name: '/gallery',
   path : '/gallery',
   component: GalleryPage
-},
-
-{
-  name: '/investmentdashboard',
-  path: '/investmentdashboard',
-  component: InvestmentDashboardPage
 },
 
 {

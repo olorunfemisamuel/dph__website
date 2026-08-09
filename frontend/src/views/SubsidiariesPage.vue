@@ -137,6 +137,66 @@ import subsidiariesIMAGE from '@/assets/subsidiariesIMAGE/subsidiariesIMAGE.png'
         />
       </div>
 
+      <!-- CARD 4 - Image overlaps on tall text box (right side) -->
+      <div class="relative flex flex-col md:flex-row-reverse items-start gap-0">
+        <!-- Tall Text Box -->
+        <div id="trustees-limited" class="bg-neutral-900 text-white p-10 rounded-lg w-full md:w-[380px] h-[500px] flex flex-col justify-center">
+          <div>
+            <h3 class="text-2xl font-semibold mb-4">DPH Trustees Limited</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              DPH Trustees Limited offers independent trusteeship and fiduciary services for debt issuances, structured finance transactions, collective investment schemes, and corporate trusts. The company is committed to safeguarding stakeholders' interests while ensuring compliance, transparency, and effective trust administration.
+            </p>
+          </div>
+        </div>
+
+        <!-- Image overlapping -->
+        <img
+          :src="subsidiariesIMAGE"
+          alt="Trustees building"
+          class="rounded-lg w-full md:w-[600px] h-[300px] object-cover md:absolute md:-mr-0 md:right-[380px] md:top-16 mt-6 md:mt-0"
+        />
+      </div>
+
+      <!-- CARD 5 - Image overlaps on tall text box (left side) -->
+      <div class="relative flex flex-col md:flex-row items-start gap-0">
+        <!-- Tall Text Box -->
+        <div id="venture-capital" class="bg-neutral-900 text-white p-10 rounded-lg w-full md:w-[380px] h-[500px] flex flex-col justify-center">
+          <div>
+            <h3 class="text-2xl font-semibold mb-4">DPH Venture Capital</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              DPH Venture Capital Limited partners with innovative entrepreneurs and early-stage businesses by providing growth capital, strategic guidance, and business development support. The company focuses on nurturing scalable enterprises capable of creating sustainable economic and social impact.
+            </p>
+          </div>
+        </div>
+
+        <!-- Image overlapping -->
+        <img
+          :src="subsidiariesIMAGE"
+          alt="Venture capital building"
+          class="rounded-lg w-full md:w-[600px] h-[300px] object-cover md:absolute md:-ml-0 md:left-[380px] md:top-16 mt-6 md:mt-0"
+        />
+      </div>
+
+      <!-- CARD 6 - Image overlaps on tall text box (right side) -->
+      <div class="relative flex flex-col md:flex-row-reverse items-start gap-0">
+        <!-- Tall Text Box -->
+        <div id="consultancy-services" class="bg-neutral-900 text-white p-10 rounded-lg w-full md:w-[380px] h-[500px] flex flex-col justify-center">
+          <div>
+            <h3 class="text-2xl font-semibold mb-4">DPH Consultancy Services</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              DPH Consultancy Services provides strategic business advisory and management consulting solutions that help organizations improve performance, strengthen governance, enhance operational efficiency, and achieve sustainable growth. Its multidisciplinary expertise enables clients to navigate complex business challenges and implement practical, results-driven strategies.
+            </p>
+          </div>
+        </div>
+
+        <!-- Image overlapping -->
+        <img
+          :src="subsidiariesIMAGE"
+          alt="Consultancy services building"
+          class="rounded-lg w-full md:w-[600px] h-[300px] object-cover md:absolute md:-mr-0 md:right-[380px] md:top-16 mt-6 md:mt-0"
+        />
+      </div>
+
     </section>
 
   </div>
