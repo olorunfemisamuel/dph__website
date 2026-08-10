@@ -4,6 +4,16 @@ import { ref } from 'vue';
 // Track active tab: 'management' or 'board'
 const activeTab = ref('management');
 
+// Modal state
+const showModal = ref(false);
+const selectedLeader = ref<{ name: string; role: string; img: string } | null>(null);
+
+// Close modal function
+const closeModal = () => {
+  showModal.value = false;
+  selectedLeader.value = null;
+};
+
 // Sample data to differentiate the views
 const managementData = [
   { name: 'DR. ONUOHA IKWOR-NNACHI', role: 'Managing Director/CEO', img: new URL('@/assets/ManagementImg/mddph.jpeg', import.meta.url).href },
