@@ -16,43 +16,60 @@
 
 
   <!-- WHITE SECTION WITH IMAGE + TEXT -->
-  <div class="bg-white py-16">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-10 items-start">
-
-      <!-- IMAGE (LEFT SIDE) -->
-      <div class="w-full md:w-[380px] flex-shrink-0">
-        <img
-          src="@/assets/mdIMG/Onuoha-NNACHI-DPH-Managing-Partner.jpg.webp"
-          alt="Managing Director"
-          class="w-full rounded-xl shadow-lg object-cover"
-        />
+  <div class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      
+      <!-- MAIN HEADING -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Welcome to Deutsche Partner Holding
+        </h2>
+        <div class="w-24 h-1 bg-green-700 mx-auto"></div>
       </div>
 
-      <!-- TEXT (RIGHT SIDE) -->
-      <div class="flex-1 text-sm text-gray-700 leading-relaxed">
-        <p class="mb-6">
-          At Deutsche Partners Holdings, our mission is clear. To provide insightful,
-          ethical, and high impact financial and investment advisory solutions that
-          support sustainable growth across Africa and beyond. We are a Pan African
-          institution with a global perspective, built to serve governments,
-          corporations, institutional investors, and private clients with excellence
-          and integrity.
-        </p>
+      <!-- IMAGE + TEXT LAYOUT -->
+      <div class="flex flex-col lg:flex-row gap-12 items-start">
 
-        <p class="mb-6">
-          I firmly believe in Africa’s long term potential. Despite existing
-          challenges, the continent remains one of the most compelling frontiers for
-          investment, innovation, and wealth creation.
-        </p>
+        <!-- IMAGE (LEFT SIDE) -->
+        <div class="w-full lg:w-[420px] flex-shrink-0 mx-auto lg:mx-0">
+          <img
+            src="@/assets/ManagementImg/mddph.jpeg"
+            alt="Dr. Onuoha I. Nnachi - Managing Partner"
+            class="w-full rounded-2xl shadow-2xl object-cover"
+          />
+        </div>
 
-        <p class="mb-6">
-          Our firm combines deep regional knowledge with global best practices to
-          deliver strategic financial advisory and investment solutions across
-          corporate finance, capital markets, infrastructure, energy, and public
-          sector development.
-        </p>
+        <!-- TEXT (RIGHT SIDE) -->
+        <div class="flex-1 text-base md:text-lg text-gray-800 leading-relaxed space-y-6">
+          <p class="text-lg md:text-xl leading-loose">
+            Deutsche Partner Holding was built on a simple conviction: that capital, well understood and well deployed, is one of the most powerful tools for building resilient economies. As Managing Partner, I have the privilege of leading a Holding whose subsidiaries — <strong>Deutsche Capital</strong>, <strong>Deutsche Securities</strong>, <strong>Deutsche Asset Management</strong>, and <strong>Deutsche Pensions</strong> — together offer clients a full spectrum of capital markets, wealth management, mergers and acquisitions, securities trading, and pension solutions.
+          </p>
+
+          <p class="leading-loose">
+            My own path into this work has been shaped by two disciplines that rarely sit side by side — engineering and finance. With doctoral training in Petroleum Engineering (Upstream Infrastructure Economics) and Telecommunication Engineering, alongside postgraduate qualifications in Petroleum Economics and Information Technology Systems, and further training in Corporate Finance and Investment, Financial Risk and Cash Flow Analysis, and Investment Banking Analysis from institutions including Columbia Business School and the New York Institute of Finance, I have spent my career at the intersection of technical rigour and financial strategy. That combination informs how Deutsche Partner Holding approaches every mandate: we do not simply manage capital, we understand the assets, sectors, and structures behind it before we commit to it.
+          </p>
+
+          <p class="leading-loose">
+            This philosophy runs through each of our subsidiaries. Deutsche Capital and Deutsche Securities give clients access to capital raising, mergers and acquisitions, and securities trading expertise. Deutsche Asset Management stewards portfolios with the discipline our clients expect of a fiduciary. And Deutsche Pensions is built to safeguard and grow the long-term retirement savings entrusted to us. Across all four, our standard is the same: institutional-grade rigour, delivered with integrity.
+          </p>
+
+          <p class="leading-loose">
+            I remain, above all, a believer in the power of sound institutions and good governance to unlock opportunity for individuals, for businesses, and for the wider economy. Whether the conversation is about wealth management, a capital raise, or securing a pension for the future, Deutsche Partner Holding's role is to bring capital, expertise, and integrity to bear on our clients' most consequential financial decisions.
+          </p>
+
+          <p class="leading-loose font-medium">
+            I invite you to explore what we do, and to partner with us as we build.
+          </p>
+
+          <!-- SIGNATURE -->
+          <div class="pt-8 border-t border-gray-200 mt-10">
+            <p class="italic text-gray-900 font-semibold text-lg">Dr. Onuoha I. Nnachi, Ph.D.</p>
+            <p class="text-gray-600 font-medium mt-1">Managing Partner</p>
+            <p class="text-gray-600">Deutsche Partner Holding</p>
+          </div>
+        </div>
+
       </div>
-
     </div>
   </div>
 
