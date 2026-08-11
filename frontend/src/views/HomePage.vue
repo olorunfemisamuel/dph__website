@@ -16,7 +16,7 @@ import assetmanagementslider from '@/assets/assetmanagementslider.webp'
 import thirdsliderImage from '@/assets/thirdsliderImage.webp'
 import fourthsliderImage from '@/assets/fourthsliderImage.webp'
 import fifthsliderImage from '@/assets/fifthsliderImage.webp'
-import venturecapitalimage from '@/assets/venturecapitalimg.webp'
+import venturecapitalimage from '@/assets/venturecapitalIMG.jpg'
 
 type SlideType = {
   type: string

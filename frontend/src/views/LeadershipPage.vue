@@ -29,7 +29,7 @@ const boardData = [
   { name: 'DR. ONUOHA IKWOR-NNACHI', role: 'Managing Director/CEO', img: new URL('@/assets/BoardImgs/mddph.jpeg', import.meta.url).href },
   { name: 'SHEIKH IBRAHIM DAHIRU BAUCHI', role: 'Non Executive Director', img: new URL('@/assets/BoardImgs/boardofdirector2.jpeg', import.meta.url).href },
   { name: 'MR. EMEKA UGWU-OJU', role: 'Non Executive Director', img: new URL('@/assets/BoardImgs/boardofdirector3.jpeg', import.meta.url).href },
-  { name: 'MS RACHEL OGBONNA', role: 'Board Member', img: '' },
+  { name: 'MS RACHEL OGBONNA', role: 'Board Member', img: new URL('@/assets/BoardImgs/fifthboardmember.jpeg', import.meta.url).href },
   { name: 'HIGH CHIEF HIGGINS PETERS', role: 'Non Executive Director', img: new URL('@/assets/BoardImgs/boardofdireactor1.jpeg', import.meta.url).href },
 ];
 
